@@ -14,7 +14,9 @@ This is a desktop application developed using Python and PyQt5 that helps apartm
 To use this application, follow the steps below:
 1. Clone the repository to your local machine
 2. Install MySQL
-3. Install the required python dependencies using the commands: * pip install pyqt5 * pip install pyqt5-tools 
+3. Install the required python dependencies using the commands: 
+  * pip install pyqt5 
+  * pip install pyqt5-tools 
 4. Run the application using the command 'python main.py'
 
 ## Clone the repository to your local machine.
