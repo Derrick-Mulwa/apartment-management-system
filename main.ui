@@ -128,7 +128,7 @@ color: rgb(255, 255, 255);</string>
       <string notr="true">background-color: rgb(33, 33, 33);
 color: rgb(255, 255, 255);
 
-border: 2px solid rgb(255, 255, 255);
+border: 2px solid white;
 border-radius: 10px;</string>
      </property>
     </widget>
@@ -213,6 +213,51 @@ border-radius: 4px</string>
       <string>SIGN UP</string>
      </property>
     </widget>
+    <widget class="QLabel" name="lbl_pageLogin_username">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>140</y>
+       <width>191</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(33, 33, 33);
+color: rgb(255, 26, 10)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_pageLogin_password">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>240</y>
+       <width>191</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(33, 33, 33);
+color: rgb(255, 26, 10)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>label_2</zorder>
+    <zorder>label_3</zorder>
+    <zorder>label_5</zorder>
+    <zorder>btn_LoginPage_Login</zorder>
+    <zorder>btn_LoginPage_ForgotPassword</zorder>
+    <zorder>btn_LoginPage_SignUp</zorder>
+    <zorder>lbl_pageLogin_username</zorder>
+    <zorder>led_LoginPage_Username</zorder>
+    <zorder>lbl_pageLogin_password</zorder>
+    <zorder>led_LoginPage_Password</zorder>
    </widget>
    <widget class="QWidget" name="pageSignUp">
     <widget class="QPushButton" name="btn_PageSignUp_signup">
@@ -690,7 +735,7 @@ border-radius: 5px;
 border: 2px solid rgb(255, 255, 255);</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>480</x>

@@ -1,9 +1,10 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import mysql.connector
+import time
 
 db = mysql.connector.connect(
-    host = "localhost",
     user = "root",
+    host = "localhost",
     password = "root"
 )
 
@@ -53,7 +54,7 @@ class Ui_Form(object):
         self.led_LoginPage_Username.setStyleSheet("background-color: rgb(33, 33, 33);\n"
 "color: rgb(255, 255, 255);\n"
 "\n"
-"border: 2px solid rgb(255, 255, 255);\n"
+"border: 2px solid white;\n"
 "border-radius: 10px;")
         self.led_LoginPage_Username.setObjectName("led_LoginPage_Username")
         self.led_LoginPage_Password = QtWidgets.QLineEdit(self.PageLogin)
@@ -65,7 +66,6 @@ class Ui_Form(object):
 "border-radius: 10px;\n"
 "")
         self.led_LoginPage_Password.setObjectName("led_LoginPage_Password")
-        self.led_LoginPage_Password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.btn_LoginPage_Login = QtWidgets.QPushButton(self.PageLogin)
         self.btn_LoginPage_Login.setGeometry(QtCore.QRect(430, 280, 261, 51))
         self.btn_LoginPage_Login.setStyleSheet("QPushButton{\n"
@@ -93,6 +93,29 @@ class Ui_Form(object):
 "background-color: rgb(6, 46, 175);\n"
 "border-radius: 4px")
         self.btn_LoginPage_SignUp.setObjectName("btn_LoginPage_SignUp")
+        self.lbl_pageLogin_username = QtWidgets.QLabel(self.PageLogin)
+        self.lbl_pageLogin_username.setGeometry(QtCore.QRect(300, 140, 191, 16))
+        self.lbl_pageLogin_username.setStyleSheet("background-color: rgb(33, 33, 33);\n"
+"color: rgb(255, 26, 10)")
+        self.lbl_pageLogin_username.setText("")
+        self.lbl_pageLogin_username.setObjectName("lbl_pageLogin_username")
+        self.lbl_pageLogin_password = QtWidgets.QLabel(self.PageLogin)
+        self.lbl_pageLogin_password.setGeometry(QtCore.QRect(300, 240, 191, 16))
+        self.lbl_pageLogin_password.setStyleSheet("background-color: rgb(33, 33, 33);\n"
+"color: rgb(255, 26, 10)")
+        self.lbl_pageLogin_password.setText("")
+        self.lbl_pageLogin_password.setObjectName("lbl_pageLogin_password")
+        self.label.raise_()
+        self.label_2.raise_()
+        self.label_3.raise_()
+        self.label_5.raise_()
+        self.btn_LoginPage_Login.raise_()
+        self.btn_LoginPage_ForgotPassword.raise_()
+        self.btn_LoginPage_SignUp.raise_()
+        self.lbl_pageLogin_username.raise_()
+        self.led_LoginPage_Username.raise_()
+        self.lbl_pageLogin_password.raise_()
+        self.led_LoginPage_Password.raise_()
         self.stackedWidget.addWidget(self.PageLogin)
         self.pageSignUp = QtWidgets.QWidget()
         self.pageSignUp.setObjectName("pageSignUp")
@@ -265,17 +288,17 @@ class Ui_Form(object):
 "border-radius: 5px;\n"
 "border: 2px solid rgb(255, 255, 255);")
         self.led_PageSignup_RepeatPassword.setObjectName("led_PageSignup_RepeatPassword")
-        self.widget = QtWidgets.QWidget(self.pageSignUp)
-        self.widget.setGeometry(QtCore.QRect(480, 90, 151, 51))
-        self.widget.setObjectName("widget")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
+        self.layoutWidget = QtWidgets.QWidget(self.pageSignUp)
+        self.layoutWidget.setGeometry(QtCore.QRect(480, 90, 151, 51))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.rbtn_PageSignup_Male = QtWidgets.QRadioButton(self.widget)
+        self.rbtn_PageSignup_Male = QtWidgets.QRadioButton(self.layoutWidget)
         self.rbtn_PageSignup_Male.setStyleSheet("color: rgb(255, 255, 255);")
         self.rbtn_PageSignup_Male.setObjectName("rbtn_PageSignup_Male")
         self.horizontalLayout.addWidget(self.rbtn_PageSignup_Male)
-        self.rbtn_PageSignup_Female = QtWidgets.QRadioButton(self.widget)
+        self.rbtn_PageSignup_Female = QtWidgets.QRadioButton(self.layoutWidget)
         self.rbtn_PageSignup_Female.setStyleSheet("color: rgb(255, 255, 255);")
         self.rbtn_PageSignup_Female.setObjectName("rbtn_PageSignup_Female")
         self.horizontalLayout.addWidget(self.rbtn_PageSignup_Female)
@@ -336,7 +359,7 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
         self.stackedWidget.setCurrentIndex(0)
-        self.led_LoginPage_Username.editingFinished.connect(self.led_LoginPage_Username.selectAll)
+
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -376,12 +399,15 @@ class Ui_Form(object):
 
         # Mambo yangu
 
+        self.led_LoginPage_Password.setEchoMode(QtWidgets.QLineEdit.Password)
+
         self.btn_LoginPage_Login.clicked.connect(lambda: self.loginpage_btnlogin())
         self.btn_LoginPage_SignUp.clicked.connect(lambda: self.to_pageSignup())
         self.btn_LoginPage_ForgotPassword.clicked.connect(lambda: self.to_pageForgotpassword())
         self.btn_pageHomepage_logout.clicked.connect(lambda: self.to_pageLogin())
         self.btn_pageForgotPassword_BacktoLogin.clicked.connect(lambda: self.to_pageLogin())
         self.btn_PageSignUp_BacktoLogin.clicked.connect(lambda: self.to_pageLogin())
+        self.led_LoginPage_Username.editingFinished.connect(self.led_authentic_username)
 
     def to_pageLogin(self):
         self.stackedWidget.setCurrentWidget(self.PageLogin)
@@ -395,38 +421,62 @@ class Ui_Form(object):
     def to_pageHomepage(self):
         self.stackedWidget.setCurrentWidget(self.pageHomepage)
 
-
     def get_password(self, user):
-
         try:
             self.mycursor.execute(f"SELECT user_password FROM apartment_name.tenants_logins WHERE id_number = {user};")
-            self.password = self.mycursor.fetchall()[0][0]
-            return self.password
+            password = self.mycursor.fetchall()[0][0]
+            return password
         except:
             try:
                 self.mycursor.execute(
                     f"SELECT user_password FROM apartment_name.tenants_logins WHERE house_number = '{user}';")
-                self.password = self.mycursor.fetchall()[0][0]
-                return self.password
+                password = self.mycursor.fetchall()[0][0]
+                return password
             except:
                 try:
                     self.mycursor.execute(
                         f"SELECT user_password FROM apartment_name.tenants_logins WHERE phone_number = {user};")
-                    self.password = self.mycursor.fetchall()[0][0]
-                    return self.password
+                    password = self.mycursor.fetchall()[0][0]
+                    return password
                 except:
                     try:
                         self.mycursor.execute(
-                        f"SELECT user_password FROM apartment_name.tenants_logins WHERE email_address = '{user}';")
+                            f"SELECT user_password FROM apartment_name.tenants_logins WHERE email_address = '{user}';")
 
-                        self.password = self.mycursor.fetchall()[0][0]
-                        return self.password
+                        password = self.mycursor.fetchall()[0][0]
+                        return password
                     except:
-                        self.password = "None"
-                        return self.password
+                        password = "None"
+                        return password
+
+    def authentic_username(self, username):
+        autenticity = self.get_password(username)
+        if autenticity == "None":
+            return False
+        else:
+            return True
+
+    def led_authentic_username(self):
+        is_username_authentic = self.authentic_username(self.led_LoginPage_Username.text())
+        print(self.led_LoginPage_Username.text())
+        print(is_username_authentic)
+
+        if is_username_authentic is False:
+            self.led_LoginPage_Username.setStyleSheet("background-color: rgb(33, 33, 33);"
+                                                      "color: rgb(255, 255, 255);"
+                                                      "border: 2px solid red;"
+                                                      "border-radius: 10px;")
+            self.lbl_pageLogin_username.setText("Username does not exist")
+        else:
+            self.led_LoginPage_Username.setStyleSheet("background-color: rgb(33, 33, 33);"
+                                                      "color: rgb(255, 255, 255);"
+                                                      "border: 2px solid rgb(79, 223, 12);"
+                                                      "border-radius: 10px;")
+            self.lbl_pageLogin_username.setText("")
 
 
     def loginpage_btnlogin(self):
+
         self.username = self.led_LoginPage_Username.text()
         print(self.username)
         self.entered_password = self.led_LoginPage_Password.text()
@@ -434,12 +484,26 @@ class Ui_Form(object):
         self.user_password = self.get_password(self.username)
 
         if self.user_password == self.entered_password:
+            self.led_LoginPage_Password.setStyleSheet("background-color: rgb(33, 33, 33);"
+                                                      "color: rgb(255, 255, 255);"
+                                                      "border: 2px solid white;"
+                                                      "border-radius: 10px;")
+            self.lbl_pageLogin_password.setText("")
+
             self.to_pageHomepage()
 
         else:
-            print("User does not exist!")
+            if self.user_password == "None":
+                self.lbl_pageLogin_password.setText("You entered a username that does not exist!")
+                self.lbl_pageLogin_password.adjustSize()
 
-
+            else:
+                self.led_LoginPage_Password.setStyleSheet("background-color: rgb(33, 33, 33);"
+                                                          "color: rgb(255, 255, 255);"
+                                                          "border: 2px solid red;"
+                                                          "border-radius: 10px;")
+                self.lbl_pageLogin_password.setText("Incorrect Password. Please try again!")
+                self.lbl_pageLogin_password.adjustSize()
 
 
 
