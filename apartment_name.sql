@@ -31,13 +31,13 @@ authorized_by VARCHAR(100));
 
 INSERT INTO apartment_name.details(id_number, first_name, last_name, phone_number, email_address, house_number, occupation,
 next_of_kin_first_name, next_of_kin_last_name, user_role) VALUES
-(11217220, "Derrick", "Mkali", 254799368479, "anemail@gmail.com", "B16", "Student", "Kendrick", "Mulamwa", "Tenant"),
+(11217220, "Derrick", "Mkali", 254799368479, "mbalukaderrik@gmail.com", "B16", "Student", "Kendrick", "Mulamwa", "Tenant"),
 (32711242, "Angela", "Nyaboke", 254712348479, "angela19200@gmail.com", "A11", "Accountant", "Louis", "Cia", "Tenant"),
 (47554865, "Ian", "Pweza", 254748556412, "ianfala1213@gmail.com", "J9", "Watchman", "Keovin", "Musyo", "Tenant"),
 (24568121, "Ken", "Walibora", 254736951362, "kenwalibora@gmail.com", "M45", "Plumber", "Miss", "Wake", "Manager");
 
 INSERT INTO tenants_logins(id_number,house_number,phone_number, email_address, user_password) VALUES
-(11217220, "B16", 254799368479, "anemail@gmail.com", "Deriky1"),
+(11217220, "B16", 254799368479, "mbalukaderrik@gmail.com", "Deriky1"),
 (32711242, "A11", 254712348479, "angela19200@gmail.com", "Wowman"),
 (47554865, "J9",  254748556412, "ianfala1213@gmail.com", "Tenant4"),
 (24568121, "M45", 254736951362, "kenwalibora@gmail.com", "M45Karia")

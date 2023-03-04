@@ -131,6 +131,9 @@ color: rgb(255, 255, 255);
 border: 2px solid white;
 border-radius: 10px;</string>
      </property>
+     <property name="placeholderText">
+      <string>   ID number / Email address / House number / Phone number</string>
+     </property>
     </widget>
     <widget class="QLineEdit" name="led_LoginPage_Password">
      <property name="geometry">
@@ -774,8 +777,8 @@ border: 2px solid rgb(255, 255, 255);</string>
       <rect>
        <x>260</x>
        <y>40</y>
-       <width>541</width>
-       <height>381</height>
+       <width>501</width>
+       <height>331</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -787,12 +790,12 @@ background-color: rgb(61, 61, 61);
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="label_18">
+    <widget class="QLabel" name="lbl_pageForgotPassword_email">
      <property name="geometry">
       <rect>
        <x>350</x>
        <y>120</y>
-       <width>51</width>
+       <width>131</width>
        <height>31</height>
       </rect>
      </property>
@@ -802,13 +805,13 @@ background-color: rgb(61, 61, 61);
 </string>
      </property>
      <property name="text">
-      <string>Username</string>
+      <string>Enter your Email Address</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_pageForgotPassword_ResetPassword">
+    <widget class="QPushButton" name="btn_pageForgotPassword_continue">
      <property name="geometry">
       <rect>
-       <x>460</x>
+       <x>450</x>
        <y>230</y>
        <width>141</width>
        <height>41</height>
@@ -820,15 +823,165 @@ border-radius:10px
 </string>
      </property>
      <property name="text">
-      <string>Reset Password</string>
+      <string>Continue</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="led_PageForgotPPassword_Username">
+    <widget class="QLineEdit" name="led_pageForgotPassword_Username">
      <property name="geometry">
       <rect>
-       <x>430</x>
-       <y>120</y>
-       <width>241</width>
+       <x>350</x>
+       <y>150</y>
+       <width>361</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(61, 61, 61);
+color: rgb(255, 255, 255);
+border: 2px solid white;
+border-radius:5px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>   abc@ayz.com</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageForgotPassword_BacktoLogin">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>40</y>
+       <width>141</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(22, 172, 5);
+border-radius:10px;
+border-bottom-left-radius: 0px
+</string>
+     </property>
+     <property name="text">
+      <string>Back to Login</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>40</y>
+       <width>501</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(108, 108, 108);
+border-radius:15px;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>60</y>
+       <width>501</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(108, 108, 108);
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_24">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>40</y>
+       <width>301</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Niagara Engraved</family>
+       <pointsize>36</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(108, 108, 108);
+
+</string>
+     </property>
+     <property name="text">
+      <string>RESET PASSWORD</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_pageForgotPassword_emailNotification">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>170</y>
+       <width>381</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Narrow</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 44, 7);
+background-color: rgb(61, 61, 61);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageForgotPassword_verifyCode">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>310</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(255, 32, 43);
+border-radius:10px
+</string>
+     </property>
+     <property name="text">
+      <string>Verify code</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="led_pageForgotPassword_verificationCode">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>240</y>
+       <width>361</width>
        <height>31</height>
       </rect>
      </property>
@@ -839,24 +992,117 @@ border: 2px solid white;
 border-radius:5px;</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_pageForgotPassword_BacktoLogin">
+    <widget class="QLabel" name="lbl_pageForgotPassword_verificationcode">
      <property name="geometry">
       <rect>
-       <x>460</x>
-       <y>360</y>
-       <width>141</width>
+       <x>350</x>
+       <y>210</y>
+       <width>231</width>
        <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:rgb(22, 172, 5);
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(61, 61, 61);
+</string>
+     </property>
+     <property name="text">
+      <string>Enter verification code</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_pageForgotPassword_verificationNotification">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>270</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Narrow</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 44, 7);
+background-color: rgb(61, 61, 61);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageForgotPassword_updatePassword">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>310</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(16, 255, 12);
 border-radius:10px
 </string>
      </property>
      <property name="text">
-      <string>Back to Login</string>
+      <string>Update Password</string>
      </property>
     </widget>
+    <widget class="QLineEdit" name="led_pageForgotPassword_newpassword">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>150</y>
+       <width>361</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(61, 61, 61);
+color: rgb(255, 255, 255);
+border: 2px solid white;
+border-radius:5px;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="led_pageForgotPassword_confirmPassword">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>240</y>
+       <width>361</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(61, 61, 61);
+color: rgb(255, 255, 255);
+border: 2px solid white;
+border-radius:5px;</string>
+     </property>
+    </widget>
+    <zorder>label_17</zorder>
+    <zorder>lbl_pageForgotPassword_email</zorder>
+    <zorder>label_22</zorder>
+    <zorder>label_23</zorder>
+    <zorder>btn_pageForgotPassword_BacktoLogin</zorder>
+    <zorder>label_24</zorder>
+    <zorder>lbl_pageForgotPassword_emailNotification</zorder>
+    <zorder>btn_pageForgotPassword_verifyCode</zorder>
+    <zorder>lbl_pageForgotPassword_verificationcode</zorder>
+    <zorder>lbl_pageForgotPassword_verificationNotification</zorder>
+    <zorder>led_pageForgotPassword_verificationCode</zorder>
+    <zorder>btn_pageForgotPassword_updatePassword</zorder>
+    <zorder>led_pageForgotPassword_newpassword</zorder>
+    <zorder>led_pageForgotPassword_confirmPassword</zorder>
+    <zorder>led_pageForgotPassword_Username</zorder>
+    <zorder>btn_pageForgotPassword_continue</zorder>
    </widget>
    <widget class="QWidget" name="pageHomepage">
     <widget class="QLabel" name="label_19">
