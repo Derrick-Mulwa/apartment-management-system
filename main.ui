@@ -131,6 +131,9 @@ color: rgb(255, 255, 255);
 border: 2px solid white;
 border-radius: 10px;</string>
      </property>
+     <property name="placeholderText">
+      <string>   ID number / Email address / House number / Phone number</string>
+     </property>
     </widget>
     <widget class="QLineEdit" name="led_LoginPage_Password">
      <property name="geometry">
@@ -260,512 +263,1360 @@ color: rgb(255, 26, 10)</string>
     <zorder>led_LoginPage_Password</zorder>
    </widget>
    <widget class="QWidget" name="pageSignUp">
-    <widget class="QPushButton" name="btn_PageSignUp_signup">
-     <property name="geometry">
-      <rect>
-       <x>290</x>
-       <y>410</y>
-       <width>271</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(43, 166, 16);
-border-radius:10px</string>
-     </property>
-     <property name="text">
-      <string>SIGN UP</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>40</y>
-       <width>81</width>
-       <height>16</height>
+       <x>170</x>
+       <y>10</y>
+       <width>771</width>
+       <height>471</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
      </property>
      <property name="text">
-      <string>First Name</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>190</y>
-       <width>81</width>
-       <height>16</height>
+       <x>180</x>
+       <y>20</y>
+       <width>201</width>
+       <height>451</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(59, 59, 59);
+border-radius: 10px</string>
      </property>
      <property name="text">
-      <string>Username</string>
+      <string/>
      </property>
     </widget>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>110</y>
-       <width>81</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>Gender</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>110</y>
-       <width>81</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>ID Number</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_9">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>40</y>
-       <width>81</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>Last Name</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_10">
-     <property name="geometry">
-      <rect>
-       <x>670</x>
-       <y>110</y>
-       <width>81</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>Phone Number</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_11">
-     <property name="geometry">
-      <rect>
-       <x>820</x>
-       <y>40</y>
-       <width>81</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>House Number</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_12">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>335</y>
-       <width>81</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>First Name</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_13">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>340</y>
-       <width>81</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>Last Name</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_14">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>260</y>
-       <width>921</width>
-       <height>41</height>
+       <x>390</x>
+       <y>20</y>
+       <width>541</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>14</pointsize>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(43, 166, 16);
-border-radius:10px;
-
+      <string notr="true">background-color: rgb(59, 59, 59);
+border-radius: 10px;
 color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
-      <string>NEXT OF KIN'S DETAILS</string>
+      <string>SIGN UP</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="led_PageSignup_FirstName">
+    <widget class="QLabel" name="lbl_pageSignUp_personalDetails">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>30</y>
-       <width>171</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="led_PageSignup_Username">
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>180</y>
-       <width>171</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="led_PageSignup_LastName">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>30</y>
-       <width>161</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="led_PageSignup_IDNumber">
-     <property name="geometry">
-      <rect>
-       <x>230</x>
+       <x>180</x>
        <y>100</y>
-       <width>171</width>
-       <height>31</height>
+       <width>201</width>
+       <height>61</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="led_PageSignup_HouseNumber">
-     <property name="geometry">
-      <rect>
-       <x>900</x>
-       <y>30</y>
-       <width>151</width>
-       <height>31</height>
-      </rect>
+     <property name="font">
+      <font>
+       <family>Cambria</family>
+       <pointsize>20</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="led_PageSignup_NOKastName">
-     <property name="geometry">
-      <rect>
-       <x>420</x>
-       <y>330</y>
-       <width>241</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="led_PageSignup_NOKFirstName">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>330</y>
-       <width>161</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="led_PageSignup_Phonenumber">
-     <property name="geometry">
-      <rect>
-       <x>750</x>
-       <y>100</y>
-       <width>161</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_15">
-     <property name="geometry">
-      <rect>
-       <x>570</x>
-       <y>30</y>
-       <width>81</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(203, 203, 203);
+border: 2px solid rgb(59, 59, 59);
+border-left:6px solid rgb(255, 6, 18);
+</string>
      </property>
      <property name="text">
-      <string>Email
-Address</string>
+      <string>Personal Details</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="led_PageSignup_EmailAddress">
+    <widget class="QLabel" name="lbl_pageSignUp_nextofkin">
      <property name="geometry">
       <rect>
-       <x>620</x>
-       <y>30</y>
-       <width>191</width>
-       <height>31</height>
+       <x>180</x>
+       <y>200</y>
+       <width>201</width>
+       <height>61</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_16">
-     <property name="geometry">
-      <rect>
-       <x>720</x>
-       <y>340</y>
-       <width>81</width>
-       <height>16</height>
-      </rect>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>20</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(203, 203, 203);
+border: 2px solid rgb(59, 59, 59);
+border-radius:5px
+</string>
      </property>
      <property name="text">
-      <string>Phone Number</string>
+      <string>Next of kin</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="led_PageSignup_NOKPhoneNumber">
+    <widget class="QStackedWidget" name="signUP">
      <property name="geometry">
       <rect>
-       <x>810</x>
-       <y>330</y>
-       <width>241</width>
-       <height>31</height>
+       <x>400</x>
+       <y>90</y>
+       <width>531</width>
+       <height>381</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(203, 203, 203);
+color: rgb(17, 17, 17);</string>
      </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pageSignUpPersonalDetails">
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>First Name *</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_firstName">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="placeholderText">
+        <string>John</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_lastName">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>40</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="placeholderText">
+        <string>Doe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>10</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>Last Name *</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_idNumber">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="placeholderText">
+        <string>12345678</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>ID/Passport Number *</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_emailAddress">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>120</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="placeholderText">
+        <string>johndoe@abc.com</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>90</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>Email address *</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_phoneNumber">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>200</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="placeholderText">
+        <string>712345678</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>170</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>Phone Number</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>200</y>
+         <width>41</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>+254</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>250</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>Occupation</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>240</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>Gender</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageSignup_personalDetailsNext">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>330</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(81, 171, 8);
+border-radius:6px</string>
+       </property>
+       <property name="text">
+        <string>NEXT</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_occupation_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>200</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>G11</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>170</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>House Number *</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>122</width>
+         <height>36</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QRadioButton" name="rbn_pageSignUp_male">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Downloads/icons8-user-male-50.png</normaloff>../../../Downloads/icons8-user-male-50.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbn_pageSignUp_female">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Downloads/icons8-female-user-64.png</normaloff>../../../Downloads/icons8-female-user-64.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="lbl_pageSignup_emailNotification">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>140</y>
+         <width>221</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageSignup_IDNumberNotification">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>140</y>
+         <width>221</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageSignup_houseNumberNotification">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>220</y>
+         <width>221</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageSignup_phoneNumberNotification">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>220</y>
+         <width>221</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageSignup_FirstNameNotification">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>221</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageSignup_lastNameNotification">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>60</y>
+         <width>221</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_occupation">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>280</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Accountant</string>
+       </property>
+      </widget>
+      <zorder>layoutWidget</zorder>
+      <zorder>label_8</zorder>
+      <zorder>label_10</zorder>
+      <zorder>label_9</zorder>
+      <zorder>label_11</zorder>
+      <zorder>label_12</zorder>
+      <zorder>label_13</zorder>
+      <zorder>label_14</zorder>
+      <zorder>label_15</zorder>
+      <zorder>btn_pageSignup_personalDetailsNext</zorder>
+      <zorder>label_16</zorder>
+      <zorder>lbl_pageSignup_emailNotification</zorder>
+      <zorder>led_pageSignup_emailAddress</zorder>
+      <zorder>lbl_pageSignup_IDNumberNotification</zorder>
+      <zorder>led_pageSignup_idNumber</zorder>
+      <zorder>lbl_pageSignup_houseNumberNotification</zorder>
+      <zorder>led_pageSignup_occupation_2</zorder>
+      <zorder>lbl_pageSignup_phoneNumberNotification</zorder>
+      <zorder>led_pageSignup_phoneNumber</zorder>
+      <zorder>lbl_pageSignup_FirstNameNotification</zorder>
+      <zorder>lbl_pageSignup_lastNameNotification</zorder>
+      <zorder>led_pageSignup_firstName</zorder>
+      <zorder>led_pageSignup_lastName</zorder>
+      <zorder>led_pageSignup_occupation</zorder>
+     </widget>
+     <widget class="QWidget" name="pageNextOfKin">
+      <widget class="QLabel" name="lbl_pageSignUp_nextofkin_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>0</y>
+         <width>481</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift Condensed</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border: 2px solid rgb(59, 59, 59);
+border-radius:5px
+</string>
+       </property>
+       <property name="text">
+        <string>Next of kin</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>First Name *</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_next_of_kinfirstName">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>100</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="placeholderText">
+        <string>John</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>70</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>Last Name *</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_next_of_kinLastName">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>100</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="placeholderText">
+        <string>John</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>140</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>Email Address</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_next_of_kinemailAddress">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>170</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>mynextofkin@abc.com</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>220</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>Relationship</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_next_of_kin_phoneNumber">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>170</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="placeholderText">
+        <string>712345678</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_27">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>170</y>
+         <width>41</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>+254</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_28">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>140</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>Phone Number *</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="combo_pageSignup_next_of_kin_relationship">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>250</y>
+         <width>151</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift Condensed</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="toolTipDuration">
+        <number>3</number>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(48, 48, 48);
+border-radius: 5px;
+color: rgb(172, 172, 172);</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Father</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mother</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Brother</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sister</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Spouse</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Child</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Close relative</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="btn_pageSignup_pageNexofKin_next">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>320</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(81, 171, 8);
+border-radius:6px</string>
+       </property>
+       <property name="text">
+        <string>Next</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_next_of_kinAddress">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>250</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:2px solid rgb(203, 203, 203);;
+border-bottom: 2px solid rgb(15, 15, 15)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Donholm, Nairobi</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_29">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>220</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageSignup_page_NextofKin_back">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>320</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius:6px;
+border: 2px solid rgb(66, 66, 255)</string>
+       </property>
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageSignup_NextOfKin_FirstNameNotification">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>221</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageSignup_nextfKin_LastNameNotification">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>120</y>
+         <width>221</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageSignup_NextofKin_PhoneNumberNotification">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>190</y>
+         <width>221</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <zorder>lbl_pageSignUp_nextofkin_2</zorder>
+      <zorder>label_18</zorder>
+      <zorder>label_20</zorder>
+      <zorder>label_25</zorder>
+      <zorder>led_pageSignup_next_of_kinemailAddress</zorder>
+      <zorder>label_26</zorder>
+      <zorder>label_27</zorder>
+      <zorder>label_28</zorder>
+      <zorder>combo_pageSignup_next_of_kin_relationship</zorder>
+      <zorder>btn_pageSignup_pageNexofKin_next</zorder>
+      <zorder>led_pageSignup_next_of_kinAddress</zorder>
+      <zorder>label_29</zorder>
+      <zorder>btn_pageSignup_page_NextofKin_back</zorder>
+      <zorder>lbl_pageSignup_NextOfKin_FirstNameNotification</zorder>
+      <zorder>led_pageSignup_next_of_kinfirstName</zorder>
+      <zorder>lbl_pageSignup_nextfKin_LastNameNotification</zorder>
+      <zorder>led_pageSignup_next_of_kinLastName</zorder>
+      <zorder>lbl_pageSignup_NextofKin_PhoneNumberNotification</zorder>
+      <zorder>led_pageSignup_next_of_kin_phoneNumber</zorder>
+     </widget>
+     <widget class="QWidget" name="pagePassword">
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>80</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>New Password</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageSignup_pagePassword_back">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>320</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius:6px;
+border: 2px solid rgb(66, 66, 255)</string>
+       </property>
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageSignUp_nextofkin_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>0</y>
+         <width>481</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift Condensed</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border: 2px solid rgb(59, 59, 59);
+border-radius:5px
+</string>
+       </property>
+       <property name="text">
+        <string>Password</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageSignup_signUp">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>190</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(81, 171, 8);
+border-radius:6px</string>
+       </property>
+       <property name="text">
+        <string>Sign Up</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_newPassword">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>110</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid rgb(15, 15, 15);
+
+border-radius: 10px;
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>mypassword</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_31">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>80</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string>Repeat Password</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageSignup_repeatPassword">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>110</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid rgb(15, 15, 15);
+
+border-radius: 10px;
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>mypassword</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pagePassword_NewpasswordNotification">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>140</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pagePassword_RepeatPasswordNotification">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>140</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(203, 203, 203);
+border-radius: 10px;
+color: rgb(17, 17, 17);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <zorder>label_21</zorder>
+      <zorder>btn_pageSignup_pagePassword_back</zorder>
+      <zorder>lbl_pageSignUp_nextofkin_3</zorder>
+      <zorder>btn_pageSignup_signUp</zorder>
+      <zorder>label_31</zorder>
+      <zorder>lbl_pagePassword_NewpasswordNotification</zorder>
+      <zorder>led_pageSignup_newPassword</zorder>
+      <zorder>lbl_pagePassword_RepeatPasswordNotification</zorder>
+      <zorder>led_pageSignup_repeatPassword</zorder>
+     </widget>
     </widget>
     <widget class="QPushButton" name="btn_PageSignUp_BacktoLogin">
      <property name="geometry">
       <rect>
-       <x>800</x>
+       <x>210</x>
        <y>410</y>
        <width>121</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:rgb(255, 32, 43);
-border-radius:10px</string>
+      <string notr="true">border-radius:6px;
+background-color: rgb(7, 65, 255);
+border: 2px solid rgb(66, 66, 255)</string>
      </property>
      <property name="text">
-      <string>BACK TO LOGIN PAGE</string>
+      <string>Back to Login Page</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_20">
+    <widget class="QLabel" name="lbl_pageSignUp_password">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>190</y>
-       <width>81</width>
-       <height>16</height>
+       <x>180</x>
+       <y>300</y>
+       <width>201</width>
+       <height>61</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(203, 203, 203);
+border: 2px solid rgb(59, 59, 59);
+border-radius:5px
+</string>
      </property>
      <property name="text">
       <string>Password</string>
      </property>
-    </widget>
-    <widget class="QLineEdit" name="led_PageSignup_Password">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>180</y>
-       <width>171</width>
-       <height>31</height>
-      </rect>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_21">
-     <property name="geometry">
-      <rect>
-       <x>680</x>
-       <y>180</y>
-       <width>81</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>Repeat
-Password</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="led_PageSignup_RepeatPassword">
-     <property name="geometry">
-      <rect>
-       <x>740</x>
-       <y>180</y>
-       <width>171</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(33, 33, 33);
-color: rgb(255, 255, 255);
-
-border-radius: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>90</y>
-       <width>151</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QRadioButton" name="rbtn_PageSignup_Male">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>MALE</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="rbtn_PageSignup_Female">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>FEMALE</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
     </widget>
    </widget>
    <widget class="QWidget" name="pageForgotPassword">
@@ -774,8 +1625,8 @@ border: 2px solid rgb(255, 255, 255);</string>
       <rect>
        <x>260</x>
        <y>40</y>
-       <width>541</width>
-       <height>381</height>
+       <width>501</width>
+       <height>331</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -787,12 +1638,12 @@ background-color: rgb(61, 61, 61);
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="label_18">
+    <widget class="QLabel" name="lbl_pageForgotPassword_email">
      <property name="geometry">
       <rect>
        <x>350</x>
        <y>120</y>
-       <width>51</width>
+       <width>131</width>
        <height>31</height>
       </rect>
      </property>
@@ -802,13 +1653,13 @@ background-color: rgb(61, 61, 61);
 </string>
      </property>
      <property name="text">
-      <string>Username</string>
+      <string>Enter your Email Address</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_pageForgotPassword_ResetPassword">
+    <widget class="QPushButton" name="btn_pageForgotPassword_continue">
      <property name="geometry">
       <rect>
-       <x>460</x>
+       <x>450</x>
        <y>230</y>
        <width>141</width>
        <height>41</height>
@@ -820,15 +1671,165 @@ border-radius:10px
 </string>
      </property>
      <property name="text">
-      <string>Reset Password</string>
+      <string>Continue</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="led_PageForgotPPassword_Username">
+    <widget class="QLineEdit" name="led_pageForgotPassword_Username">
      <property name="geometry">
       <rect>
-       <x>430</x>
-       <y>120</y>
-       <width>241</width>
+       <x>350</x>
+       <y>150</y>
+       <width>361</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(61, 61, 61);
+color: rgb(255, 255, 255);
+border: 2px solid white;
+border-radius:5px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>   abc@ayz.com</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageForgotPassword_BacktoLogin">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>40</y>
+       <width>141</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(22, 172, 5);
+border-radius:10px;
+border-bottom-left-radius: 0px
+</string>
+     </property>
+     <property name="text">
+      <string>Back to Login</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>40</y>
+       <width>501</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(108, 108, 108);
+border-radius:15px;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>60</y>
+       <width>501</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(108, 108, 108);
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_24">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>40</y>
+       <width>301</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Niagara Engraved</family>
+       <pointsize>36</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color:rgb(108, 108, 108);
+
+</string>
+     </property>
+     <property name="text">
+      <string>RESET PASSWORD</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_pageForgotPassword_emailNotification">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>170</y>
+       <width>381</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Narrow</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 44, 7);
+background-color: rgb(61, 61, 61);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageForgotPassword_verifyCode">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>310</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(255, 32, 43);
+border-radius:10px
+</string>
+     </property>
+     <property name="text">
+      <string>Verify code</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="led_pageForgotPassword_verificationCode">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>240</y>
+       <width>361</width>
        <height>31</height>
       </rect>
      </property>
@@ -839,24 +1840,117 @@ border: 2px solid white;
 border-radius:5px;</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_pageForgotPassword_BacktoLogin">
+    <widget class="QLabel" name="lbl_pageForgotPassword_verificationcode">
      <property name="geometry">
       <rect>
-       <x>460</x>
-       <y>360</y>
-       <width>141</width>
+       <x>350</x>
+       <y>210</y>
+       <width>231</width>
        <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:rgb(22, 172, 5);
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(61, 61, 61);
+</string>
+     </property>
+     <property name="text">
+      <string>Enter verification code</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_pageForgotPassword_verificationNotification">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>270</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Narrow</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 44, 7);
+background-color: rgb(61, 61, 61);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageForgotPassword_updatePassword">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>310</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(16, 255, 12);
 border-radius:10px
 </string>
      </property>
      <property name="text">
-      <string>Back to Login</string>
+      <string>Update Password</string>
      </property>
     </widget>
+    <widget class="QLineEdit" name="led_pageForgotPassword_newpassword">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>150</y>
+       <width>361</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(61, 61, 61);
+color: rgb(255, 255, 255);
+border: 2px solid white;
+border-radius:5px;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="led_pageForgotPassword_confirmPassword">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>240</y>
+       <width>361</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(61, 61, 61);
+color: rgb(255, 255, 255);
+border: 2px solid white;
+border-radius:5px;</string>
+     </property>
+    </widget>
+    <zorder>label_17</zorder>
+    <zorder>lbl_pageForgotPassword_email</zorder>
+    <zorder>label_22</zorder>
+    <zorder>label_23</zorder>
+    <zorder>btn_pageForgotPassword_BacktoLogin</zorder>
+    <zorder>label_24</zorder>
+    <zorder>lbl_pageForgotPassword_emailNotification</zorder>
+    <zorder>btn_pageForgotPassword_verifyCode</zorder>
+    <zorder>lbl_pageForgotPassword_verificationcode</zorder>
+    <zorder>lbl_pageForgotPassword_verificationNotification</zorder>
+    <zorder>led_pageForgotPassword_verificationCode</zorder>
+    <zorder>btn_pageForgotPassword_updatePassword</zorder>
+    <zorder>led_pageForgotPassword_newpassword</zorder>
+    <zorder>led_pageForgotPassword_confirmPassword</zorder>
+    <zorder>led_pageForgotPassword_Username</zorder>
+    <zorder>btn_pageForgotPassword_continue</zorder>
    </widget>
    <widget class="QWidget" name="pageHomepage">
     <widget class="QLabel" name="label_19">
@@ -906,22 +2000,5 @@ border-radius:10px
   </widget>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>led_LoginPage_Username</sender>
-   <signal>editingFinished()</signal>
-   <receiver>led_LoginPage_Username</receiver>
-   <slot>selectAll()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>404</x>
-     <y>106</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>474</x>
-     <y>125</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

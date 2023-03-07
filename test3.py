@@ -50,8 +50,6 @@ class MyWindow(QMainWindow):
         self.btn_pageForgotPassword_verifyCode.clicked.connect(self.button_verifyCode)
         self.btn_pageForgotPassword_updatePassword.clicked.connect(self.button_forgotpassword_updatepassword)
 
-        self.btn_pageSignup_personalDetailsNext.clicked.connect(self.next_signup_page)
-
     def to_pageLogin(self):
         self.stackedWidget.setCurrentWidget(self.PageLogin)
 
@@ -405,10 +403,6 @@ class MyWindow(QMainWindow):
                 self.lbl_pageForgotPassword_verificationNotification.setText("Passwords do not match!")
         else:
             self.lbl_pageForgotPassword_emailNotification.setText("Password length should be greater than 8")
-
-
-    def next_signup_page(self):
-        self.signUP.setCurrentWidget(self.pageNextOfKin)
 
 
 if __name__ == '__main__':
