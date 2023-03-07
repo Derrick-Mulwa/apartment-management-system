@@ -17,6 +17,9 @@ To use this application, follow the steps below:
 3. Install the required python dependencies using the commands: 
   * pip install pyqt5 
   * pip install pyqt5-tools 
+  * pip istall smtplb
+  * pip install mysql-connector
+  
 4. Run the application using the command 'python main.py'
 
 ## Clone the repository to your local machine.
