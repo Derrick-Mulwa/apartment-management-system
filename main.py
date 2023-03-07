@@ -13,6 +13,7 @@ class Ui_Form(object):
         self.stackedWidget = QtWidgets.QStackedWidget(Form)
         self.stackedWidget.setGeometry(QtCore.QRect(-40, 0, 1061, 521))
         self.stackedWidget.setStyleSheet("background-color:rgb(25, 25, 25)")
+        
         self.stackedWidget.setObjectName("stackedWidget")
         self.PageLogin = QtWidgets.QWidget()
         self.PageLogin.setStyleSheet("QPushButton:hover{\n"
