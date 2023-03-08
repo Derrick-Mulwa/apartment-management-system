@@ -34,7 +34,8 @@ class Ui_Form(object):
         self.pushButton.setText(_translate("Form", "send"))
 
         self.pushButton.clicked.connect(self.update_messages)
-        threading.Thread(target=self.update_messages()).start()
+        # threading.Thread(target=self.update_messages()).start()
+        self.update_messages()
 
 
     def update_messages(self):
@@ -71,6 +72,7 @@ class Ui_Form(object):
         cursor = self.textEdit.textCursor()
         cursor.movePosition(QTextCursor.End, QTextCursor.MoveAnchor)
         self.textEdit.setTextCursor(cursor)
+        self.lineEdit.clear()
         self.textEdit.setReadOnly(True)
 
 

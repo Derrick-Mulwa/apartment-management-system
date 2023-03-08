@@ -794,21 +794,223 @@ class Ui_Form(object):
         self.stackedWidget.addWidget(self.pageForgotPassword)
         self.pageHomepage = QtWidgets.QWidget()
         self.pageHomepage.setObjectName("pageHomepage")
-        self.label_19 = QtWidgets.QLabel(self.pageHomepage)
-        self.label_19.setGeometry(QtCore.QRect(30, 0, 1031, 501))
+        self.stackedWidget_2 = QtWidgets.QStackedWidget(self.pageHomepage)
+        self.stackedWidget_2.setGeometry(QtCore.QRect(190, 0, 881, 511))
+        self.stackedWidget_2.setStyleSheet("background-color: rgb(113, 113, 113);")
+        self.stackedWidget_2.setObjectName("stackedWidget_2")
+        self.pageRealHomepage = QtWidgets.QWidget()
+        self.pageRealHomepage.setObjectName("pageRealHomepage")
+        self.label_32 = QtWidgets.QLabel(self.pageRealHomepage)
+        self.label_32.setGeometry(QtCore.QRect(240, 140, 411, 131))
         font = QtGui.QFont()
-        font.setFamily("OCR A Extended")
+        font.setFamily("MS PGothic")
+        font.setPointSize(20)
+        self.label_32.setFont(font)
+        self.label_32.setStyleSheet("border-radius: 5px;\n"
+"background-color: rgb(255, 0, 0);\n"
+"color: rgb(36, 36, 36);")
+        self.label_32.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_32.setObjectName("label_32")
+        self.lbl_pageHomepage_welcomeUser_2 = QtWidgets.QLabel(self.pageRealHomepage)
+        self.lbl_pageHomepage_welcomeUser_2.setGeometry(QtCore.QRect(0, 20, 871, 71))
+        font = QtGui.QFont()
         font.setPointSize(36)
-        self.label_19.setFont(font)
-        self.label_19.setStyleSheet("background-color: rgb(34, 255, 10);")
-        self.label_19.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_pageHomepage_welcomeUser_2.setFont(font)
+        self.lbl_pageHomepage_welcomeUser_2.setStyleSheet("background-color: rgb(113, 113, 113);\n"
+"color: rgb(255, 255, 255);")
+        self.lbl_pageHomepage_welcomeUser_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_pageHomepage_welcomeUser_2.setObjectName("lbl_pageHomepage_welcomeUser_2")
+        self.stackedWidget_2.addWidget(self.pageRealHomepage)
+        self.pagePayRent = QtWidgets.QWidget()
+        self.pagePayRent.setObjectName("pagePayRent")
+        self.stackedWidget_2.addWidget(self.pagePayRent)
+        self.pageChat = QtWidgets.QWidget()
+        self.pageChat.setObjectName("pageChat")
+        self.label_33 = QtWidgets.QLabel(self.pageChat)
+        self.label_33.setGeometry(QtCore.QRect(10, 110, 181, 211))
+        self.label_33.setStyleSheet("background-color: rgb(52, 52, 52);\n"
+"border-radius: 8px")
+        self.label_33.setText("")
+        self.label_33.setObjectName("label_33")
+        self.ted_pageChat_chatbox = QtWidgets.QTextEdit(self.pageChat)
+        self.ted_pageChat_chatbox.setGeometry(QtCore.QRect(210, 10, 641, 401))
+        self.ted_pageChat_chatbox.setStyleSheet("background-color: rgb(52, 52, 52);\n"
+"border-radius: 8px;\n"
+"color: rgb(255, 255, 255);")
+        self.ted_pageChat_chatbox.setObjectName("ted_pageChat_chatbox")
+        self.led_pageChat_message = QtWidgets.QLineEdit(self.pageChat)
+        self.led_pageChat_message.setGeometry(QtCore.QRect(212, 419, 501, 41))
+        self.led_pageChat_message.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius: 8px")
+        self.led_pageChat_message.setObjectName("led_pageChat_message")
+        self.btn_pageChat_send = QtWidgets.QPushButton(self.pageChat)
+        self.btn_pageChat_send.setGeometry(QtCore.QRect(730, 422, 111, 41))
+        self.btn_pageChat_send.setStyleSheet("background-color: rgb(0, 255, 0);\n"
+"border-radius: 4px")
+        self.btn_pageChat_send.setObjectName("btn_pageChat_send")
+        self.btn_pageChat_chatWithManager = QtWidgets.QPushButton(self.pageChat)
+        self.btn_pageChat_chatWithManager.setGeometry(QtCore.QRect(30, 140, 141, 61))
+        self.btn_pageChat_chatWithManager.setStyleSheet("border-radius:5px;\n"
+"background-color: rgb(0, 255, 0);\n"
+"border-top: 2px solid rgb(81, 81, 81);\n"
+"border-bottom: 2px solid rgb(81, 81, 81)")
+        self.btn_pageChat_chatWithManager.setObjectName("btn_pageChat_chatWithManager")
+        self.btn_pageChat_chatWithOwner = QtWidgets.QPushButton(self.pageChat)
+        self.btn_pageChat_chatWithOwner.setGeometry(QtCore.QRect(30, 230, 141, 61))
+        self.btn_pageChat_chatWithOwner.setStyleSheet("border-radius:5px;\n"
+"background-color: rgb(0, 255, 0);\n"
+"border-top: 2px solid rgb(81, 81, 81);\n"
+"border-bottom: 2px solid rgb(81, 81, 81)")
+        self.btn_pageChat_chatWithOwner.setObjectName("btn_pageChat_chatWithOwner")
+        self.stackedWidget_2.addWidget(self.pageChat)
+        self.pageReport_a_complaint = QtWidgets.QWidget()
+        self.pageReport_a_complaint.setObjectName("pageReport_a_complaint")
+        self.label_34 = QtWidgets.QLabel(self.pageReport_a_complaint)
+        self.label_34.setGeometry(QtCore.QRect(160, 20, 631, 461))
+        self.label_34.setStyleSheet("border-radius:7px;\n"
+"background-color: rgb(170, 170, 127);")
+        self.label_34.setText("")
+        self.label_34.setObjectName("label_34")
+        self.label_35 = QtWidgets.QLabel(self.pageReport_a_complaint)
+        self.label_35.setGeometry(QtCore.QRect(300, 85, 91, 21))
+        self.label_35.setStyleSheet("border-radius:7px;\n"
+"background-color: rgb(170, 170, 127);")
+        self.label_35.setObjectName("label_35")
+        self.ted_pageReportAComplaint_describeComplaint = QtWidgets.QTextEdit(self.pageReport_a_complaint)
+        self.ted_pageReportAComplaint_describeComplaint.setGeometry(QtCore.QRect(250, 210, 471, 201))
+        self.ted_pageReportAComplaint_describeComplaint.setStyleSheet("border-radius:7px;\n"
+"background-color: rgb(170, 170, 127);\n"
+"color: rgb(39, 39, 39);\n"
+"border: 2px solid black")
+        self.ted_pageReportAComplaint_describeComplaint.setObjectName("ted_pageReportAComplaint_describeComplaint")
+        self.date_pageReport_a_complaint_date_of_incedence = QtWidgets.QDateEdit(self.pageReport_a_complaint)
+        self.date_pageReport_a_complaint_date_of_incedence.setGeometry(QtCore.QRect(420, 80, 181, 31))
+        self.date_pageReport_a_complaint_date_of_incedence.setStyleSheet("background-color: rgb(170, 170, 127);\n"
+"border-radius: 4px;\n"
+"border: 2px solid black")
+        self.date_pageReport_a_complaint_date_of_incedence.setObjectName("date_pageReport_a_complaint_date_of_incedence")
+        self.label_36 = QtWidgets.QLabel(self.pageReport_a_complaint)
+        self.label_36.setGeometry(QtCore.QRect(280, 129, 111, 31))
+        self.label_36.setStyleSheet("border-radius:7px;\n"
+"background-color: rgb(170, 170, 127);")
+        self.label_36.setObjectName("label_36")
+        self.combo_pageReportAComplaint_category_of_complaint = QtWidgets.QComboBox(self.pageReport_a_complaint)
+        self.combo_pageReportAComplaint_category_of_complaint.setGeometry(QtCore.QRect(420, 130, 181, 31))
+        self.combo_pageReportAComplaint_category_of_complaint.setStyleSheet("background-color: rgb(170, 170, 127);\n"
+"border-radius: 4px;\n"
+"border: 2px solid black")
+        self.combo_pageReportAComplaint_category_of_complaint.setObjectName("combo_pageReportAComplaint_category_of_complaint")
+        self.combo_pageReportAComplaint_category_of_complaint.addItem("")
+        self.combo_pageReportAComplaint_category_of_complaint.addItem("")
+        self.combo_pageReportAComplaint_category_of_complaint.addItem("")
+        self.combo_pageReportAComplaint_category_of_complaint.addItem("")
+        self.combo_pageReportAComplaint_category_of_complaint.addItem("")
+        self.combo_pageReportAComplaint_category_of_complaint.addItem("")
+        self.combo_pageReportAComplaint_category_of_complaint.addItem("")
+        self.combo_pageReportAComplaint_category_of_complaint.addItem("")
+        self.combo_pageReportAComplaint_category_of_complaint.addItem("")
+        self.label_37 = QtWidgets.QLabel(self.pageReport_a_complaint)
+        self.label_37.setGeometry(QtCore.QRect(420, 180, 111, 31))
+        self.label_37.setStyleSheet("border-radius:7px;\n"
+"background-color: rgb(170, 170, 127);")
+        self.label_37.setObjectName("label_37")
+        self.label_38 = QtWidgets.QLabel(self.pageReport_a_complaint)
+        self.label_38.setGeometry(QtCore.QRect(160, 20, 631, 41))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(26)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_38.setFont(font)
+        self.label_38.setStyleSheet("border-radius:7px;\n"
+"background-color: rgb(170, 170, 127);")
+        self.label_38.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_38.setObjectName("label_38")
+        self.btn_pageReportAComplaint_backToHomepage = QtWidgets.QPushButton(self.pageReport_a_complaint)
+        self.btn_pageReportAComplaint_backToHomepage.setGeometry(QtCore.QRect(190, 430, 111, 41))
+        self.btn_pageReportAComplaint_backToHomepage.setStyleSheet("background-color:rgb(255, 32, 43);\n"
+"border-radius:10px\n"
+"")
+        self.btn_pageReportAComplaint_backToHomepage.setObjectName("btn_pageReportAComplaint_backToHomepage")
+        self.btn_pageReportAComplaint_submitComplaint = QtWidgets.QPushButton(self.pageReport_a_complaint)
+        self.btn_pageReportAComplaint_submitComplaint.setGeometry(QtCore.QRect(570, 430, 171, 41))
+        self.btn_pageReportAComplaint_submitComplaint.setStyleSheet("background-color:rgb(67, 203, 99);\n"
+"border-radius:10px\n"
+"")
+        self.btn_pageReportAComplaint_submitComplaint.setObjectName("btn_pageReportAComplaint_submitComplaint")
+        self.label_34.raise_()
+        self.label_35.raise_()
+        self.date_pageReport_a_complaint_date_of_incedence.raise_()
+        self.label_36.raise_()
+        self.combo_pageReportAComplaint_category_of_complaint.raise_()
+        self.label_37.raise_()
+        self.ted_pageReportAComplaint_describeComplaint.raise_()
+        self.label_38.raise_()
+        self.btn_pageReportAComplaint_backToHomepage.raise_()
+        self.btn_pageReportAComplaint_submitComplaint.raise_()
+        self.stackedWidget_2.addWidget(self.pageReport_a_complaint)
+        self.label_19 = QtWidgets.QLabel(self.pageHomepage)
+        self.label_19.setGeometry(QtCore.QRect(40, -20, 151, 521))
+        self.label_19.setStyleSheet("border-radius:5px;\n"
+"background-color: rgb(0, 255, 0)")
+        self.label_19.setText("")
         self.label_19.setObjectName("label_19")
+        self.label_30 = QtWidgets.QLabel(self.pageHomepage)
+        self.label_30.setGeometry(QtCore.QRect(70, 10, 91, 91))
+        self.label_30.setStyleSheet("background-color: rgb(0, 255, 0)")
+        self.label_30.setText("")
+        self.label_30.setPixmap(QtGui.QPixmap("icons/user.png"))
+        self.label_30.setScaledContents(True)
+        self.label_30.setObjectName("label_30")
+        self.lbl_pageHomepage_welcomeUser = QtWidgets.QLabel(self.pageHomepage)
+        self.lbl_pageHomepage_welcomeUser.setGeometry(QtCore.QRect(40, 110, 151, 21))
+        self.lbl_pageHomepage_welcomeUser.setStyleSheet("background-color: rgb(0, 255, 0);\n"
+"color: rgb(20, 20, 20);")
+        self.lbl_pageHomepage_welcomeUser.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbl_pageHomepage_welcomeUser.setObjectName("lbl_pageHomepage_welcomeUser")
+        self.btn_pageHomepage_payRent = QtWidgets.QPushButton(self.pageHomepage)
+        self.btn_pageHomepage_payRent.setGeometry(QtCore.QRect(30, 180, 181, 61))
+        self.btn_pageHomepage_payRent.setStyleSheet("border-radius:5px;\n"
+"background-color: rgb(0, 255, 0);\n"
+"border-top: 3px solid rgb(81, 81, 81);\n"
+"border-bottom: 2px solid rgb(81, 81, 81)")
+        self.btn_pageHomepage_payRent.setObjectName("btn_pageHomepage_payRent")
+        self.btn_pageHomepage_chat = QtWidgets.QPushButton(self.pageHomepage)
+        self.btn_pageHomepage_chat.setGeometry(QtCore.QRect(30, 240, 181, 61))
+        self.btn_pageHomepage_chat.setStyleSheet("border-radius:5px;\n"
+"background-color: rgb(0, 255, 0);\n"
+"border-top: 2px solid rgb(81, 81, 81);\n"
+"border-bottom: 2px solid rgb(81, 81, 81)")
+        self.btn_pageHomepage_chat.setObjectName("btn_pageHomepage_chat")
+        self.btn_pageHomepage_reportacomplaint = QtWidgets.QPushButton(self.pageHomepage)
+        self.btn_pageHomepage_reportacomplaint.setGeometry(QtCore.QRect(30, 300, 181, 61))
+        self.btn_pageHomepage_reportacomplaint.setStyleSheet("border-radius:5px;\n"
+"background-color: rgb(0, 255, 0);\n"
+"border-top: 2px solid rgb(81, 81, 81);\n"
+"border-bottom: 2px solid rgb(81, 81, 81)")
+        self.btn_pageHomepage_reportacomplaint.setObjectName("btn_pageHomepage_reportacomplaint")
+        self.btn_pageHomepage_checkAvailableProperties = QtWidgets.QPushButton(self.pageHomepage)
+        self.btn_pageHomepage_checkAvailableProperties.setGeometry(QtCore.QRect(30, 360, 181, 61))
+        self.btn_pageHomepage_checkAvailableProperties.setStyleSheet("border-radius:5px;\n"
+"background-color: rgb(0, 255, 0);\n"
+"border-top: 2px solid rgb(81, 81, 81);\n"
+"border-bottom: 3px solid rgb(81, 81, 81)")
+        self.btn_pageHomepage_checkAvailableProperties.setObjectName("btn_pageHomepage_checkAvailableProperties")
         self.btn_pageHomepage_logout = QtWidgets.QPushButton(self.pageHomepage)
-        self.btn_pageHomepage_logout.setGeometry(QtCore.QRect(470, 400, 141, 41))
+        self.btn_pageHomepage_logout.setGeometry(QtCore.QRect(60, 440, 101, 41))
         self.btn_pageHomepage_logout.setStyleSheet("background-color:rgb(255, 32, 43);\n"
 "border-radius:10px\n"
 "")
         self.btn_pageHomepage_logout.setObjectName("btn_pageHomepage_logout")
+        self.label_19.raise_()
+        self.label_30.raise_()
+        self.lbl_pageHomepage_welcomeUser.raise_()
+        self.btn_pageHomepage_payRent.raise_()
+        self.btn_pageHomepage_chat.raise_()
+        self.btn_pageHomepage_reportacomplaint.raise_()
+        self.btn_pageHomepage_checkAvailableProperties.raise_()
+        self.btn_pageHomepage_logout.raise_()
+        self.stackedWidget_2.raise_()
         self.stackedWidget.addWidget(self.pageHomepage)
 
         self.retranslateUi(Form)
@@ -885,7 +1087,33 @@ class Ui_Form(object):
         self.btn_pageForgotPassword_verifyCode.setText(_translate("Form", "Verify code"))
         self.lbl_pageForgotPassword_verificationcode.setText(_translate("Form", "Enter verification code"))
         self.btn_pageForgotPassword_updatePassword.setText(_translate("Form", "Update Password"))
-        self.label_19.setText(_translate("Form", "WELCOME TO HOMEPAGE"))
+        self.label_32.setText(_translate("Form", "RENT DETAILS\n"
+"Days Remaining: 24\n"
+"Rent Arreas: KSH2400"))
+        self.lbl_pageHomepage_welcomeUser_2.setText(_translate("Form", "Welcome user"))
+        self.btn_pageChat_send.setText(_translate("Form", "SEND"))
+        self.btn_pageChat_chatWithManager.setText(_translate("Form", "Chat with Manager"))
+        self.btn_pageChat_chatWithOwner.setText(_translate("Form", "Chat with Owner"))
+        self.label_35.setText(_translate("Form", "Date of incidence"))
+        self.label_36.setText(_translate("Form", "Category of complaint"))
+        self.combo_pageReportAComplaint_category_of_complaint.setItemText(0, _translate("Form", "Noise"))
+        self.combo_pageReportAComplaint_category_of_complaint.setItemText(1, _translate("Form", "Payments"))
+        self.combo_pageReportAComplaint_category_of_complaint.setItemText(2, _translate("Form", "Maintenance and Repairs"))
+        self.combo_pageReportAComplaint_category_of_complaint.setItemText(3, _translate("Form", "House Hygene"))
+        self.combo_pageReportAComplaint_category_of_complaint.setItemText(4, _translate("Form", "Water"))
+        self.combo_pageReportAComplaint_category_of_complaint.setItemText(5, _translate("Form", "Electricity"))
+        self.combo_pageReportAComplaint_category_of_complaint.setItemText(6, _translate("Form", "Other tenants/Neighbours"))
+        self.combo_pageReportAComplaint_category_of_complaint.setItemText(7, _translate("Form", "House Management"))
+        self.combo_pageReportAComplaint_category_of_complaint.setItemText(8, _translate("Form", "Other"))
+        self.label_37.setText(_translate("Form", "Describe Complaint"))
+        self.label_38.setText(_translate("Form", "REPORT A COMPLAINT"))
+        self.btn_pageReportAComplaint_backToHomepage.setText(_translate("Form", "Back to homepage"))
+        self.btn_pageReportAComplaint_submitComplaint.setText(_translate("Form", "SUBMIT COMPLAINT"))
+        self.lbl_pageHomepage_welcomeUser.setText(_translate("Form", "Welcome user"))
+        self.btn_pageHomepage_payRent.setText(_translate("Form", "Pay Rent"))
+        self.btn_pageHomepage_chat.setText(_translate("Form", "Chat"))
+        self.btn_pageHomepage_reportacomplaint.setText(_translate("Form", "Report a complaint"))
+        self.btn_pageHomepage_checkAvailableProperties.setText(_translate("Form", "Check available properties"))
         self.btn_pageHomepage_logout.setText(_translate("Form", "LOGOUT"))
 
         # Mambo yangu
@@ -894,9 +1122,9 @@ class Ui_Form(object):
         # import smtplib
 
         self.db = mysql.connector.connect(
-            user="root",
-            host="localhost",
-            password="root")
+                user="root",
+                host="localhost",
+                password="root")
 
         self.mycursor = self.db.cursor()
 
@@ -931,389 +1159,393 @@ class Ui_Form(object):
         self.btn_pageSignup_page_NextofKin_back.clicked.connect(self.btn_pageSignup_page_NextofKin_back_clicked)
 
     def to_pageLogin(self):
-        self.stackedWidget.setCurrentWidget(self.PageLogin)
+            self.stackedWidget.setCurrentWidget(self.PageLogin)
 
     def to_pageSignup(self):
-        self.stackedWidget.setCurrentWidget(self.pageSignUp)
+            self.stackedWidget.setCurrentWidget(self.pageSignUp)
 
     def to_pageForgotpassword(self):
-        self.stackedWidget.setCurrentWidget(self.pageForgotPassword)
+            self.stackedWidget.setCurrentWidget(self.pageForgotPassword)
 
     def to_pageHomepage(self):
-        self.stackedWidget.setCurrentWidget(self.pageHomepage)
+            self.stackedWidget.setCurrentWidget(self.pageHomepage)
 
     def get_password(self, user):
-        try:
-            self.mycursor.execute(f"SELECT user_password FROM apartment_name.tenants_logins WHERE id_number = {user};")
-            password = self.mycursor.fetchall()[0][0]
-            return password
-        except:
             try:
-                self.mycursor.execute(
-                    f"SELECT user_password FROM apartment_name.tenants_logins WHERE house_number = '{user}';")
-                password = self.mycursor.fetchall()[0][0]
-                return password
-            except:
-                try:
                     self.mycursor.execute(
-                        f"SELECT user_password FROM apartment_name.tenants_logins WHERE phone_number = {user};")
+                            f"SELECT user_password FROM apartment_name.tenants_logins WHERE id_number = {user};")
                     password = self.mycursor.fetchall()[0][0]
                     return password
-                except:
+            except:
                     try:
-                        self.mycursor.execute(
-                            f"SELECT user_password FROM apartment_name.tenants_logins WHERE email_address = '{user}';")
-
-                        password = self.mycursor.fetchall()[0][0]
-                        return password
+                            self.mycursor.execute(
+                                    f"SELECT user_password FROM apartment_name.tenants_logins WHERE house_number = '{user}';")
+                            password = self.mycursor.fetchall()[0][0]
+                            return password
                     except:
-                        password = "None"
-                        return password
+                            try:
+                                    self.mycursor.execute(
+                                            f"SELECT user_password FROM apartment_name.tenants_logins WHERE phone_number = {user};")
+                                    password = self.mycursor.fetchall()[0][0]
+                                    return password
+                            except:
+                                    try:
+                                            self.mycursor.execute(
+                                                    f"SELECT user_password FROM apartment_name.tenants_logins WHERE email_address = '{user}';")
+
+                                            password = self.mycursor.fetchall()[0][0]
+                                            return password
+                                    except:
+                                            password = "None"
+                                            return password
 
     def authentic_username(self, username):
-        autenticity = self.get_password(username)
-        if autenticity == "None":
-            return False
-        else:
-            return True
+            autenticity = self.get_password(username)
+            if autenticity == "None":
+                    return False
+            else:
+                    return True
 
     def led_authentic_username(self):
-        is_username_authentic = self.authentic_username(self.led_LoginPage_Username.text())
-        print(self.led_LoginPage_Username.text())
-        print(is_username_authentic)
+            is_username_authentic = self.authentic_username(self.led_LoginPage_Username.text())
+            print(self.led_LoginPage_Username.text())
+            print(is_username_authentic)
 
-        if is_username_authentic is False:
-            self.led_LoginPage_Username.setStyleSheet("background-color: rgb(33, 33, 33);"
-                                                      "color: rgb(255, 255, 255);"
-                                                      "border: 2px solid red;"
-                                                      "border-radius: 10px;")
-            self.lbl_pageLogin_username.setText("Username does not exist")
-        else:
-            self.led_LoginPage_Username.setStyleSheet("background-color: rgb(33, 33, 33);"
-                                                      "color: rgb(255, 255, 255);"
-                                                      "border: 2px solid rgb(79, 223, 12);"
-                                                      "border-radius: 10px;")
-            self.lbl_pageLogin_username.setText("")
+            if is_username_authentic is False:
+                    self.led_LoginPage_Username.setStyleSheet("background-color: rgb(33, 33, 33);"
+                                                              "color: rgb(255, 255, 255);"
+                                                              "border: 2px solid red;"
+                                                              "border-radius: 10px;")
+                    self.lbl_pageLogin_username.setText("Username does not exist")
+            else:
+                    self.led_LoginPage_Username.setStyleSheet("background-color: rgb(33, 33, 33);"
+                                                              "color: rgb(255, 255, 255);"
+                                                              "border: 2px solid rgb(79, 223, 12);"
+                                                              "border-radius: 10px;")
+                    self.lbl_pageLogin_username.setText("")
 
     def loginpage_btnlogin(self):
-        self.username = self.led_LoginPage_Username.text()
-        print(self.username)
-        self.entered_password = self.led_LoginPage_Password.text()
+            self.username = self.led_LoginPage_Username.text()
+            print(self.username)
+            self.entered_password = self.led_LoginPage_Password.text()
 
-        self.user_password = self.get_password(self.username)
+            self.user_password = self.get_password(self.username)
 
-        if self.user_password == self.entered_password:
-            self.led_LoginPage_Password.setStyleSheet("background-color: rgb(33, 33, 33);"
-                                                      "color: rgb(255, 255, 255);"
-                                                      "border: 2px solid white;"
-                                                      "border-radius: 10px;")
-            self.lbl_pageLogin_password.setText("")
+            if self.user_password == self.entered_password:
+                    self.led_LoginPage_Password.setStyleSheet("background-color: rgb(33, 33, 33);"
+                                                              "color: rgb(255, 255, 255);"
+                                                              "border: 2px solid white;"
+                                                              "border-radius: 10px;")
+                    self.lbl_pageLogin_password.setText("")
 
-            self.to_pageHomepage()
-
-        else:
-            if self.user_password == "None":
-                self.lbl_pageLogin_password.setText("You entered a username that does not exist!")
-                self.lbl_pageLogin_password.adjustSize()
+                    self.to_pageHomepage()
 
             else:
-                self.led_LoginPage_Password.setStyleSheet("background-color: rgb(33, 33, 33);"
-                                                          "color: rgb(255, 255, 255);"
-                                                          "border: 2px solid red;"
-                                                          "border-radius: 10px;")
-                self.lbl_pageLogin_password.setText("Incorrect Password. Please try again!")
-                self.lbl_pageLogin_password.adjustSize()
+                    if self.user_password == "None":
+                            self.lbl_pageLogin_password.setText("You entered a username that does not exist!")
+                            self.lbl_pageLogin_password.adjustSize()
+
+                    else:
+                            self.led_LoginPage_Password.setStyleSheet("background-color: rgb(33, 33, 33);"
+                                                                      "color: rgb(255, 255, 255);"
+                                                                      "border: 2px solid red;"
+                                                                      "border-radius: 10px;")
+                            self.lbl_pageLogin_password.setText("Incorrect Password. Please try again!")
+                            self.lbl_pageLogin_password.adjustSize()
 
     def led_authentic_username_forgotpassword(self):
-        username = self.led_PageForgotPPassword_Username.text()
-        legit = self.authentic_username(username)
-        if legit is True:
-            self.lbl_resetPassword_usernameNotiication = QtWidgets.QLabel(self.pageForgotPassword)
-            self.lbl_resetPassword_usernameNotiication.setGeometry(QtCore.QRect(440, 100, 241, 31))
-            self.lbl_resetPassword_usernameNotiication.setStyleSheet("color:rgb(23, 255, 11);\n"
-                                                                     "background-color: rgb(61, 61, 61);\n"
-                                                                     "")
-            self.lbl_resetPassword_usernameNotiication.setObjectName("lbl_resetPassword_usernameNotiication")
-            self.lbl_resetPassword_usernameNotiication.setText("OTP code has been sent to your email address")
+            username = self.led_PageForgotPPassword_Username.text()
+            legit = self.authentic_username(username)
+            if legit is True:
+                    self.lbl_resetPassword_usernameNotiication = QtWidgets.QLabel(self.pageForgotPassword)
+                    self.lbl_resetPassword_usernameNotiication.setGeometry(QtCore.QRect(440, 100, 241, 31))
+                    self.lbl_resetPassword_usernameNotiication.setStyleSheet("color:rgb(23, 255, 11);\n"
+                                                                             "background-color: rgb(61, 61, 61);\n"
+                                                                             "")
+                    self.lbl_resetPassword_usernameNotiication.setObjectName("lbl_resetPassword_usernameNotiication")
+                    self.lbl_resetPassword_usernameNotiication.setText("OTP code has been sent to your email address")
 
     def get_otp(self):
-        otp = ""
-        for i in range(6):
-            otp = otp + (str(random.randint(0, 9)))
+            otp = ""
+            for i in range(6):
+                    otp = otp + (str(random.randint(0, 9)))
 
-        return otp
+            return otp
 
     def sendmail(self, send_email_address, firstName, otp):
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        email_password = "gqtkvoyoqagcfhby"
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            email_password = "gqtkvoyoqagcfhby"
 
-        server.ehlo()
-        server.starttls()
-        server.ehlo()
-        server.login("derrickmulwa.programming@gmail.com", email_password)
-        company = "Friends Corner"
-        body = f"Dear {firstName},\n\nWe have received a request to reset " \
-               f"the password for your account. To proceed with this request, use the following verification " \
-               f"code:\n\n{otp}\n\nPlease enter this code on the password reset page to confirm your identity and continue" \
-               f" with the password reset process.\nIf you did not make this request, please disregard this email and " \
-               f"ensure that your account is secure. Thank you for using our service.\n\nBest regards,\n" \
-               f"{company}."
+            server.ehlo()
+            server.starttls()
+            server.ehlo()
+            server.login("derrickmulwa.programming@gmail.com", email_password)
+            company = "Friends Corner"
+            body = f"Dear {firstName},\n\nWe have received a request to reset " \
+                   f"the password for your account. To proceed with this request, use the following verification " \
+                   f"code:\n\n{otp}\n\nPlease enter this code on the password reset page to confirm your identity and continue" \
+                   f" with the password reset process.\nIf you did not make this request, please disregard this email and " \
+                   f"ensure that your account is secure. Thank you for using our service.\n\nBest regards,\n" \
+                   f"{company}."
 
-        subject = "RESET YOUR FRIENDSCORNER PASSWORD."
+            subject = "RESET YOUR FRIENDSCORNER PASSWORD."
 
-        message = f'subject: {subject} \n\n{body}'
+            message = f'subject: {subject} \n\n{body}'
 
-        server.sendmail(
-            "derrickmulwa.programming@gmail.com",
-            send_email_address,
-            message)
+            server.sendmail(
+                    "derrickmulwa.programming@gmail.com",
+                    send_email_address,
+                    message)
 
     def button_continue(self):
-        self.reset_password_step = 1
-        self.resetpass_send_email_address = self.led_pageForgotPassword_Username.text()
-        try:
-            self.mycursor.execute(f"SELECT EXISTS(SELECT * FROM apartment_name.tenants_logins "
-                                  f"WHERE email_address = '{self.resetpass_send_email_address}');")
-            exists = str(self.mycursor.fetchall()[0][0])
-            if exists == "1":
-                self.lbl_pageForgotPassword_emailNotification.setText("Verification code has been sent to your email")
-                self.lbl_pageForgotPassword_emailNotification.setStyleSheet("color: rgb(56, 255, 12);"
-                                                                            "background-color: rgb(61, 61, 61);")
+            self.reset_password_step = 1
+            self.resetpass_send_email_address = self.led_pageForgotPassword_Username.text()
+            try:
+                    self.mycursor.execute(f"SELECT EXISTS(SELECT * FROM apartment_name.tenants_logins "
+                                          f"WHERE email_address = '{self.resetpass_send_email_address}');")
+                    exists = str(self.mycursor.fetchall()[0][0])
+                    if exists == "1":
+                            self.lbl_pageForgotPassword_emailNotification.setText(
+                                    "Verification code has been sent to your email")
+                            self.lbl_pageForgotPassword_emailNotification.setStyleSheet("color: rgb(56, 255, 12);"
+                                                                                        "background-color: rgb(61, 61, 61);")
 
-                try:
-                    self.led_pageForgotPassword_Username.setStyleSheet("background-color: rgb(61, 61, 61);"
-                                                                       "color: rgb(255, 255, 255);"
-                                                                       "border: 2px solid rgb(100, 197, 26);"
-                                                                       "border-radius:5px;")
-                    self.verification_code = self.get_otp()
-                    self.mycursor.execute(f"SELECT first_name FROM apartment_name.details "
-                                          f"WHERE email_address = '{self.resetpass_send_email_address}';")
-                    self.resetpass_first_name = str(self.mycursor.fetchall()[0][0])
-                    self.sendmail(self.resetpass_send_email_address, self.resetpass_first_name, self.verification_code)
-                    self.btn_pageForgotPassword_continue.hide()
-                    self.lbl_pageForgotPassword_verificationcode.show()
-                    self.led_pageForgotPassword_verificationCode.show()
-                    self.btn_pageForgotPassword_verifyCode.show()
-                    self.lbl_pageForgotPassword_verificationcode.setText("Enter Verification Code")
-                except:
+                            try:
+                                    self.led_pageForgotPassword_Username.setStyleSheet(
+                                            "background-color: rgb(61, 61, 61);"
+                                            "color: rgb(255, 255, 255);"
+                                            "border: 2px solid rgb(100, 197, 26);"
+                                            "border-radius:5px;")
+                                    self.verification_code = self.get_otp()
+                                    self.mycursor.execute(f"SELECT first_name FROM apartment_name.details "
+                                                          f"WHERE email_address = '{self.resetpass_send_email_address}';")
+                                    self.resetpass_first_name = str(self.mycursor.fetchall()[0][0])
+                                    self.sendmail(self.resetpass_send_email_address, self.resetpass_first_name,
+                                                  self.verification_code)
+                                    self.btn_pageForgotPassword_continue.hide()
+                                    self.lbl_pageForgotPassword_verificationcode.show()
+                                    self.led_pageForgotPassword_verificationCode.show()
+                                    self.btn_pageForgotPassword_verifyCode.show()
+                                    self.lbl_pageForgotPassword_verificationcode.setText("Enter Verification Code")
+                            except:
+                                    self.lbl_pageForgotPassword_emailNotification.setText(
+                                            "There was an error sending verification code."
+                                            "Please check your internet.")
+
+                                    self.lbl_pageForgotPassword_emailNotification.setStyleSheet(
+                                            "color: rgb(255, 44, 7);"
+                                            "background-color: rgb(61, 61, 61);")
+
+                    else:
+                            self.lbl_pageForgotPassword_emailNotification.setText(
+                                    "Email address is not linked to any account")
+                            self.lbl_pageForgotPassword_emailNotification.setStyleSheet("color: rgb(255, 44, 7);"
+                                                                                        "background-color: rgb(61, 61, 61);")
+
+            except:
                     self.lbl_pageForgotPassword_emailNotification.setText(
-                        "There was an error sending verification code."
-                        "Please check your internet connection.")
-                    self.lbl_pageForgotPassword_emailNotification.adjustSize()
+                            "An error occurred! Please restart the application")
                     self.lbl_pageForgotPassword_emailNotification.setStyleSheet("color: rgb(255, 44, 7);"
                                                                                 "background-color: rgb(61, 61, 61);")
 
-            else:
-                self.lbl_pageForgotPassword_emailNotification.setText("Email address is not linked to any account")
-                self.lbl_pageForgotPassword_emailNotification.setStyleSheet("color: rgb(255, 44, 7);"
-                                                                            "background-color: rgb(61, 61, 61);")
-
-        except:
-            self.lbl_pageForgotPassword_emailNotification.setText("An error occurred! Please restart the application")
-            self.lbl_pageForgotPassword_emailNotification.setStyleSheet("color: rgb(255, 44, 7);"
-                                                                        "background-color: rgb(61, 61, 61);")
-
     def button_verifyCode(self):
-        self.reset_password_step = 2
-        user_code = self.led_pageForgotPassword_verificationCode.text()
+            self.reset_password_step = 2
+            user_code = self.led_pageForgotPassword_verificationCode.text()
 
-        if user_code == self.verification_code:
-            self.led_pageForgotPassword_verificationCode.hide()
-            self.led_pageForgotPassword_Username.hide()
-            self.btn_pageForgotPassword_verifyCode.hide()
+            if user_code == self.verification_code:
+                    self.led_pageForgotPassword_verificationCode.hide()
+                    self.led_pageForgotPassword_Username.hide()
+                    self.btn_pageForgotPassword_verifyCode.hide()
 
-            self.led_pageForgotPassword_newpassword.show()
-            self.led_pageForgotPassword_confirmPassword.show()
-            self.btn_pageForgotPassword_updatePassword.show()
+                    self.led_pageForgotPassword_newpassword.show()
+                    self.led_pageForgotPassword_confirmPassword.show()
+                    self.btn_pageForgotPassword_updatePassword.show()
 
-            self.lbl_pageForgotPassword_verificationNotification.setText("")
-            self.lbl_pageForgotPassword_emailNotification.setText("")
-            self.lbl_pageForgotPassword_email.setText("New password")
-            self.lbl_pageForgotPassword_verificationcode.setText("Repeat Password")
+                    self.lbl_pageForgotPassword_verificationNotification.setText("")
+                    self.lbl_pageForgotPassword_emailNotification.setText("")
+                    self.lbl_pageForgotPassword_email.setText("New password")
+                    self.lbl_pageForgotPassword_verificationcode.setText("Repeat Password")
 
-        else:
-            self.lbl_pageForgotPassword_verificationNotification.setText("Incorrect code!")
+            else:
+                    self.lbl_pageForgotPassword_verificationNotification.setText("Incorrect code!")
 
     def button_pageForgotPassword_BacktoLogin(self):
-        try:
-            if self.reset_password_step == 0:
-                self.to_pageLogin()
-            elif self.reset_password_step == 1 or self.lbl_pageForgotPassword_verificationcode.text() == "Incorrect code!":
-                self.led_pageForgotPassword_Username.show()
-                self.lbl_pageForgotPassword_email.setText("Enter your Email Address")
-                self.lbl_pageForgotPassword_emailNotification.setText("")
-                self.led_pageForgotPassword_Username.clear()
-                self.btn_pageForgotPassword_continue.show()
-                self.stackedWidget.setCurrentWidget(self.PageLogin)
-                self.lbl_pageForgotPassword_verificationcode.hide()
-                self.btn_pageForgotPassword_verifyCode.hide()
+            try:
+                    if self.reset_password_step == 0:
+                            self.to_pageLogin()
+                    elif self.reset_password_step == 1 or self.lbl_pageForgotPassword_verificationcode.text() == "Incorrect code!":
+                            self.led_pageForgotPassword_Username.show()
+                            self.lbl_pageForgotPassword_email.setText("Enter your Email Address")
+                            self.lbl_pageForgotPassword_emailNotification.setText("")
+                            self.led_pageForgotPassword_Username.clear()
+                            self.btn_pageForgotPassword_continue.show()
+                            self.stackedWidget.setCurrentWidget(self.PageLogin)
+                            self.lbl_pageForgotPassword_verificationcode.hide()
+                            self.btn_pageForgotPassword_verifyCode.hide()
 
-                self.led_pageForgotPassword_verificationCode.hide()
+                            self.led_pageForgotPassword_verificationCode.hide()
 
-                self.led_pageForgotPassword_Username.show()
-                self.lbl_pageForgotPassword_email.setText("Enter your Email Address")
-                self.lbl_pageForgotPassword_emailNotification.setText("")
-                self.led_pageForgotPassword_Username.clear()
-                self.btn_pageForgotPassword_continue.show()
-                self.stackedWidget.setCurrentWidget(self.PageLogin)
+                            self.led_pageForgotPassword_Username.show()
+                            self.lbl_pageForgotPassword_email.setText("Enter your Email Address")
+                            self.lbl_pageForgotPassword_emailNotification.setText("")
+                            self.led_pageForgotPassword_Username.clear()
+                            self.btn_pageForgotPassword_continue.show()
+                            self.stackedWidget.setCurrentWidget(self.PageLogin)
 
-            elif self.reset_password_step == 2:
-                self.lbl_pageForgotPassword_verificationcode.hide()
-                self.btn_pageForgotPassword_updatePassword.hide()
-                self.led_pageForgotPassword_newpassword.hide()
-                self.led_pageForgotPassword_confirmPassword.hide()
+                    elif self.reset_password_step == 2:
+                            self.lbl_pageForgotPassword_verificationcode.hide()
+                            self.btn_pageForgotPassword_updatePassword.hide()
+                            self.led_pageForgotPassword_newpassword.hide()
+                            self.led_pageForgotPassword_confirmPassword.hide()
 
-                self.led_pageForgotPassword_Username.show()
-                self.lbl_pageForgotPassword_email.setText("Enter your Email Address")
-                self.lbl_pageForgotPassword_emailNotification.setText("")
-                self.lbl_pageForgotPassword_verificationNotification.setText("")
+                            self.led_pageForgotPassword_Username.show()
+                            self.lbl_pageForgotPassword_email.setText("Enter your Email Address")
+                            self.lbl_pageForgotPassword_emailNotification.setText("")
+                            self.lbl_pageForgotPassword_verificationNotification.setText("")
 
-                self.led_pageForgotPassword_Username.clear()
-                self.btn_pageForgotPassword_continue.show()
-                self.stackedWidget.setCurrentWidget(self.PageLogin)
+                            self.led_pageForgotPassword_Username.clear()
+                            self.btn_pageForgotPassword_continue.show()
+                            self.stackedWidget.setCurrentWidget(self.PageLogin)
 
-        except:
-            self.led_pageForgotPassword_confirmPassword.hide()
-            self.led_pageForgotPassword_confirmPassword.hide()
-            self.lbl_pageForgotPassword_verificationcode.setText("")
-            self.led_pageForgotPassword_Username.show()
-            self.lbl_pageForgotPassword_email.setText("Enter your Email Address")
-            self.led_pageForgotPassword_Username.clear()
-            self.lbl_resetPassword_usernameNotiication.setText("")
-            self.btn_pageForgotPassword_continue.show()
-            self.stackedWidget.setCurrentWidget(self.PageLogin)
+            except:
+                    self.led_pageForgotPassword_confirmPassword.hide()
+                    self.led_pageForgotPassword_confirmPassword.hide()
+                    self.lbl_pageForgotPassword_verificationcode.setText("")
+                    self.led_pageForgotPassword_Username.show()
+                    self.lbl_pageForgotPassword_email.setText("Enter your Email Address")
+                    self.led_pageForgotPassword_Username.clear()
+                    self.lbl_resetPassword_usernameNotiication.setText("")
+                    self.btn_pageForgotPassword_continue.show()
+                    self.stackedWidget.setCurrentWidget(self.PageLogin)
 
     def goodpass(self):
-        if len(self.led_pageForgotPassword_newpassword.text()) >= 8:
-            self.led_pageForgotPassword_newpassword.setStyleSheet("background-color: rgb(61, 61, 61);"
-                                                                  "color: rgb(255, 255, 255);"
-                                                                  "border: 2px solid rgb(100, 197, 26);"
-                                                                  "border-radius:5px;")
-            self.lbl_pageForgotPassword_emailNotification.setText("Strong Password")
-            self.lbl_pageForgotPassword_emailNotification.setStyleSheet("color: rgb(100, 197, 26);"
-                                                                        "background-color: rgb(61, 61, 61);")
-        else:
-            self.led_pageForgotPassword_newpassword.setStyleSheet("background-color: rgb(61, 61, 61);"
-                                                                  "color: rgb(255, 255, 255);"
-                                                                  "border: 2px solid red;"
-                                                                  "border-radius:5px;")
+            if len(self.led_pageForgotPassword_newpassword.text()) >= 8:
+                    self.led_pageForgotPassword_newpassword.setStyleSheet("background-color: rgb(61, 61, 61);"
+                                                                          "color: rgb(255, 255, 255);"
+                                                                          "border: 2px solid rgb(100, 197, 26);"
+                                                                          "border-radius:5px;")
+                    self.lbl_pageForgotPassword_emailNotification.setText("Strong Password")
+                    self.lbl_pageForgotPassword_emailNotification.setStyleSheet("color: rgb(100, 197, 26);"
+                                                                                "background-color: rgb(61, 61, 61);")
+            else:
+                    self.led_pageForgotPassword_newpassword.setStyleSheet("background-color: rgb(61, 61, 61);"
+                                                                          "color: rgb(255, 255, 255);"
+                                                                          "border: 2px solid red;"
+                                                                          "border-radius:5px;")
 
-            self.lbl_pageForgotPassword_emailNotification.setText("Password length should be greater than 8 characters")
-            self.lbl_pageForgotPassword_emailNotification.setStyleSheet("color: rgb(255, 44, 7);"
-                                                                        "background-color: rgb(61, 61, 61);")
+                    self.lbl_pageForgotPassword_emailNotification.setText(
+                            "Password length should be greater than 8 characters")
+                    self.lbl_pageForgotPassword_emailNotification.setStyleSheet("color: rgb(255, 44, 7);"
+                                                                                "background-color: rgb(61, 61, 61);")
 
     def button_forgotpassword_updatepassword(self):
-        new_password = self.led_pageForgotPassword_newpassword.text()
-        confirm_password = self.led_pageForgotPassword_confirmPassword.text()
+            new_password = self.led_pageForgotPassword_newpassword.text()
+            confirm_password = self.led_pageForgotPassword_confirmPassword.text()
 
-        if len(new_password) >= 8:
-            self.led_pageForgotPassword_newpassword.setStyleSheet("background-color: rgb(61, 61, 61);"
-                                                                  "color: rgb(255, 255, 255);"
-                                                                  "border: 2px solid rgb(100, 197, 26);"
-                                                                  "border-radius:5px;")
-            if new_password == confirm_password:
-                print(self.resetpass_send_email_address)
-                self.mycursor.execute(f"SELECT id_number FROM apartment_name.tenants_logins "
-                                      f"WHERE email_address = '{self.resetpass_send_email_address}';")
+            if len(new_password) >= 8:
+                    self.led_pageForgotPassword_newpassword.setStyleSheet("background-color: rgb(61, 61, 61);"
+                                                                          "color: rgb(255, 255, 255);"
+                                                                          "border: 2px solid rgb(100, 197, 26);"
+                                                                          "border-radius:5px;")
+                    if new_password == confirm_password:
+                            print(self.resetpass_send_email_address)
+                            self.mycursor.execute(f"SELECT id_number FROM apartment_name.tenants_logins "
+                                                  f"WHERE email_address = '{self.resetpass_send_email_address}';")
 
-                primary_key = str(self.mycursor.fetchall()[0][0])
-                print(f"Done here: {primary_key}")
+                            primary_key = str(self.mycursor.fetchall()[0][0])
+                            print(f"Done here: {primary_key}")
 
-                self.mycursor.execute(f"UPDATE apartment_name.tenants_logins SET user_password = '{new_password}' "
-                                      f"WHERE id_number = '{primary_key}';")
-                self.db.commit()
+                            self.mycursor.execute(
+                                    f"UPDATE apartment_name.tenants_logins SET user_password = '{new_password}' "
+                                    f"WHERE id_number = '{primary_key}';")
+                            self.db.commit()
 
-                server = smtplib.SMTP('smtp.gmail.com', 587)
-                email_password = "gqtkvoyoqagcfhby"
+                            server = smtplib.SMTP('smtp.gmail.com', 587)
+                            email_password = "gqtkvoyoqagcfhby"
 
-                server.ehlo()
-                server.starttls()
-                server.ehlo()
-                server.login("derrickmulwa.programming@gmail.com", email_password)
-                company = "Friends Corner"
+                            server.ehlo()
+                            server.starttls()
+                            server.ehlo()
+                            server.login("derrickmulwa.programming@gmail.com", email_password)
+                            company = "Friends Corner"
 
-                body = f"Dear {self.resetpass_first_name} \n\nThis email is to confirm that the password for your " \
-                       f"account has been successfully" \
-                       f" changed. If you did not make this change, please contact our support team immediately. \n\nIf " \
-                       f"you did make this change, please keep your new password secure and do not share it with anyone." \
-                       f" We recommend that you choose a strong, unique password that is not easy to guess and update it" \
-                       f" regularly to ensure the security of your account. \n\nIf you experience any issues logging in " \
-                       f"with your new password, please contact our support team for assistance. Thank you for using " \
-                       f"our service. \n\nBest regards,\n{company}"
+                            body = f"Dear {self.resetpass_first_name} \n\nThis email is to confirm that the password for your " \
+                                   f"account has been successfully" \
+                                   f" changed. If you did not make this change, please contact our support team immediately. \n\nIf " \
+                                   f"you did make this change, please keep your new password secure and do not share it with anyone." \
+                                   f" We recommend that you choose a strong, unique password that is not easy to guess and update it" \
+                                   f" regularly to ensure the security of your account. \n\nIf you experience any issues logging in " \
+                                   f"with your new password, please contact our support team for assistance. Thank you for using " \
+                                   f"our service. \n\nBest regards,\n{company}"
 
-                subject = "FRIENDSCORNER'S PASSWORD CHANGE."
+                            subject = "FRIENDSCORNER'S PASSWORD CHANGE."
 
-                message = f'subject: {subject} \n\n{body}'
+                            message = f'subject: {subject} \n\n{body}'
 
-                server.sendmail(
-                    "derrickmulwa.programming@gmail.com",
-                    self.resetpass_send_email_address,
-                    message)
+                            server.sendmail(
+                                    "derrickmulwa.programming@gmail.com",
+                                    self.resetpass_send_email_address,
+                                    message)
 
-                self.stackedWidget.setCurrentWidget(self.PageLogin)
-                self.lbl_pageForgotPassword_verificationNotification.setText("Password changed successfully!")
+                            self.stackedWidget.setCurrentWidget(self.PageLogin)
+                            self.lbl_pageForgotPassword_verificationNotification.setText(
+                                    "Password changed successfully!")
 
-                self.lbl_pageForgotPassword_verificationcode.hide()
-                self.btn_pageForgotPassword_updatePassword.hide()
-                self.led_pageForgotPassword_newpassword.hide()
-                self.led_pageForgotPassword_confirmPassword.hide()
+                            self.lbl_pageForgotPassword_verificationcode.hide()
+                            self.btn_pageForgotPassword_updatePassword.hide()
+                            self.led_pageForgotPassword_newpassword.hide()
+                            self.led_pageForgotPassword_confirmPassword.hide()
 
-                self.led_pageForgotPassword_Username.show()
-                self.lbl_pageForgotPassword_email.setText("Enter your Email Address")
-                self.lbl_pageForgotPassword_emailNotification.setText("")
-                self.lbl_pageForgotPassword_verificationNotification.setText("")
+                            self.led_pageForgotPassword_Username.show()
+                            self.lbl_pageForgotPassword_email.setText("Enter your Email Address")
+                            self.lbl_pageForgotPassword_emailNotification.setText("")
+                            self.lbl_pageForgotPassword_verificationNotification.setText("")
 
-                self.led_pageForgotPassword_Username.clear()
-                self.btn_pageForgotPassword_continue.show()
+                            self.led_pageForgotPassword_Username.clear()
+                            self.btn_pageForgotPassword_continue.show()
 
-                self.stackedWidget.setCurrentWidget(self.PageLogin)
+                            self.stackedWidget.setCurrentWidget(self.PageLogin)
 
+                    else:
+                            self.lbl_pageForgotPassword_verificationNotification.setText("Passwords do not match!")
             else:
-                self.lbl_pageForgotPassword_verificationNotification.setText("Passwords do not match!")
-        else:
-            self.lbl_pageForgotPassword_emailNotification.setText("Password length should be greater than 8")
+                    self.lbl_pageForgotPassword_emailNotification.setText("Password length should be greater than 8")
 
     def next_signup_page(self):
-        self.signUP.setCurrentWidget(self.pageNextOfKin)
-        self.lbl_pageSignUp_nextofkin.setStyleSheet("background-color: rgb(203, 203, 203);"
-                                                    "border: 2px solid rgb(59, 59, 59);"
-                                                    "border-left:6px solid rgb(255, 6, 18);")
-        self.lbl_pageSignUp_personalDetails.setStyleSheet("background-color: rgb(203, 203, 203);"
-                                                          "border: 2px solid rgb(59, 59, 59);"
-                                                          "border-radius:5px")
+            self.signUP.setCurrentWidget(self.pageNextOfKin)
+            self.lbl_pageSignUp_nextofkin.setStyleSheet("background-color: rgb(203, 203, 203);"
+                                                        "border: 2px solid rgb(59, 59, 59);"
+                                                        "border-left:6px solid rgb(255, 6, 18);")
+            self.lbl_pageSignUp_personalDetails.setStyleSheet("background-color: rgb(203, 203, 203);"
+                                                              "border: 2px solid rgb(59, 59, 59);"
+                                                              "border-radius:5px")
 
     def btn_pageSignup_pageNexofKin_next_clicked(self):
-        self.signUP.setCurrentWidget(self.pagePassword)
-        self.lbl_pageSignUp_password.setStyleSheet("background-color: rgb(203, 203, 203);"
-                                                    "border: 2px solid rgb(59, 59, 59);"
-                                                    "border-left:6px solid rgb(255, 6, 18);")
-        self.lbl_pageSignUp_nextofkin.setStyleSheet("background-color: rgb(203, 203, 203);"
-                                                    "border: 2px solid rgb(59, 59, 59);"
-                                                    "border-radius:5px")
+            self.signUP.setCurrentWidget(self.pagePassword)
+            self.lbl_pageSignUp_password.setStyleSheet("background-color: rgb(203, 203, 203);"
+                                                       "border: 2px solid rgb(59, 59, 59);"
+                                                       "border-left:6px solid rgb(255, 6, 18);")
+            self.lbl_pageSignUp_nextofkin.setStyleSheet("background-color: rgb(203, 203, 203);"
+                                                        "border: 2px solid rgb(59, 59, 59);"
+                                                        "border-radius:5px")
 
     def btn_pageSignup_pagePassword_back_clicked(self):
-        self.signUP.setCurrentWidget(self.pageNextOfKin)
-        self.lbl_pageSignUp_nextofkin.setStyleSheet("background-color: rgb(203, 203, 203);"
-                                                   "border: 2px solid rgb(59, 59, 59);"
-                                                   "border-left:6px solid rgb(255, 6, 18);")
-        self.lbl_pageSignUp_password.setStyleSheet("background-color: rgb(203, 203, 203);"
-                                                    "border: 2px solid rgb(59, 59, 59);"
-                                                    "border-radius:5px")
-
+            self.signUP.setCurrentWidget(self.pageNextOfKin)
+            self.lbl_pageSignUp_nextofkin.setStyleSheet("background-color: rgb(203, 203, 203);"
+                                                        "border: 2px solid rgb(59, 59, 59);"
+                                                        "border-left:6px solid rgb(255, 6, 18);")
+            self.lbl_pageSignUp_password.setStyleSheet("background-color: rgb(203, 203, 203);"
+                                                       "border: 2px solid rgb(59, 59, 59);"
+                                                       "border-radius:5px")
 
     def btn_pageSignup_page_NextofKin_back_clicked(self):
-        self.signUP.setCurrentWidget(self.pageSignUpPersonalDetails)
-        self.lbl_pageSignUp_personalDetails.setStyleSheet("background-color: rgb(203, 203, 203);"
-                                                    "border: 2px solid rgb(59, 59, 59);"
-                                                    "border-left:6px solid rgb(255, 6, 18);")
-        self.lbl_pageSignUp_nextofkin.setStyleSheet("background-color: rgb(203, 203, 203);"
-                                                          "border: 2px solid rgb(59, 59, 59);"
-                                                          "border-radius:5px")
-
-
-
-
-
+            self.signUP.setCurrentWidget(self.pageSignUpPersonalDetails)
+            self.lbl_pageSignUp_personalDetails.setStyleSheet("background-color: rgb(203, 203, 203);"
+                                                              "border: 2px solid rgb(59, 59, 59);"
+                                                              "border-left:6px solid rgb(255, 6, 18);")
+            self.lbl_pageSignUp_nextofkin.setStyleSheet("background-color: rgb(203, 203, 203);"
+                                                        "border: 2px solid rgb(59, 59, 59);"
+                                                        "border-radius:5px")
 
 
 if __name__ == "__main__":
