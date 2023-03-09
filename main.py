@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import mysql.connector
 import random
 import smtplib
+import re
 
 
 class Ui_Form(object):
@@ -1153,13 +1154,307 @@ class Ui_Form(object):
         self.btn_pageForgotPassword_verifyCode.clicked.connect(self.button_verifyCode)
         self.btn_pageForgotPassword_updatePassword.clicked.connect(self.button_forgotpassword_updatepassword)
 
-        self.btn_pageSignup_personalDetailsNext.clicked.connect(self.next_signup_page)
+        # self.btn_pageSignup_personalDetailsNext.clicked.connect(self.next_signup_page)
         self.btn_pageSignup_pageNexofKin_next.clicked.connect(self.btn_pageSignup_pageNexofKin_next_clicked)
         self.btn_pageSignup_pagePassword_back.clicked.connect(self.btn_pageSignup_pagePassword_back_clicked)
         self.btn_pageSignup_page_NextofKin_back.clicked.connect(self.btn_pageSignup_page_NextofKin_back_clicked)
 
+        self.btn_pageHomepage_chat.clicked.connect(self.btn_pageHomepage_chat_clicked)
+        self.btn_pageHomepage_reportacomplaint.clicked.connect(self.btn_pageHomepage_reportacomplaint_clicked)
+        self.btn_pageReportAComplaint_backToHomepage.clicked.connect(self.btn_pageReportAComplaint_backToHomepage_clicked)
+
+
+
+        # Registration
+
+        self.edited_FirstName_signup = False
+        self.edited_LastName_signup = False
+        self.edited_email_signup = False
+        self.edited_idNumber_signup = False
+        self.edited_phoneNumber_signup = False
+        self.edited_houseNumber_signup = False
+        self.edited_NOK_FirstName_signup = False
+        self.edited_NOK_LastName_signup = False
+        self.edited_NOK_email_signup = False
+        self.edited_NOK_phoneNumber_signup = False
+
+
+
+        self.led_pageSignup_firstName.editingFinished.connect(self.led_pageSignup_firstName_edit)
+        self.led_pageSignup_lastName.editingFinished.connect(self.led_pageSignup_lastName_edit)
+        self.led_pageSignup_idNumber.editingFinished.connect(self.led_pageSignup_idNumber_edit)
+        self.led_pageSignup_phoneNumber.editingFinished.connect(self.led_pageSignup_phoneNumber_edit)
+        self.led_pageSignup_emailAddress.editingFinished.connect(self.led_pageSignup_emailAddress_edit)
+        self.led_pageSignup_occupation_2.editingFinished.connect(self.led_pageSignup_occupation_2_edit)
+        self.btn_pageSignup_personalDetailsNext.clicked.connect(self.btn_pageSignup_personalDetailsNext_clicked)
+        self.led_pageSignup_next_of_kinfirstName.editingFinished.connect(self.led_pageSignup_next_of_kinfirstName_edit)
+        self.led_pageSignup_next_of_kinLastName.editingFinished.connect(self.led_pageSignup_next_of_kinLastName_edit)
+        self.led_pageSignup_next_of_kinemailAddress.editingFinished.connect(self.led_pageSignup_next_of_kinemailAddress_edit)
+        self.led_pageSignup_next_of_kin_phoneNumber.editingFinished.connect(self.led_pageSignup_next_of_kin_phoneNumber_edit)
+
+
+    def led_pageSignup_next_of_kin_phoneNumber_edit(self):
+        edited_text = self.led_pageSignup_next_of_kin_phoneNumber.text()
+
+        if edited_text != "":
+            try:
+                for i in edited_text:
+                    int(i)
+
+                if len(edited_text) == 9:
+                    self.edited_NOK_phoneNumber_signup = True
+                    self.led_pageSignup_next_of_kin_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                "border-bottom: 2px solid rgb(0, 136, 0)")
+                    self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText("")
+
+                    self.signup_NOK_phoneNumber = edited_text
+
+                else:
+                    self.led_pageSignup_next_of_kin_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText("Number of digits is more/less than expected!")
+
+                    self.edited_NOK_phoneNumber_signup = False
+
+            except:
+                self.led_pageSignup_next_of_kin_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+                self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText("Field should contain digits only")
+                self.edited_NOK_phoneNumber_signup = False
+
+
+        else:
+            self.led_pageSignup_next_of_kin_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+            self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText("Phone number cannot be blank!")
+            self.edited_NOK_phoneNumber_signup = False
+
+    def led_pageSignup_next_of_kinemailAddress_edit(self):
+        edited_text = self.led_pageSignup_next_of_kinemailAddress.text().strip().lower()
+        valid_mail = self.is_valid_email(edited_text)
+
+        if valid_mail is True:
+            self.edited_NOK_email_signup = True
+            self.led_pageSignup_next_of_kinemailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
+
+            self.signup_NOK_emailAddress = edited_text
+
+        else:
+            self.led_pageSignup_next_of_kinemailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                               "border-bottom: 2px solid rgb(255, 7, 11)")
+            self.edited_NOK_email_signup = False
+
+    def led_pageSignup_next_of_kinfirstName_edit(self):
+        edited_text = self.led_pageSignup_next_of_kinfirstName.text().strip()
+
+        if edited_text != "":
+            self.edited_NOK_FirstName_signup = True
+            self.led_pageSignup_next_of_kinfirstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
+            self.lbl_pageSignup_NextOfKin_FirstNameNotification.setText("")
+
+            self.signup_NOK_firstName = edited_text
+
+        else:
+            self.led_pageSignup_next_of_kinfirstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+            self.lbl_pageSignup_NextOfKin_FirstNameNotification.setText("First name cannot be blank!")
+            self.edited_NOK_FirstName_signup = False
+
+
+    def led_pageSignup_next_of_kinLastName_edit(self):
+        edited_text = self.led_pageSignup_next_of_kinLastName.text().strip()
+
+        if edited_text != "":
+            self.edited_NOK_LastName_signup = True
+            self.led_pageSignup_next_of_kinLastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
+            self.lbl_pageSignup_nextfKin_LastNameNotification.setText("")
+
+            self.signup_NOK_lastName = edited_text
+
+        else:
+            self.led_pageSignup_next_of_kinLastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+            self.lbl_pageSignup_nextfKin_LastNameNotification.setText("First name cannot be blank!")
+            self.edited_NOK_LastName_signup = False
+
+    def led_pageSignup_firstName_edit(self):
+        edited_text = self.led_pageSignup_firstName.text().strip()
+
+        if edited_text != "":
+            self.edited_FirstName_signup = True
+            self.led_pageSignup_firstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
+            self.lbl_pageSignup_FirstNameNotification.setText("")
+
+            self.signup_firstName = edited_text
+
+        else:
+            self.led_pageSignup_firstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+            self.lbl_pageSignup_FirstNameNotification.setText("First name cannot be blank!")
+            self.edited_FirstName_signup = False
+
+    def led_pageSignup_lastName_edit(self):
+        edited_text = self.led_pageSignup_lastName.text().strip()
+
+        if edited_text != "":
+            self.edited_LastName_signup = True
+            self.led_pageSignup_lastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
+            self.lbl_pageSignup_lastNameNotification.setText("")
+            self.signup_lastName = edited_text
+
+
+        else:
+            self.led_pageSignup_lastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+            self.lbl_pageSignup_lastNameNotification.setText("Last name cannot be blank!")
+            self.edited_LastName_signup = False
+
+    def led_pageSignup_idNumber_edit(self):
+        edited_text = self.led_pageSignup_idNumber.text()
+
+        if edited_text != "":
+            try:
+                for i in edited_text:
+                    int(i)
+
+
+                if len(edited_text)>=8 and len(edited_text) <= 9:
+                    self.edited_idNumber_signup = True
+                    self.led_pageSignup_idNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                "border-bottom: 2px solid rgb(0, 136, 0)")
+                    self.lbl_pageSignup_IDNumberNotification.setText("")
+
+                    self.signup_idNumber = edited_text
+
+                else:
+                    self.led_pageSignup_idNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_IDNumberNotification.setText("Number of digits is more/less than expected!")
+
+                    self.edited_idNumber_signup = False
+
+            except:
+                self.led_pageSignup_idNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+                self.lbl_pageSignup_IDNumberNotification.setText("Field should contain digits only")
+                self.edited_idNumber_signup = False
+
+
+        else:
+            self.led_pageSignup_idNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+            self.lbl_pageSignup_IDNumberNotification.setText("ID/Passport number cannot be blank!")
+            self.edited_idNumber_signup = False
+
+
+
+    def led_pageSignup_phoneNumber_edit(self):
+        edited_text = self.led_pageSignup_phoneNumber.text()
+
+        if edited_text != "":
+            try:
+                for i in edited_text:
+                    int(i)
+
+                if len(edited_text) == 9:
+                    self.edited_phoneNumber_signup = True
+                    self.led_pageSignup_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                "border-bottom: 2px solid rgb(0, 136, 0)")
+                    self.lbl_pageSignup_phoneNumberNotification.setText("")
+
+                    self.signup_phoneNumber = edited_text
+
+                else:
+                    self.led_pageSignup_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_phoneNumberNotification.setText("Number of digits is more/less than expected!")
+
+                    self.edited_phoneNumber_signup = False
+
+            except:
+                self.led_pageSignup_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+                self.lbl_pageSignup_phoneNumberNotification.setText("Field should contain digits only")
+                self.edited_phoneNumber_signup = False
+
+
+        else:
+            self.led_pageSignup_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+            self.lbl_pageSignup_phoneNumberNotification.setText("Phone number cannot be blank!")
+            self.edited_phoneNumber_signup = False
+
+    def is_valid_email(self, email_to_validate):
+        if not email_to_validate:
+            return False
+
+        pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+
+        if re.match(pattern, email_to_validate):
+                return True
+        else:
+                return False
+
+    def led_pageSignup_emailAddress_edit(self):
+        edited_text = self.led_pageSignup_emailAddress.text().strip().lower()
+        valid_mail = self.is_valid_email(edited_text)
+
+        if valid_mail is True:
+            self.edited_email_signup = True
+            self.led_pageSignup_emailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
+            self.lbl_pageSignup_emailNotification.setText("")
+
+            self.signup_emailAddress = edited_text
+
+        else:
+            self.led_pageSignup_emailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                               "border-bottom: 2px solid rgb(255, 7, 11)")
+            self.lbl_pageSignup_emailNotification.setText("Enter a valid email address!")
+
+            self.edited_email_signup = False
+
+    def led_pageSignup_occupation_2_edit(self):
+        edited_text = self.led_pageSignup_occupation_2.text().strip()
+
+        if edited_text != "":
+            self.edited_houseNumber_signup = True
+            self.led_pageSignup_occupation_2.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
+            self.lbl_pageSignup_houseNumberNotification.setText("")
+            self.signup_housenumber = edited_text
+
+
+        else:
+            self.led_pageSignup_occupation_2.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
+            self.lbl_pageSignup_houseNumberNotification.setText("House Number cannot be blank!")
+            self.edited_houseNumber_signup = False
+
+    def btn_pageSignup_personalDetailsNext_clicked(self):
+        self.signup_occupation = self.led_pageSignup_occupation.text()
+        if self.rbn_pageSignUp_male.isChecked():
+            self.signup_gender = "Male"
+        if self.rbn_pageSignUp_female.isChecked():
+            self.signup_gender = "Female"
+
+        if (self.edited_FirstName_signup is True) and (self.edited_LastName_signup is True) and \
+                (self.edited_idNumber_signup is True) and (self.edited_email_signup is True) and\
+                (self.edited_houseNumber_signup is True) and (self.edited_phoneNumber_signup is True):
+
+            self.next_signup_page()
+            print(self.signup_gender)
+        else:
+            print("Invalid")
+
     def to_pageLogin(self):
-            self.stackedWidget.setCurrentWidget(self.PageLogin)
+        self.stackedWidget.setCurrentWidget(self.PageLogin)
+        self.stackedWidget_2.setCurrentWidget(self.pageRealHomepage)
 
     def to_pageSignup(self):
             self.stackedWidget.setCurrentWidget(self.pageSignUp)
@@ -1175,18 +1470,29 @@ class Ui_Form(object):
                     self.mycursor.execute(
                             f"SELECT user_password FROM apartment_name.tenants_logins WHERE id_number = {user};")
                     password = self.mycursor.fetchall()[0][0]
+                    self.session_user_id = user
                     return password
             except:
                     try:
                             self.mycursor.execute(
                                     f"SELECT user_password FROM apartment_name.tenants_logins WHERE house_number = '{user}';")
                             password = self.mycursor.fetchall()[0][0]
+
+                            self.mycursor.execute(
+                                    f"SELECT id_number FROM apartment_name.tenants_logins WHERE house_number = '{user}';")
+                            self.session_user_id = self.mycursor.fetchall()[0][0]
+
                             return password
                     except:
                             try:
                                     self.mycursor.execute(
                                             f"SELECT user_password FROM apartment_name.tenants_logins WHERE phone_number = {user};")
                                     password = self.mycursor.fetchall()[0][0]
+
+                                    self.mycursor.execute(
+                                            f"SELECT id_number FROM apartment_name.tenants_logins WHERE phone_number = {user};")
+                                    self.session_user_id = self.mycursor.fetchall()[0][0]
+
                                     return password
                             except:
                                     try:
@@ -1194,6 +1500,12 @@ class Ui_Form(object):
                                                     f"SELECT user_password FROM apartment_name.tenants_logins WHERE email_address = '{user}';")
 
                                             password = self.mycursor.fetchall()[0][0]
+
+                                            self.mycursor.execute(
+                                                    f"SELECT id_number FROM apartment_name.tenants_logins WHERE email_address = '{user}';")
+
+                                            self.session_user_id = self.mycursor.fetchall()[0][0]
+
                                             return password
                                     except:
                                             password = "None"
@@ -1239,6 +1551,14 @@ class Ui_Form(object):
                     self.lbl_pageLogin_password.setText("")
 
                     self.to_pageHomepage()
+
+                    self.mycursor.execute(
+                            f"SELECT first_name FROM apartment_name.details WHERE id_number = '{self.session_user_id}';")
+
+                    self.session_user_firstName = self.mycursor.fetchall()[0][0]
+
+                    self.lbl_pageHomepage_welcomeUser.setText(f"Welcome {self.session_user_firstName}")
+                    self.lbl_pageHomepage_welcomeUser_2.setText(f"Welcome {self.session_user_firstName}")
 
             else:
                     if self.user_password == "None":
@@ -1546,6 +1866,15 @@ class Ui_Form(object):
             self.lbl_pageSignUp_nextofkin.setStyleSheet("background-color: rgb(203, 203, 203);"
                                                         "border: 2px solid rgb(59, 59, 59);"
                                                         "border-radius:5px")
+
+    def btn_pageHomepage_chat_clicked(self):
+        self.stackedWidget_2.setCurrentWidget(self.pageChat)
+
+    def btn_pageHomepage_reportacomplaint_clicked(self):
+        self.stackedWidget_2.setCurrentWidget(self.pageReport_a_complaint)
+
+    def btn_pageReportAComplaint_backToHomepage_clicked(self):
+        self.stackedWidget_2.setCurrentWidget(self.pageRealHomepage)
 
 
 if __name__ == "__main__":
