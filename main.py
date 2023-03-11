@@ -1,9 +1,13 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QTextCursor
+from PyQt5.QtWidgets import QMessageBox
+from PyQt5.QtCore import QThread, pyqtSignal
 import mysql.connector
 import random
 import smtplib
+from datetime import datetime
 import re
-
+import time as sleeptime
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -344,6 +348,15 @@ class Ui_Form(object):
 "border-bottom: 2px solid rgb(15, 15, 15)")
         self.led_pageSignup_occupation.setText("")
         self.led_pageSignup_occupation.setObjectName("led_pageSignup_occupation")
+        self.lbl_pageSignup_FillallNotification = QtWidgets.QLabel(self.pageSignUpPersonalDetails)
+        self.lbl_pageSignup_FillallNotification.setGeometry(QtCore.QRect(70, 340, 181, 21))
+        font = QtGui.QFont()
+        font.setFamily("MV Boli")
+        font.setPointSize(12)
+        self.lbl_pageSignup_FillallNotification.setFont(font)
+        self.lbl_pageSignup_FillallNotification.setStyleSheet("color: rgb(229, 6, 28);")
+        self.lbl_pageSignup_FillallNotification.setText("")
+        self.lbl_pageSignup_FillallNotification.setObjectName("lbl_pageSignup_FillallNotification")
         self.layoutWidget.raise_()
         self.label_8.raise_()
         self.label_10.raise_()
@@ -368,6 +381,7 @@ class Ui_Form(object):
         self.led_pageSignup_firstName.raise_()
         self.led_pageSignup_lastName.raise_()
         self.led_pageSignup_occupation.raise_()
+        self.lbl_pageSignup_FillallNotification.raise_()
         self.signUP.addWidget(self.pageSignUpPersonalDetails)
         self.pageNextOfKin = QtWidgets.QWidget()
         self.pageNextOfKin.setObjectName("pageNextOfKin")
@@ -519,6 +533,15 @@ class Ui_Form(object):
         self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setStyleSheet("color: rgb(229, 6, 28);")
         self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText("")
         self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setObjectName("lbl_pageSignup_NextofKin_PhoneNumberNotification")
+        self.lbl_pageSignup_Fillall_NOK_Notification = QtWidgets.QLabel(self.pageNextOfKin)
+        self.lbl_pageSignup_Fillall_NOK_Notification.setGeometry(QtCore.QRect(160, 330, 181, 21))
+        font = QtGui.QFont()
+        font.setFamily("MV Boli")
+        font.setPointSize(12)
+        self.lbl_pageSignup_Fillall_NOK_Notification.setFont(font)
+        self.lbl_pageSignup_Fillall_NOK_Notification.setStyleSheet("color: rgb(229, 6, 28);")
+        self.lbl_pageSignup_Fillall_NOK_Notification.setText("")
+        self.lbl_pageSignup_Fillall_NOK_Notification.setObjectName("lbl_pageSignup_Fillall_NOK_Notification")
         self.lbl_pageSignUp_nextofkin_2.raise_()
         self.label_18.raise_()
         self.label_20.raise_()
@@ -538,6 +561,7 @@ class Ui_Form(object):
         self.led_pageSignup_next_of_kinLastName.raise_()
         self.lbl_pageSignup_NextofKin_PhoneNumberNotification.raise_()
         self.led_pageSignup_next_of_kin_phoneNumber.raise_()
+        self.lbl_pageSignup_Fillall_NOK_Notification.raise_()
         self.signUP.addWidget(self.pageNextOfKin)
         self.pagePassword = QtWidgets.QWidget()
         self.pagePassword.setObjectName("pagePassword")
@@ -569,7 +593,7 @@ class Ui_Form(object):
         self.lbl_pageSignUp_nextofkin_3.setAlignment(QtCore.Qt.AlignCenter)
         self.lbl_pageSignUp_nextofkin_3.setObjectName("lbl_pageSignUp_nextofkin_3")
         self.btn_pageSignup_signUp = QtWidgets.QPushButton(self.pagePassword)
-        self.btn_pageSignup_signUp.setGeometry(QtCore.QRect(180, 190, 121, 41))
+        self.btn_pageSignup_signUp.setGeometry(QtCore.QRect(190, 220, 121, 41))
         self.btn_pageSignup_signUp.setStyleSheet("background-color: rgb(81, 171, 8);\n"
 "border-radius:6px")
         self.btn_pageSignup_signUp.setObjectName("btn_pageSignup_signUp")
@@ -616,6 +640,15 @@ class Ui_Form(object):
 "color: rgb(17, 17, 17);")
         self.lbl_pagePassword_RepeatPasswordNotification.setText("")
         self.lbl_pagePassword_RepeatPasswordNotification.setObjectName("lbl_pagePassword_RepeatPasswordNotification")
+        self.lbl_pageSignup_Fillall_Password_Notification = QtWidgets.QLabel(self.pagePassword)
+        self.lbl_pageSignup_Fillall_Password_Notification.setGeometry(QtCore.QRect(160, 180, 181, 21))
+        font = QtGui.QFont()
+        font.setFamily("MV Boli")
+        font.setPointSize(12)
+        self.lbl_pageSignup_Fillall_Password_Notification.setFont(font)
+        self.lbl_pageSignup_Fillall_Password_Notification.setStyleSheet("color: rgb(229, 6, 28);")
+        self.lbl_pageSignup_Fillall_Password_Notification.setText("")
+        self.lbl_pageSignup_Fillall_Password_Notification.setObjectName("lbl_pageSignup_Fillall_Password_Notification")
         self.label_21.raise_()
         self.btn_pageSignup_pagePassword_back.raise_()
         self.lbl_pageSignUp_nextofkin_3.raise_()
@@ -625,6 +658,7 @@ class Ui_Form(object):
         self.led_pageSignup_newPassword.raise_()
         self.lbl_pagePassword_RepeatPasswordNotification.raise_()
         self.led_pageSignup_repeatPassword.raise_()
+        self.lbl_pageSignup_Fillall_Password_Notification.raise_()
         self.signUP.addWidget(self.pagePassword)
         self.btn_PageSignUp_BacktoLogin = QtWidgets.QPushButton(self.pageSignUp)
         self.btn_PageSignUp_BacktoLogin.setGeometry(QtCore.QRect(210, 410, 121, 41))
@@ -833,21 +867,29 @@ class Ui_Form(object):
 "border-radius: 8px")
         self.label_33.setText("")
         self.label_33.setObjectName("label_33")
-        self.ted_pageChat_chatbox = QtWidgets.QTextEdit(self.pageChat)
-        self.ted_pageChat_chatbox.setGeometry(QtCore.QRect(210, 10, 641, 401))
-        self.ted_pageChat_chatbox.setStyleSheet("background-color: rgb(52, 52, 52);\n"
+        self.ted_pageChat_chatbox_owner = QtWidgets.QTextEdit(self.pageChat)
+        self.ted_pageChat_chatbox_owner.setGeometry(QtCore.QRect(210, 10, 641, 401))
+        self.ted_pageChat_chatbox_owner.setStyleSheet("background-color: rgb(52, 52, 52);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);")
-        self.ted_pageChat_chatbox.setObjectName("ted_pageChat_chatbox")
+        self.ted_pageChat_chatbox_owner.setObjectName("ted_pageChat_chatbox_owner")
         self.led_pageChat_message = QtWidgets.QLineEdit(self.pageChat)
-        self.led_pageChat_message.setGeometry(QtCore.QRect(212, 419, 501, 41))
+        self.led_pageChat_message.setGeometry(QtCore.QRect(250, 430, 501, 41))
         self.led_pageChat_message.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border-radius: 8px")
         self.led_pageChat_message.setObjectName("led_pageChat_message")
         self.btn_pageChat_send = QtWidgets.QPushButton(self.pageChat)
-        self.btn_pageChat_send.setGeometry(QtCore.QRect(730, 422, 111, 41))
-        self.btn_pageChat_send.setStyleSheet("background-color: rgb(0, 255, 0);\n"
+        self.btn_pageChat_send.setGeometry(QtCore.QRect(748, 430, 71, 41))
+        self.btn_pageChat_send.setStyleSheet("background-color: rgb(113, 113, 113);\n"
 "border-radius: 4px")
+        self.btn_pageChat_send.setText("")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("icons/send.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_pageChat_send.setIcon(icon2)
+        self.btn_pageChat_send.setIconSize(QtCore.QSize(40, 40))
+        self.btn_pageChat_send.setCheckable(False)
+        self.btn_pageChat_send.setChecked(False)
+        self.btn_pageChat_send.setAutoDefault(False)
         self.btn_pageChat_send.setObjectName("btn_pageChat_send")
         self.btn_pageChat_chatWithManager = QtWidgets.QPushButton(self.pageChat)
         self.btn_pageChat_chatWithManager.setGeometry(QtCore.QRect(30, 140, 141, 61))
@@ -863,6 +905,19 @@ class Ui_Form(object):
 "border-top: 2px solid rgb(81, 81, 81);\n"
 "border-bottom: 2px solid rgb(81, 81, 81)")
         self.btn_pageChat_chatWithOwner.setObjectName("btn_pageChat_chatWithOwner")
+        self.ted_pageChat_chatbox_manager = QtWidgets.QTextEdit(self.pageChat)
+        self.ted_pageChat_chatbox_manager.setGeometry(QtCore.QRect(210, 10, 641, 401))
+        self.ted_pageChat_chatbox_manager.setStyleSheet("background-color: rgb(52, 52, 52);\n"
+"border-radius: 8px;\n"
+"color: rgb(255, 255, 255);")
+        self.ted_pageChat_chatbox_manager.setObjectName("ted_pageChat_chatbox_manager")
+        self.label_33.raise_()
+        self.ted_pageChat_chatbox_owner.raise_()
+        self.btn_pageChat_send.raise_()
+        self.btn_pageChat_chatWithManager.raise_()
+        self.btn_pageChat_chatWithOwner.raise_()
+        self.ted_pageChat_chatbox_manager.raise_()
+        self.led_pageChat_message.raise_()
         self.stackedWidget_2.addWidget(self.pageChat)
         self.pageReport_a_complaint = QtWidgets.QWidget()
         self.pageReport_a_complaint.setObjectName("pageReport_a_complaint")
@@ -878,7 +933,7 @@ class Ui_Form(object):
 "background-color: rgb(170, 170, 127);")
         self.label_35.setObjectName("label_35")
         self.ted_pageReportAComplaint_describeComplaint = QtWidgets.QTextEdit(self.pageReport_a_complaint)
-        self.ted_pageReportAComplaint_describeComplaint.setGeometry(QtCore.QRect(250, 210, 471, 201))
+        self.ted_pageReportAComplaint_describeComplaint.setGeometry(QtCore.QRect(250, 220, 471, 191))
         self.ted_pageReportAComplaint_describeComplaint.setStyleSheet("border-radius:7px;\n"
 "background-color: rgb(170, 170, 127);\n"
 "color: rgb(39, 39, 39);\n"
@@ -891,12 +946,12 @@ class Ui_Form(object):
 "border: 2px solid black")
         self.date_pageReport_a_complaint_date_of_incedence.setObjectName("date_pageReport_a_complaint_date_of_incedence")
         self.label_36 = QtWidgets.QLabel(self.pageReport_a_complaint)
-        self.label_36.setGeometry(QtCore.QRect(280, 129, 111, 31))
+        self.label_36.setGeometry(QtCore.QRect(280, 140, 111, 31))
         self.label_36.setStyleSheet("border-radius:7px;\n"
 "background-color: rgb(170, 170, 127);")
         self.label_36.setObjectName("label_36")
         self.combo_pageReportAComplaint_category_of_complaint = QtWidgets.QComboBox(self.pageReport_a_complaint)
-        self.combo_pageReportAComplaint_category_of_complaint.setGeometry(QtCore.QRect(420, 130, 181, 31))
+        self.combo_pageReportAComplaint_category_of_complaint.setGeometry(QtCore.QRect(420, 141, 181, 31))
         self.combo_pageReportAComplaint_category_of_complaint.setStyleSheet("background-color: rgb(170, 170, 127);\n"
 "border-radius: 4px;\n"
 "border: 2px solid black")
@@ -911,7 +966,7 @@ class Ui_Form(object):
         self.combo_pageReportAComplaint_category_of_complaint.addItem("")
         self.combo_pageReportAComplaint_category_of_complaint.addItem("")
         self.label_37 = QtWidgets.QLabel(self.pageReport_a_complaint)
-        self.label_37.setGeometry(QtCore.QRect(420, 180, 111, 31))
+        self.label_37.setGeometry(QtCore.QRect(430, 190, 111, 31))
         self.label_37.setStyleSheet("border-radius:7px;\n"
 "background-color: rgb(170, 170, 127);")
         self.label_37.setObjectName("label_37")
@@ -939,9 +994,19 @@ class Ui_Form(object):
 "border-radius:10px\n"
 "")
         self.btn_pageReportAComplaint_submitComplaint.setObjectName("btn_pageReportAComplaint_submitComplaint")
+        self.label_39 = QtWidgets.QLabel(self.pageReport_a_complaint)
+        self.label_39.setGeometry(QtCore.QRect(160, 110, 631, 31))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_39.setFont(font)
+        self.label_39.setStyleSheet("border-radius:7px;\n"
+"background-color: rgb(170, 170, 127);\n"
+"color: rgb(207, 8, 22);")
+        self.label_39.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_39.setObjectName("label_39")
         self.label_34.raise_()
         self.label_35.raise_()
-        self.date_pageReport_a_complaint_date_of_incedence.raise_()
         self.label_36.raise_()
         self.combo_pageReportAComplaint_category_of_complaint.raise_()
         self.label_37.raise_()
@@ -949,6 +1014,8 @@ class Ui_Form(object):
         self.label_38.raise_()
         self.btn_pageReportAComplaint_backToHomepage.raise_()
         self.btn_pageReportAComplaint_submitComplaint.raise_()
+        self.label_39.raise_()
+        self.date_pageReport_a_complaint_date_of_incedence.raise_()
         self.stackedWidget_2.addWidget(self.pageReport_a_complaint)
         self.label_19 = QtWidgets.QLabel(self.pageHomepage)
         self.label_19.setGeometry(QtCore.QRect(40, -20, 151, 521))
@@ -1017,6 +1084,7 @@ class Ui_Form(object):
         self.retranslateUi(Form)
         self.stackedWidget.setCurrentIndex(0)
         self.signUP.setCurrentIndex(0)
+        self.stackedWidget_2.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -1027,6 +1095,7 @@ class Ui_Form(object):
         self.label_5.setText(_translate("Form", "NEW USER?"))
         self.led_LoginPage_Username.setPlaceholderText(_translate("Form", "   ID number / Email address / House number / Phone number"))
         self.btn_LoginPage_Login.setText(_translate("Form", "LOG IN"))
+        self.btn_LoginPage_Login.setShortcut(_translate("Form", "Return"))
         self.btn_LoginPage_ForgotPassword.setText(_translate("Form", "FORGOT PASSWORD"))
         self.btn_LoginPage_SignUp.setText(_translate("Form", "SIGN UP"))
         self.label_7.setText(_translate("Form", "SIGN UP"))
@@ -1041,7 +1110,7 @@ class Ui_Form(object):
         self.led_pageSignup_emailAddress.setPlaceholderText(_translate("Form", "johndoe@abc.com"))
         self.label_11.setText(_translate("Form", "Email address *"))
         self.led_pageSignup_phoneNumber.setPlaceholderText(_translate("Form", "712345678"))
-        self.label_12.setText(_translate("Form", "Phone Number"))
+        self.label_12.setText(_translate("Form", "Phone Number *"))
         self.label_13.setText(_translate("Form", "+254"))
         self.label_14.setText(_translate("Form", "Occupation"))
         self.label_15.setText(_translate("Form", "Gender"))
@@ -1075,6 +1144,7 @@ class Ui_Form(object):
         self.btn_pageSignup_pagePassword_back.setText(_translate("Form", "Back"))
         self.lbl_pageSignUp_nextofkin_3.setText(_translate("Form", "Password"))
         self.btn_pageSignup_signUp.setText(_translate("Form", "Sign Up"))
+        self.btn_pageSignup_signUp.setShortcut(_translate("Form", "Return"))
         self.led_pageSignup_newPassword.setPlaceholderText(_translate("Form", "mypassword"))
         self.label_31.setText(_translate("Form", "Repeat Password"))
         self.led_pageSignup_repeatPassword.setPlaceholderText(_translate("Form", "mypassword"))
@@ -1088,11 +1158,12 @@ class Ui_Form(object):
         self.btn_pageForgotPassword_verifyCode.setText(_translate("Form", "Verify code"))
         self.lbl_pageForgotPassword_verificationcode.setText(_translate("Form", "Enter verification code"))
         self.btn_pageForgotPassword_updatePassword.setText(_translate("Form", "Update Password"))
+        self.btn_pageForgotPassword_updatePassword.setShortcut(_translate("Form", "Return"))
         self.label_32.setText(_translate("Form", "RENT DETAILS\n"
 "Days Remaining: 24\n"
 "Rent Arreas: KSH2400"))
         self.lbl_pageHomepage_welcomeUser_2.setText(_translate("Form", "Welcome user"))
-        self.btn_pageChat_send.setText(_translate("Form", "SEND"))
+        self.btn_pageChat_send.setShortcut(_translate("Form", "Return"))
         self.btn_pageChat_chatWithManager.setText(_translate("Form", "Chat with Manager"))
         self.btn_pageChat_chatWithOwner.setText(_translate("Form", "Chat with Owner"))
         self.label_35.setText(_translate("Form", "Date of incidence"))
@@ -1110,6 +1181,7 @@ class Ui_Form(object):
         self.label_38.setText(_translate("Form", "REPORT A COMPLAINT"))
         self.btn_pageReportAComplaint_backToHomepage.setText(_translate("Form", "Back to homepage"))
         self.btn_pageReportAComplaint_submitComplaint.setText(_translate("Form", "SUBMIT COMPLAINT"))
+        self.btn_pageReportAComplaint_submitComplaint.setShortcut(_translate("Form", "Return"))
         self.lbl_pageHomepage_welcomeUser.setText(_translate("Form", "Welcome user"))
         self.btn_pageHomepage_payRent.setText(_translate("Form", "Pay Rent"))
         self.btn_pageHomepage_chat.setText(_translate("Form", "Chat"))
@@ -1118,9 +1190,17 @@ class Ui_Form(object):
         self.btn_pageHomepage_logout.setText(_translate("Form", "LOGOUT"))
 
         # Mambo yangu
+
+        # from PyQt5 import QtCore, QtGui, QtWidgets
+        # from PyQt5.QtGui import QTextCursor
+        # from PyQt5.QtWidgets import QMessageBox
+        # from PyQt5.QtCore import QThread, pyqtSignal
         # import mysql.connector
         # import random
         # import smtplib
+        # from datetime import datetime
+        # import re
+        # import time as sleeptime
 
         self.db = mysql.connector.connect(
                 user="root",
@@ -1131,6 +1211,7 @@ class Ui_Form(object):
 
         self.led_LoginPage_Password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.reset_password_step = 0
+
         # Hide signup page widgets
         self.btn_pageForgotPassword_updatePassword.hide()
         self.btn_pageForgotPassword_verifyCode.hide()
@@ -1154,15 +1235,14 @@ class Ui_Form(object):
         self.btn_pageForgotPassword_verifyCode.clicked.connect(self.button_verifyCode)
         self.btn_pageForgotPassword_updatePassword.clicked.connect(self.button_forgotpassword_updatepassword)
 
-        # self.btn_pageSignup_personalDetailsNext.clicked.connect(self.next_signup_page)
         self.btn_pageSignup_pageNexofKin_next.clicked.connect(self.btn_pageSignup_pageNexofKin_next_clicked)
         self.btn_pageSignup_pagePassword_back.clicked.connect(self.btn_pageSignup_pagePassword_back_clicked)
         self.btn_pageSignup_page_NextofKin_back.clicked.connect(self.btn_pageSignup_page_NextofKin_back_clicked)
 
         self.btn_pageHomepage_chat.clicked.connect(self.btn_pageHomepage_chat_clicked)
         self.btn_pageHomepage_reportacomplaint.clicked.connect(self.btn_pageHomepage_reportacomplaint_clicked)
-        self.btn_pageReportAComplaint_backToHomepage.clicked.connect(self.btn_pageReportAComplaint_backToHomepage_clicked)
-
+        self.btn_pageReportAComplaint_backToHomepage.clicked.connect(
+                self.btn_pageReportAComplaint_backToHomepage_clicked)
 
 
         # Registration
@@ -1178,8 +1258,6 @@ class Ui_Form(object):
         self.edited_NOK_email_signup = False
         self.edited_NOK_phoneNumber_signup = False
 
-
-
         self.led_pageSignup_firstName.editingFinished.connect(self.led_pageSignup_firstName_edit)
         self.led_pageSignup_lastName.editingFinished.connect(self.led_pageSignup_lastName_edit)
         self.led_pageSignup_idNumber.editingFinished.connect(self.led_pageSignup_idNumber_edit)
@@ -1189,272 +1267,552 @@ class Ui_Form(object):
         self.btn_pageSignup_personalDetailsNext.clicked.connect(self.btn_pageSignup_personalDetailsNext_clicked)
         self.led_pageSignup_next_of_kinfirstName.editingFinished.connect(self.led_pageSignup_next_of_kinfirstName_edit)
         self.led_pageSignup_next_of_kinLastName.editingFinished.connect(self.led_pageSignup_next_of_kinLastName_edit)
-        self.led_pageSignup_next_of_kinemailAddress.editingFinished.connect(self.led_pageSignup_next_of_kinemailAddress_edit)
-        self.led_pageSignup_next_of_kin_phoneNumber.editingFinished.connect(self.led_pageSignup_next_of_kin_phoneNumber_edit)
+        self.led_pageSignup_next_of_kinemailAddress.editingFinished.connect(
+                self.led_pageSignup_next_of_kinemailAddress_edit)
+        self.led_pageSignup_next_of_kin_phoneNumber.editingFinished.connect(
+                self.led_pageSignup_next_of_kin_phoneNumber_edit)
+        self.btn_pageSignup_signUp.clicked.connect(self.btn_pageSignup_signUp_clicked)
+        self.led_pageSignup_newPassword.editingFinished.connect(self.led_pageSignup_newPassword_edit)
+        self.led_pageSignup_repeatPassword.editingFinished.connect(self.led_pageSignup_repeatPassword_edit)
+        self.btn_pageChat_chatWithManager.clicked.connect(self.btn_pageChat_chatWithManager_clicked)
+        self.btn_pageChat_chatWithOwner.clicked.connect(self.btn_pageChat_chatWithOwner_clicked)
+        self.btn_pageChat_send.clicked.connect(self.btn_pageChat_send_clicked)
+        self.date_pageReport_a_complaint_date_of_incedence.setDate(QtCore.QDate.currentDate())
+        self.btn_pageReportAComplaint_submitComplaint.clicked.connect(self.btn_pageReportAComplaint_submitComplaint_clicked)
 
+
+        self.previous_manager_display_message = " "
+        self.previous_owner_display_message = " "
+        self.previous_user = ""
+        self.login_sessin = 0
+        self.current_sending_to = "MANAGER"
+
+    def btn_pageReportAComplaint_submitComplaint_clicked(self):
+        date_fine = False
+        description_fine = False
+
+        entered_date = self.date_pageReport_a_complaint_date_of_incedence.date().toString('yyyy-MM-dd')
+        entered_date = datetime.strptime(entered_date, "%Y-%m-%d").date()
+
+        self.mycursor.execute(f"SELECT date_of_commencing_tenancy FROM apartment_name.details "
+                              f"WHERE id_number = '{self.session_user_id}';")
+
+        date_registered = self.mycursor.fetchall()[0][0]
+
+        if entered_date > datetime.now().date():
+            self.label_39.setText("Date entered cannot be in future!")
+
+            self.date_pageReport_a_complaint_date_of_incedence.setStyleSheet("background-color: rgb(221, 5, 8); "
+                                                                             "border-radius: 4px; "
+                                                                             "border: 2px solid rgb(221, 5, 8);")
+
+        elif entered_date < date_registered:
+            self.label_39.setText("Date entered is older than the day you moved in!")
+            self.date_pageReport_a_complaint_date_of_incedence.setStyleSheet("background-color: rgb(221, 5, 8); "
+                                                                             "border-radius: 4px; "
+                                                                             "border: 2px solid rgb(221, 5, 8);")
+
+        else:
+            date_fine = True
+            self.label_39.setText("")
+            self.date_pageReport_a_complaint_date_of_incedence.setStyleSheet("background-color: rgb(170, 170, 127);"
+                                                                             "border-radius: 4px; "
+                                                                             "border: 2px solid rgb(39, 162, 5);")
+
+        category = self.combo_pageReportAComplaint_category_of_complaint.currentText()
+        description = self.ted_pageReportAComplaint_describeComplaint.toPlainText()
+        time_now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        user_id = self.session_user_id
+
+        if description != "":
+                description_fine = True
+
+
+        if date_fine is True and description_fine is True:
+
+            self.mycursor.execute(f"INSERT INTO apartment_name.complaints"
+                                  f"(complaint_date_posted, complaint_from, date_of_incedence, complaint_category, complaint_description) "
+                                  f"VALUES ('{time_now}', '{user_id}', '{entered_date}','{category}', '{description}');")
+            self.db.commit()
+            self.date_pageReport_a_complaint_date_of_incedence.setDate(QtCore.QDate.currentDate())
+            self.ted_pageReportAComplaint_describeComplaint.clear()
+            self.stackedWidget_2.setCurrentWidget(self.pageRealHomepage)
+
+            messagebox = QMessageBox()
+            messagebox.setWindowTitle("COMPLINT SUBMITTED SUCCESSFULLY")
+            messagebox.setIcon(QMessageBox.Information)
+            messagebox.setText("Your complaint has been submitted sucessfully. The house manager will reach yo as soon as they get it.")
+            x = messagebox.exec_()
+        elif date_fine is False:
+                messagebox = QMessageBox()
+                messagebox.setWindowTitle("INCORRECT DATE")
+                messagebox.setIcon(QMessageBox.Information)
+                messagebox.setText("Please enter a valid date")
+                x = messagebox.exec_()
+
+        elif description_fine is False:
+                messagebox = QMessageBox()
+                messagebox.setWindowTitle("BLANK DESCRIPTION")
+                messagebox.setIcon(QMessageBox.Information)
+                messagebox.setText("Please enter a brief description of your complaint")
+                x = messagebox.exec_()
+
+
+        # print(f"User_id: {user_id}\nDate_occured: {date}\n"
+        #       f"Category: {category}\nDescription: {description}\nNow: {time_now}")
+
+        # print(f"{date}: {type(date)}\n{date2}: {type(date2)}")
+
+
+
+
+
+
+
+
+    def btn_pageChat_send_clicked(self):
+        self.mycursor.execute(f"INSERT INTO apartment_name.messages(date_sent, sent_from, sent_to, message )"
+                             f" VALUES('{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}', '{self.session_user_id}', "
+                             f"'{self.current_sending_to}', '{self.led_pageChat_message.text()}');")
+        self.db.commit()
+
+        self.led_pageChat_message.clear()
+
+    def btn_pageChat_chatWithManager_clicked(self):
+        self.ted_pageChat_chatbox_owner.hide()
+        self.ted_pageChat_chatbox_manager.show()
+        self.current_sending_to = "MANAGER"
+
+    def btn_pageChat_chatWithOwner_clicked(self):
+        self.ted_pageChat_chatbox_owner.show()
+        self.ted_pageChat_chatbox_manager.hide()
+        self.current_sending_to = "OWNER"
+
+    def led_pageSignup_repeatPassword_edit(self):
+            password_strength = self.is_strong_password(self.led_pageSignup_repeatPassword.text())
+
+            font = QtGui.QFont()
+            font.setFamily("MS Shell Dlg 2")
+            font.setPointSize(8)
+            self.lbl_pagePassword_RepeatPasswordNotification.setFont(font)
+
+            if (self.led_pageSignup_repeatPassword.text() == self.led_pageSignup_newPassword.text()):
+                    if password_strength is True:
+                            self.led_pageSignup_repeatPassword.setStyleSheet("border: 2px solid rgb(0, 136, 0);"
+                                                                             "border-radius: 10px;")
+                            self.lbl_pagePassword_RepeatPasswordNotification.setText("")
+            else:
+                    self.lbl_pagePassword_RepeatPasswordNotification.setText("Password don't match")
+
+    def btn_pageSignup_signUp_clicked(self):
+            password_strength = self.is_strong_password(self.led_pageSignup_newPassword.text())
+
+            font = QtGui.QFont()
+            font.setFamily("MS Shell Dlg 2")
+            font.setPointSize(9)
+
+            self.lbl_pagePassword_NewpasswordNotification.setFont(font)
+
+            if password_strength is True:
+                    self.lbl_pageSignup_Fillall_Password_Notification.setText("")
+                    self.signup_password = self.led_pageSignup_newPassword.text()
+
+                    try:
+                            self.mycursor.execute(f"INSERT INTO apartment_name.details"
+                                                  f"(id_number, first_name, last_name, phone_number, email_address, "
+                                                  f"house_number, date_of_commencing_tenancy, gender, occupation,next_of_kin_first_name, next_of_kin_last_name,"
+                                                  f" next_of_kin_phone_number, next_of_kin_email_address,next_of_kin_relationship, "
+                                                  f"next_of_kin_address) VALUES('{self.signup_idNumber}', '{self.signup_firstName}', "
+                                                  f"'{self.signup_lastName}', '{self.signup_phoneNumber}', '{self.signup_emailAddress}', "
+                                                  f"'{self.signup_housenumber}', '{datetime.now().strftime('%Y-%m-%d')}', '{self.signup_gender}', '{self.signup_occupation}', "
+                                                  f"'{self.signup_NOK_firstName}', '{self.signup_NOK_lastName}', "
+                                                  f"'{self.signup_NOK_phoneNumber}', '{self.signup_NOK_emailAddress}', "
+                                                  f"'{self.signup_relationsip_NOK}', '{self.signup_address_NOK}');")
+                            self.db.commit()
+
+
+                            self.mycursor.execute(
+                                    f"INSERT INTO apartment_name.tenants_logins(id_number, house_number, phone_number,email_address, "
+                                    f"user_password) VALUES ('{self.signup_idNumber}', '{self.signup_housenumber}', "
+                                    f"'{self.signup_phoneNumber}', '{self.signup_emailAddress}' , "
+                                    f"'{self.signup_password}');")
+                            self.db.commit()
+                            warning = QMessageBox()
+                            warning.setWindowTitle("ACCOUNT CREATED SUCCESSFULLY")
+                            warning.setIcon(QMessageBox.Information)
+                            warning.setText("Your account was created successfully. \nPlease Login to use your account")
+                            x = warning.exec_()
+
+                            self.signUP.setCurrentWidget(self.pageSignUpPersonalDetails)
+                            self.to_pageLogin()
+                    except:
+                            warning = QMessageBox()
+                            warning.setWindowTitle("WARNING")
+                            warning.setIcon(QMessageBox.Critical)
+                            warning.setText("An error prevented your account from being created")
+                            x = warning.exec_()
+                            self.signUP.setCurrentWidget(self.pageSignUpPersonalDetails)
+
+            else:
+                    self.lbl_pageSignup_Fillall_Password_Notification.setText("Password doesn't meet requirments")
+                    self.lbl_pageSignup_Fillall_Password_Notification.adjustSize()
+
+    def led_pageSignup_newPassword_edit(self):
+            self.lbl_pagePassword_NewpasswordNotification.setStyleSheet("color: rgb(229, 6, 28);")
+
+            password_strength = self.is_strong_password(self.led_pageSignup_newPassword.text())
+
+            if password_strength is True:
+                    self.led_pageSignup_newPassword.setStyleSheet("border: 2px solid rgb(0, 136, 0);"
+                                                                  "border-radius: 10px;")
+                    self.lbl_pagePassword_NewpasswordNotification.setText("")
+
+            else:
+
+                    font = QtGui.QFont()
+                    font.setFamily("MS Shell Dlg 2")
+                    font.setPointSize(8)
+
+                    self.lbl_pagePassword_NewpasswordNotification.setFont(font)
+                    self.lbl_pagePassword_NewpasswordNotification.setStyleSheet("color: rgb(229, 6, 28);")
+
+                    self.led_pageSignup_newPassword.setStyleSheet("border: 2px solid rgb(213, 5, 15);"
+                                                                  "border-radius: 10px;")
+                    self.lbl_pagePassword_NewpasswordNotification.setText(password_strength)
+                    self.lbl_pagePassword_NewpasswordNotification.adjustSize()
+
+    def is_strong_password(self, password):
+            if len(password) < 8:
+                    return "Password is short"
+
+            # Password must contain at least one lowercase letter
+            if not re.search(r"[a-z]", password):
+                    return "Password must contain at least one lowercase letter"
+
+            # Password must contain at least one uppercase letter
+            if not re.search(r"[A-Z]", password):
+                    return "Password must contain at least one uppercase letter"
+
+            if not re.search(r"\d", password):
+                    return "Password must contain at least one digit"
+
+            if not re.search(r"[!@#$%^&*(),.?\":{}|<>]", password):
+                    return "Password must contain at least one special character"
+
+            return True
 
     def led_pageSignup_next_of_kin_phoneNumber_edit(self):
-        edited_text = self.led_pageSignup_next_of_kin_phoneNumber.text()
+            edited_text = self.led_pageSignup_next_of_kin_phoneNumber.text()
 
-        if edited_text != "":
-            try:
-                for i in edited_text:
-                    int(i)
+            if edited_text != "":
+                    try:
+                            for i in edited_text:
+                                    int(i)
 
-                if len(edited_text) == 9:
-                    self.edited_NOK_phoneNumber_signup = True
+                            if len(edited_text) == 9:
+                                    self.edited_NOK_phoneNumber_signup = True
+                                    self.led_pageSignup_next_of_kin_phoneNumber.setStyleSheet(
+                                            "border:2px solid rgb(203, 203, 203);;"
+                                            "border-bottom: 2px solid rgb(0, 136, 0)")
+                                    self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText("")
+
+                                    self.signup_NOK_phoneNumber = "254" + edited_text
+
+                            else:
+                                    self.led_pageSignup_next_of_kin_phoneNumber.setStyleSheet(
+                                            "border:2px solid rgb(203, 203, 203);;"
+                                            "border-bottom: 2px solid rgb(255, 7, 11)")
+                                    self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText(
+                                            "Number of digits is more/less than expected!")
+
+                                    self.edited_NOK_phoneNumber_signup = False
+
+                    except:
+                            self.led_pageSignup_next_of_kin_phoneNumber.setStyleSheet(
+                                    "border:2px solid rgb(203, 203, 203);;"
+                                    "border-bottom: 2px solid rgb(255, 7, 11)")
+                            self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText(
+                                    "Field should contain digits only")
+                            self.edited_NOK_phoneNumber_signup = False
+
+
+            else:
                     self.led_pageSignup_next_of_kin_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                                "border-bottom: 2px solid rgb(0, 136, 0)")
-                    self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText("")
-
-                    self.signup_NOK_phoneNumber = edited_text
-
-                else:
-                    self.led_pageSignup_next_of_kin_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-                    self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText("Number of digits is more/less than expected!")
-
+                                                                              "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText("Phone number cannot be blank!")
                     self.edited_NOK_phoneNumber_signup = False
 
-            except:
-                self.led_pageSignup_next_of_kin_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-                self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText("Field should contain digits only")
-                self.edited_NOK_phoneNumber_signup = False
-
-
-        else:
-            self.led_pageSignup_next_of_kin_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-            self.lbl_pageSignup_NextofKin_PhoneNumberNotification.setText("Phone number cannot be blank!")
-            self.edited_NOK_phoneNumber_signup = False
-
     def led_pageSignup_next_of_kinemailAddress_edit(self):
-        edited_text = self.led_pageSignup_next_of_kinemailAddress.text().strip().lower()
-        valid_mail = self.is_valid_email(edited_text)
+            edited_text = self.led_pageSignup_next_of_kinemailAddress.text().strip().lower()
+            valid_mail = self.is_valid_email(edited_text)
 
-        if valid_mail is True:
-            self.edited_NOK_email_signup = True
-            self.led_pageSignup_next_of_kinemailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
+            if valid_mail is True:
+                    self.edited_NOK_email_signup = True
+                    self.led_pageSignup_next_of_kinemailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                              "border-bottom: 2px solid rgb(0, 136, 0)")
 
-            self.signup_NOK_emailAddress = edited_text
+                    self.signup_NOK_emailAddress = edited_text
 
-        else:
-            self.led_pageSignup_next_of_kinemailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                               "border-bottom: 2px solid rgb(255, 7, 11)")
-            self.edited_NOK_email_signup = False
+            else:
+                    self.led_pageSignup_next_of_kinemailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                              "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.edited_NOK_email_signup = False
+                    self.signup_NOK_emailAddress = "NOT STATED"
 
     def led_pageSignup_next_of_kinfirstName_edit(self):
-        edited_text = self.led_pageSignup_next_of_kinfirstName.text().strip()
+            edited_text = self.led_pageSignup_next_of_kinfirstName.text().strip()
 
-        if edited_text != "":
-            self.edited_NOK_FirstName_signup = True
-            self.led_pageSignup_next_of_kinfirstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
-            self.lbl_pageSignup_NextOfKin_FirstNameNotification.setText("")
+            if edited_text != "":
+                    self.edited_NOK_FirstName_signup = True
+                    self.led_pageSignup_next_of_kinfirstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                           "border-bottom: 2px solid rgb(0, 136, 0)")
+                    self.lbl_pageSignup_NextOfKin_FirstNameNotification.setText("")
 
-            self.signup_NOK_firstName = edited_text
+                    self.signup_NOK_firstName = edited_text
 
-        else:
-            self.led_pageSignup_next_of_kinfirstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-            self.lbl_pageSignup_NextOfKin_FirstNameNotification.setText("First name cannot be blank!")
-            self.edited_NOK_FirstName_signup = False
-
+            else:
+                    self.led_pageSignup_next_of_kinfirstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                           "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_NextOfKin_FirstNameNotification.setText("First name cannot be blank!")
+                    self.edited_NOK_FirstName_signup = False
 
     def led_pageSignup_next_of_kinLastName_edit(self):
-        edited_text = self.led_pageSignup_next_of_kinLastName.text().strip()
+            edited_text = self.led_pageSignup_next_of_kinLastName.text().strip()
 
-        if edited_text != "":
-            self.edited_NOK_LastName_signup = True
-            self.led_pageSignup_next_of_kinLastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
-            self.lbl_pageSignup_nextfKin_LastNameNotification.setText("")
+            if edited_text != "":
+                    self.edited_NOK_LastName_signup = True
+                    self.led_pageSignup_next_of_kinLastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                          "border-bottom: 2px solid rgb(0, 136, 0)")
+                    self.lbl_pageSignup_nextfKin_LastNameNotification.setText("")
 
-            self.signup_NOK_lastName = edited_text
+                    self.signup_NOK_lastName = edited_text
 
-        else:
-            self.led_pageSignup_next_of_kinLastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-            self.lbl_pageSignup_nextfKin_LastNameNotification.setText("First name cannot be blank!")
-            self.edited_NOK_LastName_signup = False
+            else:
+                    self.led_pageSignup_next_of_kinLastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                          "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_nextfKin_LastNameNotification.setText("First name cannot be blank!")
+                    self.edited_NOK_LastName_signup = False
 
     def led_pageSignup_firstName_edit(self):
-        edited_text = self.led_pageSignup_firstName.text().strip()
+            edited_text = self.led_pageSignup_firstName.text().strip()
 
-        if edited_text != "":
-            self.edited_FirstName_signup = True
-            self.led_pageSignup_firstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
-            self.lbl_pageSignup_FirstNameNotification.setText("")
+            if edited_text != "":
+                    self.edited_FirstName_signup = True
+                    self.led_pageSignup_firstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                "border-bottom: 2px solid rgb(0, 136, 0)")
+                    self.lbl_pageSignup_FirstNameNotification.setText("")
 
-            self.signup_firstName = edited_text
+                    self.signup_firstName = edited_text
 
-        else:
-            self.led_pageSignup_firstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-            self.lbl_pageSignup_FirstNameNotification.setText("First name cannot be blank!")
-            self.edited_FirstName_signup = False
+            else:
+                    self.led_pageSignup_firstName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_FirstNameNotification.setText("First name cannot be blank!")
+                    self.edited_FirstName_signup = False
 
     def led_pageSignup_lastName_edit(self):
-        edited_text = self.led_pageSignup_lastName.text().strip()
+            edited_text = self.led_pageSignup_lastName.text().strip()
 
-        if edited_text != "":
-            self.edited_LastName_signup = True
-            self.led_pageSignup_lastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
-            self.lbl_pageSignup_lastNameNotification.setText("")
-            self.signup_lastName = edited_text
+            if edited_text != "":
+                    self.edited_LastName_signup = True
+                    self.led_pageSignup_lastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                               "border-bottom: 2px solid rgb(0, 136, 0)")
+                    self.lbl_pageSignup_lastNameNotification.setText("")
+                    self.signup_lastName = edited_text
 
 
-        else:
-            self.led_pageSignup_lastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-            self.lbl_pageSignup_lastNameNotification.setText("Last name cannot be blank!")
-            self.edited_LastName_signup = False
+            else:
+                    self.led_pageSignup_lastName.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                               "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_lastNameNotification.setText("Last name cannot be blank!")
+                    self.edited_LastName_signup = False
 
     def led_pageSignup_idNumber_edit(self):
-        edited_text = self.led_pageSignup_idNumber.text()
+            edited_text = self.led_pageSignup_idNumber.text()
 
-        if edited_text != "":
-            try:
-                for i in edited_text:
-                    int(i)
+            if edited_text != "":
+                    try:
+                            for i in edited_text:
+                                    int(i)
+
+                            if len(edited_text) >= 8 and len(edited_text) <= 9:
+                                    self.edited_idNumber_signup = True
+                                    self.led_pageSignup_idNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                               "border-bottom: 2px solid rgb(0, 136, 0)")
+                                    self.lbl_pageSignup_IDNumberNotification.setText("")
+
+                                    self.signup_idNumber = edited_text
+
+                            else:
+                                    self.led_pageSignup_idNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                               "border-bottom: 2px solid rgb(255, 7, 11)")
+                                    self.lbl_pageSignup_IDNumberNotification.setText(
+                                            "Number of digits is more/less than expected!")
+
+                                    self.edited_idNumber_signup = False
+
+                    except:
+                            self.led_pageSignup_idNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                       "border-bottom: 2px solid rgb(255, 7, 11)")
+                            self.lbl_pageSignup_IDNumberNotification.setText("Field should contain digits only")
+                            self.edited_idNumber_signup = False
 
 
-                if len(edited_text)>=8 and len(edited_text) <= 9:
-                    self.edited_idNumber_signup = True
+            else:
                     self.led_pageSignup_idNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                                "border-bottom: 2px solid rgb(0, 136, 0)")
-                    self.lbl_pageSignup_IDNumberNotification.setText("")
-
-                    self.signup_idNumber = edited_text
-
-                else:
-                    self.led_pageSignup_idNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-                    self.lbl_pageSignup_IDNumberNotification.setText("Number of digits is more/less than expected!")
-
+                                                               "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_IDNumberNotification.setText("ID/Passport number cannot be blank!")
                     self.edited_idNumber_signup = False
 
-            except:
-                self.led_pageSignup_idNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-                self.lbl_pageSignup_IDNumberNotification.setText("Field should contain digits only")
-                self.edited_idNumber_signup = False
-
-
-        else:
-            self.led_pageSignup_idNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-            self.lbl_pageSignup_IDNumberNotification.setText("ID/Passport number cannot be blank!")
-            self.edited_idNumber_signup = False
-
-
-
     def led_pageSignup_phoneNumber_edit(self):
-        edited_text = self.led_pageSignup_phoneNumber.text()
+            edited_text = self.led_pageSignup_phoneNumber.text()
 
-        if edited_text != "":
-            try:
-                for i in edited_text:
-                    int(i)
+            if edited_text != "":
+                    try:
+                            for i in edited_text:
+                                    int(i)
 
-                if len(edited_text) == 9:
-                    self.edited_phoneNumber_signup = True
+                            if len(edited_text) == 9:
+                                    self.edited_phoneNumber_signup = True
+                                    self.led_pageSignup_phoneNumber.setStyleSheet(
+                                            "border:2px solid rgb(203, 203, 203);;"
+                                            "border-bottom: 2px solid rgb(0, 136, 0)")
+                                    self.lbl_pageSignup_phoneNumberNotification.setText("")
+
+                                    self.signup_phoneNumber = "254" + edited_text
+
+                            else:
+                                    self.led_pageSignup_phoneNumber.setStyleSheet(
+                                            "border:2px solid rgb(203, 203, 203);;"
+                                            "border-bottom: 2px solid rgb(255, 7, 11)")
+                                    self.lbl_pageSignup_phoneNumberNotification.setText(
+                                            "Number of digits is more/less than expected!")
+
+                                    self.edited_phoneNumber_signup = False
+
+                    except:
+                            self.led_pageSignup_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                          "border-bottom: 2px solid rgb(255, 7, 11)")
+                            self.lbl_pageSignup_phoneNumberNotification.setText("Field should contain digits only")
+                            self.edited_phoneNumber_signup = False
+
+
+            else:
                     self.led_pageSignup_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                                "border-bottom: 2px solid rgb(0, 136, 0)")
-                    self.lbl_pageSignup_phoneNumberNotification.setText("")
-
-                    self.signup_phoneNumber = edited_text
-
-                else:
-                    self.led_pageSignup_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-                    self.lbl_pageSignup_phoneNumberNotification.setText("Number of digits is more/less than expected!")
-
+                                                                  "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_phoneNumberNotification.setText("Phone number cannot be blank!")
                     self.edited_phoneNumber_signup = False
 
-            except:
-                self.led_pageSignup_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-                self.lbl_pageSignup_phoneNumberNotification.setText("Field should contain digits only")
-                self.edited_phoneNumber_signup = False
-
-
-        else:
-            self.led_pageSignup_phoneNumber.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-            self.lbl_pageSignup_phoneNumberNotification.setText("Phone number cannot be blank!")
-            self.edited_phoneNumber_signup = False
-
     def is_valid_email(self, email_to_validate):
-        if not email_to_validate:
-            return False
+            if not email_to_validate:
+                    return False
 
-        pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+            pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
 
-        if re.match(pattern, email_to_validate):
-                return True
-        else:
-                return False
+            if re.match(pattern, email_to_validate):
+                    return True
+            else:
+                    return False
 
     def led_pageSignup_emailAddress_edit(self):
-        edited_text = self.led_pageSignup_emailAddress.text().strip().lower()
-        valid_mail = self.is_valid_email(edited_text)
+            edited_text = self.led_pageSignup_emailAddress.text().strip().lower()
+            valid_mail = self.is_valid_email(edited_text)
 
-        if valid_mail is True:
-            self.edited_email_signup = True
-            self.led_pageSignup_emailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
-            self.lbl_pageSignup_emailNotification.setText("")
+            if valid_mail is True:
+                    self.edited_email_signup = True
+                    self.led_pageSignup_emailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                   "border-bottom: 2px solid rgb(0, 136, 0)")
+                    self.lbl_pageSignup_emailNotification.setText("")
 
-            self.signup_emailAddress = edited_text
+                    self.signup_emailAddress = edited_text
 
-        else:
-            self.led_pageSignup_emailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                               "border-bottom: 2px solid rgb(255, 7, 11)")
-            self.lbl_pageSignup_emailNotification.setText("Enter a valid email address!")
+            else:
+                    self.led_pageSignup_emailAddress.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                   "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_emailNotification.setText("Email address is invalid!")
 
-            self.edited_email_signup = False
+                    self.edited_email_signup = False
 
     def led_pageSignup_occupation_2_edit(self):
-        edited_text = self.led_pageSignup_occupation_2.text().strip()
+            edited_text = self.led_pageSignup_occupation_2.text().strip()
 
-        if edited_text != "":
-            self.edited_houseNumber_signup = True
-            self.led_pageSignup_occupation_2.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(0, 136, 0)")
-            self.lbl_pageSignup_houseNumberNotification.setText("")
-            self.signup_housenumber = edited_text
+            if edited_text != "":
+                    self.edited_houseNumber_signup = True
+                    self.led_pageSignup_occupation_2.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                   "border-bottom: 2px solid rgb(0, 136, 0)")
+                    self.lbl_pageSignup_houseNumberNotification.setText("")
+                    self.signup_housenumber = edited_text
 
 
-        else:
-            self.led_pageSignup_occupation_2.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
-                                                        "border-bottom: 2px solid rgb(255, 7, 11)")
-            self.lbl_pageSignup_houseNumberNotification.setText("House Number cannot be blank!")
-            self.edited_houseNumber_signup = False
+            else:
+                    self.led_pageSignup_occupation_2.setStyleSheet("border:2px solid rgb(203, 203, 203);;"
+                                                                   "border-bottom: 2px solid rgb(255, 7, 11)")
+                    self.lbl_pageSignup_houseNumberNotification.setText("House Number cannot be blank!")
+                    self.edited_houseNumber_signup = False
 
     def btn_pageSignup_personalDetailsNext_clicked(self):
-        self.signup_occupation = self.led_pageSignup_occupation.text()
-        if self.rbn_pageSignUp_male.isChecked():
-            self.signup_gender = "Male"
-        if self.rbn_pageSignUp_female.isChecked():
-            self.signup_gender = "Female"
+            self.signup_occupation = self.led_pageSignup_occupation.text()
 
-        if (self.edited_FirstName_signup is True) and (self.edited_LastName_signup is True) and \
-                (self.edited_idNumber_signup is True) and (self.edited_email_signup is True) and\
-                (self.edited_houseNumber_signup is True) and (self.edited_phoneNumber_signup is True):
+            warning = QMessageBox()
+            warning.setWindowTitle("WARNING")
+            warning.setIcon(QMessageBox.Critical)
+            if self.signup_occupation == "":
+                    self.signup_occupation = "NOT STATED"
 
-            self.next_signup_page()
-            print(self.signup_gender)
-        else:
-            print("Invalid")
+            if self.rbn_pageSignUp_male.isChecked():
+                    self.signup_gender = "Male"
+            if self.rbn_pageSignUp_female.isChecked():
+                    self.signup_gender = "Female"
+
+            if (self.edited_FirstName_signup is True) and (self.edited_LastName_signup is True) and \
+                    (self.edited_idNumber_signup is True) and (self.edited_email_signup is True) and \
+                    (self.edited_houseNumber_signup is True) and (self.edited_phoneNumber_signup is True):
+
+                    self.mycursor.execute(f"SELECT COUNT(*) FROM apartment_name.details "
+                                          f"WHERE id_number = '{self.signup_idNumber}'")
+                    result = self.mycursor.fetchone()[0]
+
+                    if result > 0:
+
+                            warning.setText("ID Number entered is already linked to an account!")
+                            x = warning.exec_()
+
+                    else:
+                            self.mycursor.execute(f"SELECT COUNT(*) FROM apartment_name.details "
+                                                  f"WHERE email_address = '{self.signup_emailAddress}'")
+                            result = self.mycursor.fetchone()[0]
+                            if result > 0:
+                                    warning.setText("Email Address entered is already linked to an account!")
+                                    x = warning.exec_()
+                            else:
+                                    self.mycursor.execute(f"SELECT COUNT(*) FROM apartment_name.details "
+                                                          f"WHERE phone_number = '254{self.signup_phoneNumber}'")
+                                    result = self.mycursor.fetchone()[0]
+                                    if result > 0:
+                                            warning.setText("Phone Number entered is already linked to an account!")
+                                            x = warning.exec_()
+                                    else:
+                                            self.mycursor.execute(f"SELECT COUNT(*) FROM apartment_name.details "
+                                                                  f"WHERE house_number = '{self.signup_housenumber}'")
+                                            result = self.mycursor.fetchone()[0]
+                                            if result > 0:
+                                                    warning.setText(
+                                                            "House Number entered is already linked to an account!")
+                                                    x = warning.exec_()
+                                            else:
+                                                    self.next_signup_page()
+                                                    self.lbl_pageSignup_FillallNotification.setText("")
+
+            else:
+                    warning.setText("Enter all required fields with * appropriately")
+                    x = warning.exec_()
+                    self.lbl_pageSignup_FillallNotification.setText("Enter all required fields with *")
+                    self.lbl_pageSignup_FillallNotification.adjustSize()
 
     def to_pageLogin(self):
         self.stackedWidget.setCurrentWidget(self.PageLogin)
         self.stackedWidget_2.setCurrentWidget(self.pageRealHomepage)
+        self.login_sessin += 1
 
     def to_pageSignup(self):
             self.stackedWidget.setCurrentWidget(self.pageSignUp)
@@ -1560,6 +1918,31 @@ class Ui_Form(object):
                     self.lbl_pageHomepage_welcomeUser.setText(f"Welcome {self.session_user_firstName}")
                     self.lbl_pageHomepage_welcomeUser_2.setText(f"Welcome {self.session_user_firstName}")
 
+                    if self.login_sessin<1:
+                        self.owner_message_thread = OwnerMessageThread(self.session_user_id)
+                        self.owner_message_thread.messages_updated.connect(self.update_owner_messages_textedit)
+                        self.owner_message_thread.start()
+
+                        self.manager_message_thread = ManagerMessageThread(self.session_user_id)
+                        self.manager_message_thread.messages_updated.connect(self.update_manager_messages_textedit)
+                        self.manager_message_thread.start()
+                    else:
+                        self.owner_message_thread.terminate()
+                        self.owner_message_thread.wait()
+
+                        self.manager_message_thread.terminate()
+                        self.manager_message_thread.wait()
+                        sleeptime.sleep(1)
+
+                        self.owner_message_thread = OwnerMessageThread(self.session_user_id)
+                        self.owner_message_thread.messages_updated.connect(self.update_owner_messages_textedit)
+                        self.owner_message_thread.start()
+
+                        self.manager_message_thread = ManagerMessageThread(self.session_user_id)
+                        self.manager_message_thread.messages_updated.connect(self.update_manager_messages_textedit)
+                        self.manager_message_thread.start()
+
+
             else:
                     if self.user_password == "None":
                             self.lbl_pageLogin_password.setText("You entered a username that does not exist!")
@@ -1594,12 +1977,12 @@ class Ui_Form(object):
 
     def sendmail(self, send_email_address, firstName, otp):
             server = smtplib.SMTP('smtp.gmail.com', 587)
-            email_password = "gqtkvoyoqagcfhby"
+            email_password = "opmawjgeglznvoyn"
 
             server.ehlo()
             server.starttls()
             server.ehlo()
-            server.login("derrickmulwa.programming@gmail.com", email_password)
+            server.login("friendscornermanagement@gmail.com", email_password)
             company = "Friends Corner"
             body = f"Dear {firstName},\n\nWe have received a request to reset " \
                    f"the password for your account. To proceed with this request, use the following verification " \
@@ -1613,10 +1996,9 @@ class Ui_Form(object):
             message = f'subject: {subject} \n\n{body}'
 
             server.sendmail(
-                    "derrickmulwa.programming@gmail.com",
+                    "Friends Corner",
                     send_email_address,
                     message)
-
     def button_continue(self):
             self.reset_password_step = 1
             self.resetpass_send_email_address = self.led_pageForgotPassword_Username.text()
@@ -1781,12 +2163,12 @@ class Ui_Form(object):
                             self.db.commit()
 
                             server = smtplib.SMTP('smtp.gmail.com', 587)
-                            email_password = "gqtkvoyoqagcfhby"
+                            email_password = "opmawjgeglznvoyn"
 
                             server.ehlo()
                             server.starttls()
                             server.ehlo()
-                            server.login("derrickmulwa.programming@gmail.com", email_password)
+                            server.login("friendscornermanagement@gmail.com", email_password)
                             company = "Friends Corner"
 
                             body = f"Dear {self.resetpass_first_name} \n\nThis email is to confirm that the password for your " \
@@ -1803,7 +2185,7 @@ class Ui_Form(object):
                             message = f'subject: {subject} \n\n{body}'
 
                             server.sendmail(
-                                    "derrickmulwa.programming@gmail.com",
+                                    "Friends Corner",
                                     self.resetpass_send_email_address,
                                     message)
 
@@ -1841,13 +2223,30 @@ class Ui_Form(object):
                                                               "border-radius:5px")
 
     def btn_pageSignup_pageNexofKin_next_clicked(self):
-            self.signUP.setCurrentWidget(self.pagePassword)
-            self.lbl_pageSignUp_password.setStyleSheet("background-color: rgb(203, 203, 203);"
-                                                       "border: 2px solid rgb(59, 59, 59);"
-                                                       "border-left:6px solid rgb(255, 6, 18);")
-            self.lbl_pageSignUp_nextofkin.setStyleSheet("background-color: rgb(203, 203, 203);"
-                                                        "border: 2px solid rgb(59, 59, 59);"
-                                                        "border-radius:5px")
+            if (self.edited_NOK_FirstName_signup is True) and \
+                    (self.edited_NOK_LastName_signup is True) and (self.edited_NOK_phoneNumber_signup is True):
+                    self.signUP.setCurrentWidget(self.pagePassword)
+                    self.lbl_pageSignUp_password.setStyleSheet("background-color: rgb(203, 203, 203);"
+                                                               "border: 2px solid rgb(59, 59, 59);"
+                                                               "border-left:6px solid rgb(255, 6, 18);")
+                    self.lbl_pageSignUp_nextofkin.setStyleSheet("background-color: rgb(203, 203, 203);"
+                                                                "border: 2px solid rgb(59, 59, 59);"
+                                                                "border-radius:5px")
+
+                    self.lbl_pageSignup_Fillall_NOK_Notification.setText("")
+
+            else:
+                    warning = QMessageBox()
+                    warning.setWindowTitle("WARNING")
+                    warning.setIcon(QMessageBox.Critical)
+                    warning.setText("Enter all required fields with *")
+                    x = warning.exec_()
+                    self.lbl_pageSignup_Fillall_NOK_Notification.setText("Enter all required fields with *")
+
+            self.signup_relationsip_NOK = self.combo_pageSignup_next_of_kin_relationship.currentText()
+            self.signup_address_NOK = self.led_pageSignup_next_of_kinAddress.text()
+            if self.signup_address_NOK == "":
+                    self.signup_address_NOK = "NOT STATED"
 
     def btn_pageSignup_pagePassword_back_clicked(self):
             self.signUP.setCurrentWidget(self.pageNextOfKin)
@@ -1870,12 +2269,171 @@ class Ui_Form(object):
     def btn_pageHomepage_chat_clicked(self):
         self.stackedWidget_2.setCurrentWidget(self.pageChat)
 
+    def update_manager_messages_textedit(self, display_message):
+        self.current_manager_display_message = display_message
+
+        if self.previous_manager_display_message != self.current_manager_display_message:
+                self.ted_pageChat_chatbox_manager.setPlainText(display_message)
+                cursor = self.ted_pageChat_chatbox_manager.textCursor()
+                cursor.movePosition(QTextCursor.End, QTextCursor.MoveAnchor)
+                self.ted_pageChat_chatbox_manager.setTextCursor(cursor)
+                self.ted_pageChat_chatbox_manager.setReadOnly(True)
+
+                self.previous_manager_display_message = self.current_manager_display_message
+        else:
+                i = 0
+
+    def update_owner_messages_textedit(self, display_message):
+        self.current_owner_display_message = display_message
+        if self.previous_owner_display_message != self.current_owner_display_message:
+                self.ted_pageChat_chatbox_owner.setPlainText(display_message)
+                cursor = self.ted_pageChat_chatbox_owner.textCursor()
+                cursor.movePosition(QTextCursor.End, QTextCursor.MoveAnchor)
+                self.ted_pageChat_chatbox_owner.setTextCursor(cursor)
+                self.ted_pageChat_chatbox_owner.setReadOnly(True)
+                self.previous_owner_display_message = self.current_owner_display_message
+        else:
+                i = 0
+
     def btn_pageHomepage_reportacomplaint_clicked(self):
-        self.stackedWidget_2.setCurrentWidget(self.pageReport_a_complaint)
+            self.stackedWidget_2.setCurrentWidget(self.pageReport_a_complaint)
 
     def btn_pageReportAComplaint_backToHomepage_clicked(self):
-        self.stackedWidget_2.setCurrentWidget(self.pageRealHomepage)
+            self.stackedWidget_2.setCurrentWidget(self.pageRealHomepage)
 
+
+
+class ManagerMessageThread(QThread):
+    messages_updated = pyqtSignal(str)
+    def __init__(self, session_user_firstName):
+        super().__init__()
+        self.db = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password ="root"
+        )
+        self.mycursor = self.db.cursor()
+        self.session_user_firstName = session_user_firstName
+
+    def run(self):
+        v = True
+        while v is True:
+                self.db = mysql.connector.connect(
+                        host="localhost",
+                        user="root",
+                        password="root"
+                )
+                self.mycursor = self.db.cursor()
+
+                self.mycursor.execute(f"SELECT * FROM (SELECT * FROM apartment_name.messages "
+                                      f"WHERE sent_from = 'MANAGER' or sent_to = 'MANAGER' ORDER BY date_sent) AS table_owner "
+                                      f"WHERE table_owner.sent_from = '{self.session_user_firstName}' or "
+                                      f"table_owner.sent_to = '{self.session_user_firstName}' ORDER BY date_sent;")
+                messagelist = [i for i in self.mycursor]
+
+                if len(messagelist) > 0:
+                    display_message = ''
+
+                    for i in messagelist:
+                        time = f"[{i[1]}] "
+                        if i[2] == self.session_user_firstName:
+                            message = time + "YOU: "
+                        else:
+                            message = time + i[2].upper() + ": "
+
+                        message += f"{i[4]}\n\n"
+
+                        display_message += message
+                else:
+                    display_message = "\n\n                                                                         " \
+                                      "           " \
+                                      "START CHAT WITH HOUSE MANAGER"
+
+
+                self.messages_updated.emit(display_message)
+                self.db.close()
+
+                sleeptime.sleep(2)
+
+class OwnerMessageThread(QThread):
+    messages_updated = pyqtSignal(str)
+    def __init__(self, session_user_firstName):
+        super().__init__()
+        self.db = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password ="root"
+        )
+        self.mycursor = self.db.cursor()
+        self.session_user_firstName = session_user_firstName
+
+    def run(self):
+        v = True
+        while v is True:
+                self.db = mysql.connector.connect(
+                        host="localhost",
+                        user="root",
+                        password="root"
+                )
+                self.mycursor = self.db.cursor()
+
+                self.mycursor.execute(f"SELECT * FROM (SELECT * FROM apartment_name.messages "
+                                      f"WHERE sent_from = 'OWNER' or sent_to = 'OWNER' ORDER BY date_sent) AS table_owner "
+                                      f"WHERE table_owner.sent_from = '{self.session_user_firstName}' or "
+                                      f"table_owner.sent_to = '{self.session_user_firstName}' ORDER BY date_sent;")
+                messagelist = [i for i in self.mycursor]
+
+                if len(messagelist) > 0:
+                    display_message = ''
+
+                    for i in messagelist:
+                        time = f"[{i[1]}] "
+                        if i[2] == self.session_user_firstName:
+                            message = time + "YOU: "
+                        else:
+                            message = time + i[2].upper() + ": "
+
+                        message += f"{i[4]}\n\n"
+
+                        display_message += message
+                else:
+                    display_message = "\n\n                                                                         " \
+                                      "           " \
+                                      "START CHAT WITH OWNER"
+
+
+                self.messages_updated.emit(display_message)
+                self.db.close()
+
+                sleeptime.sleep(2)
+
+
+    def getmessages(self):
+        self.mycursor.execute(f"SELECT * FROM (SELECT * FROM apartment_name.messages "
+                                  f"WHERE sent_from = 'OWNER' or sent_to = 'OWNER' ORDER BY date_sent) AS table_owner "
+                                  f"WHERE table_owner.sent_from = '{self.session_user_firstName}' or "
+                                  f"table_owner.sent_to = '{self.session_user_firstName}' ORDER BY date_sent;")
+        messagelist = [i for i in self.mycursor]
+
+        if len(messagelist) > 0:
+            display_message = ''
+
+        for i in messagelist:
+            time = f"[{i[1]}] "
+            if i[2] == self.session_user_firstName:
+                message = time + "YOU: "
+            else:
+                message = time + i[2].upper() + ": "
+
+                message += f"{i[4]}\n\n"
+
+                display_message += message
+        else:
+            display_message = "\n\n                                                                         " \
+                              "           " \
+                              "START CHAT WITH OWNER"
+
+        return display_message
 
 if __name__ == "__main__":
     import sys

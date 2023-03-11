@@ -178,6 +178,9 @@ backgroundr:white;
      <property name="text">
       <string>LOG IN</string>
      </property>
+     <property name="shortcut">
+      <string>Return</string>
+     </property>
     </widget>
     <widget class="QPushButton" name="btn_LoginPage_ForgotPassword">
      <property name="geometry">
@@ -596,7 +599,7 @@ border-radius: 10px;
 color: rgb(17, 17, 17);</string>
        </property>
        <property name="text">
-        <string>Phone Number</string>
+        <string>Phone Number *</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_13">
@@ -893,6 +896,28 @@ border-bottom: 2px solid rgb(15, 15, 15)</string>
         <string>Accountant</string>
        </property>
       </widget>
+      <widget class="QLabel" name="lbl_pageSignup_FillallNotification">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>340</y>
+         <width>181</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
       <zorder>layoutWidget</zorder>
       <zorder>label_8</zorder>
       <zorder>label_10</zorder>
@@ -917,6 +942,7 @@ border-bottom: 2px solid rgb(15, 15, 15)</string>
       <zorder>led_pageSignup_firstName</zorder>
       <zorder>led_pageSignup_lastName</zorder>
       <zorder>led_pageSignup_occupation</zorder>
+      <zorder>lbl_pageSignup_FillallNotification</zorder>
      </widget>
      <widget class="QWidget" name="pageNextOfKin">
       <widget class="QLabel" name="lbl_pageSignUp_nextofkin_2">
@@ -1347,6 +1373,28 @@ border: 2px solid rgb(66, 66, 255)</string>
         <string/>
        </property>
       </widget>
+      <widget class="QLabel" name="lbl_pageSignup_Fillall_NOK_Notification">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>330</y>
+         <width>181</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
       <zorder>lbl_pageSignUp_nextofkin_2</zorder>
       <zorder>label_18</zorder>
       <zorder>label_20</zorder>
@@ -1366,6 +1414,7 @@ border: 2px solid rgb(66, 66, 255)</string>
       <zorder>led_pageSignup_next_of_kinLastName</zorder>
       <zorder>lbl_pageSignup_NextofKin_PhoneNumberNotification</zorder>
       <zorder>led_pageSignup_next_of_kin_phoneNumber</zorder>
+      <zorder>lbl_pageSignup_Fillall_NOK_Notification</zorder>
      </widget>
      <widget class="QWidget" name="pagePassword">
       <widget class="QLabel" name="label_21">
@@ -1440,8 +1489,8 @@ border-radius:5px
       <widget class="QPushButton" name="btn_pageSignup_signUp">
        <property name="geometry">
         <rect>
-         <x>180</x>
-         <y>190</y>
+         <x>190</x>
+         <y>220</y>
          <width>121</width>
          <height>41</height>
         </rect>
@@ -1452,6 +1501,9 @@ border-radius:6px</string>
        </property>
        <property name="text">
         <string>Sign Up</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="led_pageSignup_newPassword">
@@ -1561,6 +1613,28 @@ color: rgb(17, 17, 17);</string>
         <string/>
        </property>
       </widget>
+      <widget class="QLabel" name="lbl_pageSignup_Fillall_Password_Notification">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>180</y>
+         <width>181</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(229, 6, 28);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
       <zorder>label_21</zorder>
       <zorder>btn_pageSignup_pagePassword_back</zorder>
       <zorder>lbl_pageSignUp_nextofkin_3</zorder>
@@ -1570,6 +1644,7 @@ color: rgb(17, 17, 17);</string>
       <zorder>led_pageSignup_newPassword</zorder>
       <zorder>lbl_pagePassword_RepeatPasswordNotification</zorder>
       <zorder>led_pageSignup_repeatPassword</zorder>
+      <zorder>lbl_pageSignup_Fillall_Password_Notification</zorder>
      </widget>
     </widget>
     <widget class="QPushButton" name="btn_PageSignUp_BacktoLogin">
@@ -1902,6 +1977,9 @@ border-radius:10px
      <property name="text">
       <string>Update Password</string>
      </property>
+     <property name="shortcut">
+      <string>Return</string>
+     </property>
     </widget>
     <widget class="QLineEdit" name="led_pageForgotPassword_newpassword">
      <property name="geometry">
@@ -1964,6 +2042,9 @@ border-radius:5px;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(113, 113, 113);</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
      </property>
      <widget class="QWidget" name="pageRealHomepage">
       <widget class="QLabel" name="label_32">
@@ -2040,7 +2121,7 @@ border-radius: 8px</string>
         <string/>
        </property>
       </widget>
-      <widget class="QTextEdit" name="ted_pageChat_chatbox">
+      <widget class="QTextEdit" name="ted_pageChat_chatbox_owner">
        <property name="geometry">
         <rect>
          <x>210</x>
@@ -2058,8 +2139,8 @@ color: rgb(255, 255, 255);</string>
       <widget class="QLineEdit" name="led_pageChat_message">
        <property name="geometry">
         <rect>
-         <x>212</x>
-         <y>419</y>
+         <x>250</x>
+         <y>430</y>
          <width>501</width>
          <height>41</height>
         </rect>
@@ -2072,18 +2153,40 @@ border-radius: 8px</string>
       <widget class="QPushButton" name="btn_pageChat_send">
        <property name="geometry">
         <rect>
-         <x>730</x>
-         <y>422</y>
-         <width>111</width>
+         <x>748</x>
+         <y>430</y>
+         <width>71</width>
          <height>41</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(0, 255, 0);
+        <string notr="true">background-color: rgb(113, 113, 113);
 border-radius: 4px</string>
        </property>
        <property name="text">
-        <string>SEND</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>icons/send.png</normaloff>icons/send.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
        </property>
       </widget>
       <widget class="QPushButton" name="btn_pageChat_chatWithManager">
@@ -2124,6 +2227,28 @@ border-bottom: 2px solid rgb(81, 81, 81)</string>
         <string>Chat with Owner</string>
        </property>
       </widget>
+      <widget class="QTextEdit" name="ted_pageChat_chatbox_manager">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>10</y>
+         <width>641</width>
+         <height>401</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(52, 52, 52);
+border-radius: 8px;
+color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <zorder>label_33</zorder>
+      <zorder>ted_pageChat_chatbox_owner</zorder>
+      <zorder>btn_pageChat_send</zorder>
+      <zorder>btn_pageChat_chatWithManager</zorder>
+      <zorder>btn_pageChat_chatWithOwner</zorder>
+      <zorder>ted_pageChat_chatbox_manager</zorder>
+      <zorder>led_pageChat_message</zorder>
      </widget>
      <widget class="QWidget" name="pageReport_a_complaint">
       <widget class="QLabel" name="label_34">
@@ -2164,9 +2289,9 @@ background-color: rgb(170, 170, 127);</string>
        <property name="geometry">
         <rect>
          <x>250</x>
-         <y>210</y>
+         <y>220</y>
          <width>471</width>
-         <height>201</height>
+         <height>191</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -2195,7 +2320,7 @@ border: 2px solid black</string>
        <property name="geometry">
         <rect>
          <x>280</x>
-         <y>129</y>
+         <y>140</y>
          <width>111</width>
          <height>31</height>
         </rect>
@@ -2212,7 +2337,7 @@ background-color: rgb(170, 170, 127);</string>
        <property name="geometry">
         <rect>
          <x>420</x>
-         <y>130</y>
+         <y>141</y>
          <width>181</width>
          <height>31</height>
         </rect>
@@ -2271,8 +2396,8 @@ border: 2px solid black</string>
       <widget class="QLabel" name="label_37">
        <property name="geometry">
         <rect>
-         <x>420</x>
-         <y>180</y>
+         <x>430</x>
+         <y>190</y>
          <width>111</width>
          <height>31</height>
         </rect>
@@ -2348,10 +2473,39 @@ border-radius:10px
        <property name="text">
         <string>SUBMIT COMPLAINT</string>
        </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_39">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>110</y>
+         <width>631</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:7px;
+background-color: rgb(170, 170, 127);
+color: rgb(207, 8, 22);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
       </widget>
       <zorder>label_34</zorder>
       <zorder>label_35</zorder>
-      <zorder>date_pageReport_a_complaint_date_of_incedence</zorder>
       <zorder>label_36</zorder>
       <zorder>combo_pageReportAComplaint_category_of_complaint</zorder>
       <zorder>label_37</zorder>
@@ -2359,6 +2513,8 @@ border-radius:10px
       <zorder>label_38</zorder>
       <zorder>btn_pageReportAComplaint_backToHomepage</zorder>
       <zorder>btn_pageReportAComplaint_submitComplaint</zorder>
+      <zorder>label_39</zorder>
+      <zorder>date_pageReport_a_complaint_date_of_incedence</zorder>
      </widget>
     </widget>
     <widget class="QLabel" name="label_19">

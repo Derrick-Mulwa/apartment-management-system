@@ -11,6 +11,7 @@ email_address VARCHAR(150),
 house_number VARCHAR(100),
 gender VARCHAR(30),
 occupation VARCHAR(100),
+date_of_commencing_tenancy DATE,
 next_of_kin_first_name VARCHAR(100),
 next_of_kin_last_name VARCHAR(100),
 next_of_kin_phone_number VARCHAR(100),
@@ -50,19 +51,24 @@ AFTER INSERT ON messages
 FOR EACH ROW
 INSERT INTO  message_updator(message_id) VALUES (NEW.message_id);
 
-
-
-INSERT INTO apartment_name.details(id_number, first_name, last_name, phone_number, email_address, house_number, occupation,
+INSERT INTO apartment_name.details(id_number, first_name, last_name, phone_number, email_address, house_number, date_of_commencing_tenancy , occupation,
 next_of_kin_first_name, next_of_kin_last_name) VALUES
-(11217220, "Derrick", "Mkali", 254799368479, "mbalukaderrik@gmail.com", "B16", "Student", "Kendrick", "Mulamwa"),
-(32711242, "Angela", "Nyaboke", 254712348479, "angela19200@gmail.com", "A11", "Accountant", "Louis", "Cia"),
-(07554865, "Ian", "Pweza", 254748556412, "ianfala1213@gmail.com", "J9", "Watchman", "Keovin", "Musyo"),
-(24568121, "Ken", "Walibora", 254736951362, "kenwalibora@gmail.com", "M45", "Plumber", "Miss", "Wake");
+(11217220, "Derrick", "Mkali", 254799368479, "mbalukaderrik@gmail.com", "B16", "2023-01-11", "Student", "Kendrick", "Mulamwa"),
+(32711242, "Angela", "Nyaboke", 254712348479, "angela19200@gmail.com", "A11", "2020-03-19", "Accountant", "Louis", "Cia"),
+(07554865, "Ian", "Pweza", 254748556412, "ianfala1213@gmail.com", "J9", "2022-07-30", "Watchman", "Keovin", "Musyo"),
+(24568121, "Ken", "Walibora", 254736951362, "kenwalibora@gmail.com", "M45", "2023-03-11", "Plumber", "Miss", "Wake");
 
 INSERT INTO tenants_logins(id_number,house_number,phone_number, email_address, user_password) VALUES
 (11217220, "B16", 254799368479, "mbalukaderrik@gmail.com", "Deriky1"),
 (32711242, "A11", 254712348479, "angela19200@gmail.com", "Wowman"),
 (07554865, "J9",  254748556412, "ianfala1213@gmail.com", "Tenant4"),
-(24568121, "M45", 254736951362, "kenwalibora@gmail.com", "M45Karia")
+(24568121, "M45", 254736951362, "kenwalibora@gmail.com", "M45Karia");
 
+CREATE TABLE complaints(
+complaint_id INT PRIMARY KEY AUTO_INCREMENT,
+complaint_date_posted DATETIME,
+complaint_from VARCHAR(100),
+date_of_incedence DATE,
+complaint_category VARCHAR(100),
+complaint_description VARCHAR(3000))
 
