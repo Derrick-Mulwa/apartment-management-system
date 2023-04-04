@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/icons8-search-100.png</file>
+    <file>icons/icons8-back-to-100.png</file>
+    <file>icons/icons8-next-page-100.png</file>
+    <file>icons/icons8-chat-room-100.png</file>
+    <file>icons/icons8-leave-house-100.png</file>
+    <file>icons/icons8-repairs-60.png</file>
+    <file>icons/icons8-strike-100.png</file>
+    <file>icons/icons8-view-90.png</file>
+    <file>icons/female.png</file>
+    <file>icons/icons.png</file>
+    <file>icons/male.png</file>
+    <file>icons/send.png</file>
+    <file>icons/user.png</file>
+  </qresource>
+</RCC>

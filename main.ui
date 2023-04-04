@@ -2034,11 +2034,17 @@ border-radius:5px;</string>
     <widget class="QStackedWidget" name="stackedWidget_2">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>189</x>
        <y>0</y>
-       <width>881</width>
-       <height>511</height>
+       <width>931</width>
+       <height>501</height>
       </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>871</width>
+       <height>501</height>
+      </size>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(113, 113, 113);</string>
@@ -2047,35 +2053,6 @@ border-radius:5px;</string>
       <number>0</number>
      </property>
      <widget class="QWidget" name="pageRealHomepage">
-      <widget class="QLabel" name="label_32">
-       <property name="geometry">
-        <rect>
-         <x>240</x>
-         <y>140</y>
-         <width>411</width>
-         <height>131</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>MS PGothic</family>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-radius: 5px;
-background-color: rgb(255, 0, 0);
-color: rgb(36, 36, 36);</string>
-       </property>
-       <property name="text">
-        <string>RENT DETAILS
-Days Remaining: 24
-Rent Arreas: KSH2400</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
       <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_2">
        <property name="geometry">
         <rect>
@@ -2101,8 +2078,517 @@ color: rgb(255, 255, 255);</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
+      <widget class="QToolButton" name="toolButton">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>120</y>
+         <width>201</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(41, 166, 18);</string>
+       </property>
+       <property name="text">
+        <string>Pay rent</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons.png</normaloff>:/icons/icons/icons.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_2">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>120</y>
+         <width>211</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(26, 29, 166);</string>
+       </property>
+       <property name="text">
+        <string>CHAT</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-chat-room-100.png</normaloff>:/icons/icons/icons8-chat-room-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_3">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>320</y>
+         <width>201</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(197, 200, 11);</string>
+       </property>
+       <property name="text">
+        <string>Schedule repairs</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-repairs-60.png</normaloff>:/icons/icons/icons8-repairs-60.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_4">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>120</y>
+         <width>201</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(188, 2, 14);</string>
+       </property>
+       <property name="text">
+        <string>Report complaint</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-strike-100.png</normaloff>:/icons/icons/icons8-strike-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_5">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>320</y>
+         <width>211</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(126, 126, 126);</string>
+       </property>
+       <property name="text">
+        <string>Vacate</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-leave-house-100.png</normaloff>:/icons/icons/icons8-leave-house-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_6">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>320</y>
+         <width>211</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(41, 166, 18);</string>
+       </property>
+       <property name="text">
+        <string>Available properties</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-view-90.png</normaloff>:/icons/icons/icons8-view-90.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
      </widget>
-     <widget class="QWidget" name="pagePayRent"/>
+     <widget class="QWidget" name="pagePayRent">
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>-10</y>
+         <width>871</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>25</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>SUBMIT A PAYMENT FOR VERIFICATION</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_2">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>120</y>
+         <width>311</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+padding-left:12px;
+border: 2px solid white;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>RBO7E35TAB</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_40">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>90</y>
+         <width>211</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>PAYMENT ID CODE</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_41">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>90</y>
+         <width>211</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>PAYMENT CHANNEL</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_42">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>190</y>
+         <width>211</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>DATE PAID</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_43">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>190</y>
+         <width>211</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Payment Reason</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>120</y>
+         <width>281</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+padding-left:20px;
+border: 2px solid white;
+border-radius: 10px;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>M-Pesa</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Equity Bank</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>KCB Bank</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Co-operative Bank</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QDateEdit" name="dateEdit">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>220</y>
+         <width>281</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+
+border: 2px solid white;
+border-radius: 10px;</string>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy MMMM dd</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_2">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>220</y>
+         <width>281</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+padding-left:20px;
+border: 2px solid white;
+border-radius: 10px;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Rent</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Repairs</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Water</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Arreas</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Other</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="btn_pageForgotPassword_updatePassword_2">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>430</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(16, 255, 12);
+border-radius:10px
+</string>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_51">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>290</y>
+         <width>211</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Amount</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_4">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>320</y>
+         <width>311</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+padding-left:12px;
+border: 2px solid white;
+border-radius: 10px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>7000</string>
+       </property>
+      </widget>
+     </widget>
      <widget class="QWidget" name="pageChat">
       <widget class="QLabel" name="label_33">
        <property name="geometry">
@@ -2163,12 +2649,9 @@ border-radius: 8px</string>
         <string notr="true">background-color: rgb(113, 113, 113);
 border-radius: 4px</string>
        </property>
-       <property name="text">
-        <string/>
-       </property>
        <property name="icon">
-        <iconset>
-         <normaloff>icons/send.png</normaloff>icons/send.png</iconset>
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/send.png</normaloff>:/icons/icons/send.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -2516,6 +2999,604 @@ color: rgb(207, 8, 22);</string>
       <zorder>label_39</zorder>
       <zorder>date_pageReport_a_complaint_date_of_incedence</zorder>
      </widget>
+     <widget class="QWidget" name="pageSchedulerepairs">
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>871</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>25</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>SCHEDULE REPAIRS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_44">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>230</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:7px;
+</string>
+       </property>
+       <property name="text">
+        <string>Brief description of the damage</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="ted_pageReportAComplaint_describeComplaint_2">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>260</y>
+         <width>471</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:7px;
+color: rgb(39, 39, 39);
+border: 2px solid black</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_45">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>99</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:7px;
+</string>
+       </property>
+       <property name="text">
+        <string>Category of Repair</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="combo_pageReportAComplaint_category_of_complaint_2">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>100</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 4px;
+border: 2px solid black</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Electricity</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Plumbing (Taps, pipes and sinks)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Walls and paintjob</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Internet</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Furniture (Cabinets and closets)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Other</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="btn_pageReportAComplaint_submitComplaint_2">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>440</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(67, 203, 99);
+border-radius:10px
+</string>
+       </property>
+       <property name="text">
+        <string>Schedule repair</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="date_pageReport_a_complaint_date_of_incedence_2">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>165</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 4px;
+border: 2px solid black</string>
+       </property>
+       <property name="displayFormat">
+        <string>]yyyy MMMM dd</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_46">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>160</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:7px;
+</string>
+       </property>
+       <property name="text">
+        <string>Date you are free for 
+repairs to take place</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageVacationNotice">
+      <widget class="QDateEdit" name="date_pageReport_a_complaint_date_of_incedence_3">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>110</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 4px;
+border: 2px solid black</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_47">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>115</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:7px;
+</string>
+       </property>
+       <property name="text">
+        <string>Vacation Date*</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_5">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>20</y>
+         <width>821</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>25</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Vacation Notice</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_3">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>350</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>RBO7E35TAB</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_49">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>360</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Account/phone number</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageReportAComplaint_submitComplaint_3">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>430</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(67, 203, 99);
+border-radius:10px
+</string>
+       </property>
+       <property name="text">
+        <string>Issue Notice</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_5">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>280</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+padding-left:20px;
+border: 2px solid black;
+border-radius: 10px;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>M-Pesa</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Equity Bank</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>KCB Bank</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Co-operative Bank</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_65">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>180</y>
+         <width>151</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Reason for Vacation</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_66">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>280</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>PAYMENT CHANNEL</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_6">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>170</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+padding-left:20px;
+border: 2px solid black;
+border-radius: 10px;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Personal reasons</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Poor house management</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cost</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Found a better place</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_67">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>240</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>For deposit reimbursement</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageViewproperties">
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_10">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>871</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>25</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color:rgb(22, 22, 22)</string>
+       </property>
+       <property name="text">
+        <string>CHECK PROPERTIES</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_11">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>80</y>
+         <width>311</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>HOUSE NUMBER</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_12">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>130</y>
+         <width>499</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>25</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources.qrc">:/icons/icons/icons.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageSignup_pagePassword_back_2">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>430</y>
+         <width>50</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+border-radius:6px;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-back-to-100.png</normaloff>:/icons/icons/icons8-back-to-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>49</width>
+         <height>49</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageSignup_pagePassword_back_3">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>430</y>
+         <width>50</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+border-radius:6px;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-next-page-100.png</normaloff>:/icons/icons/icons8-next-page-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>49</width>
+         <height>49</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
     </widget>
     <widget class="QLabel" name="label_19">
      <property name="geometry">
@@ -2550,7 +3631,7 @@ background-color: rgb(0, 255, 0)</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>icons/user.png</pixmap>
+      <pixmap resource="resources.qrc">:/icons/icons/user.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -2580,9 +3661,9 @@ color: rgb(20, 20, 20);</string>
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>180</y>
+       <y>140</y>
        <width>181</width>
-       <height>61</height>
+       <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -2592,16 +3673,16 @@ border-top: 3px solid rgb(81, 81, 81);
 border-bottom: 2px solid rgb(81, 81, 81)</string>
      </property>
      <property name="text">
-      <string>Pay Rent</string>
+      <string>Payments</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_pageHomepage_chat">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>240</y>
+       <y>190</y>
        <width>181</width>
-       <height>61</height>
+       <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -2618,9 +3699,9 @@ border-bottom: 2px solid rgb(81, 81, 81)</string>
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>300</y>
+       <y>240</y>
        <width>181</width>
-       <height>61</height>
+       <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -2637,9 +3718,9 @@ border-bottom: 2px solid rgb(81, 81, 81)</string>
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>360</y>
+       <y>390</y>
        <width>181</width>
-       <height>61</height>
+       <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -2656,7 +3737,7 @@ border-bottom: 3px solid rgb(81, 81, 81)</string>
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>440</y>
+       <y>450</y>
        <width>101</width>
        <height>41</height>
       </rect>
@@ -2670,6 +3751,44 @@ border-radius:10px
       <string>LOGOUT</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="btn_pageHomepage_reportacomplaint_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>290</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-top: 2px solid rgb(81, 81, 81);
+border-bottom: 2px solid rgb(81, 81, 81)</string>
+     </property>
+     <property name="text">
+      <string>Schedule repairs</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageHomepage_reportacomplaint_3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>340</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-top: 2px solid rgb(81, 81, 81);
+border-bottom: 2px solid rgb(81, 81, 81)</string>
+     </property>
+     <property name="text">
+      <string>Issue vacation notice</string>
+     </property>
+    </widget>
     <zorder>label_19</zorder>
     <zorder>label_30</zorder>
     <zorder>lbl_pageHomepage_welcomeUser</zorder>
@@ -2678,10 +3797,1401 @@ border-radius:10px
     <zorder>btn_pageHomepage_reportacomplaint</zorder>
     <zorder>btn_pageHomepage_checkAvailableProperties</zorder>
     <zorder>btn_pageHomepage_logout</zorder>
+    <zorder>btn_pageHomepage_reportacomplaint_2</zorder>
+    <zorder>btn_pageHomepage_reportacomplaint_3</zorder>
     <zorder>stackedWidget_2</zorder>
+   </widget>
+   <widget class="QWidget" name="pageadmin">
+    <widget class="QPushButton" name="btn_pageHomepage_chat_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>190</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-top: 2px solid rgb(81, 81, 81);
+border-bottom: 2px solid rgb(81, 81, 81)</string>
+     </property>
+     <property name="text">
+      <string>Chat</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageHomepage_checkAvailableProperties_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>390</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-top: 2px solid rgb(81, 81, 81);
+border-bottom: 3px solid rgb(81, 81, 81)</string>
+     </property>
+     <property name="text">
+      <string>Update available properties</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageHomepage_payRent_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>140</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-top: 3px solid rgb(81, 81, 81);
+border-bottom: 2px solid rgb(81, 81, 81)</string>
+     </property>
+     <property name="text">
+      <string>Verify Payments</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_32">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>10</y>
+       <width>91</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 255, 0)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources.qrc">:/icons/icons/user.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageHomepage_reportacomplaint_4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>340</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-top: 2px solid rgb(81, 81, 81);
+border-bottom: 2px solid rgb(81, 81, 81)</string>
+     </property>
+     <property name="text">
+      <string>View issued vacation notices</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageHomepage_reportacomplaint_5">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>240</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-top: 2px solid rgb(81, 81, 81);
+border-bottom: 2px solid rgb(81, 81, 81)</string>
+     </property>
+     <property name="text">
+      <string>View complaints</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_68">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>-10</y>
+       <width>151</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageHomepage_reportacomplaint_6">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>290</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-top: 2px solid rgb(81, 81, 81);
+border-bottom: 2px solid rgb(81, 81, 81)</string>
+     </property>
+     <property name="text">
+      <string>View requested repairs</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageHomepage_logout_2">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>450</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(255, 32, 43);
+border-radius:10px
+</string>
+     </property>
+     <property name="text">
+      <string>LOGOUT</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_13">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>110</y>
+       <width>151</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 255, 0);
+color: rgb(20, 20, 20);</string>
+     </property>
+     <property name="text">
+      <string>Welcome admin</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>0</y>
+       <width>871</width>
+       <height>511</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(91, 91, 91);</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pageadminHomepage">
+      <widget class="QToolButton" name="toolButton_13">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>100</y>
+         <width>201</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(188, 2, 14);</string>
+       </property>
+       <property name="text">
+        <string>View complaints</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-strike-100.png</normaloff>:/icons/icons/icons8-strike-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_14">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>300</y>
+         <width>211</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(41, 166, 18);</string>
+       </property>
+       <property name="text">
+        <string>Update Available Properties</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-view-90.png</normaloff>:/icons/icons/icons8-view-90.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_14">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>871</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>36</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Welcome admin</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_15">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>300</y>
+         <width>211</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(126, 126, 126);</string>
+       </property>
+       <property name="text">
+        <string>View vacation notices</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-leave-house-100.png</normaloff>:/icons/icons/icons8-leave-house-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_16">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>100</y>
+         <width>211</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(26, 29, 166);</string>
+       </property>
+       <property name="text">
+        <string>Chat</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-chat-room-100.png</normaloff>:/icons/icons/icons8-chat-room-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_17">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>100</y>
+         <width>201</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(41, 166, 18);</string>
+       </property>
+       <property name="text">
+        <string>Verify Payments</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons.png</normaloff>:/icons/icons/icons.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="toolButton_18">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>300</y>
+         <width>201</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:8px;
+background-color: rgb(197, 200, 11);</string>
+       </property>
+       <property name="text">
+        <string>View scheduled repairs</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-repairs-60.png</normaloff>:/icons/icons/icons8-repairs-60.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>110</width>
+         <height>110</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageadminverifyrent">
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_15">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>871</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>25</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color:rgb(22, 22, 22)</string>
+       </property>
+       <property name="text">
+        <string>VERIFY PAYMENTS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageReportAComplaint_submitComplaint_7">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>100</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(67, 203, 99);
+border-radius:10px
+</string>
+       </property>
+       <property name="text">
+        <string>Mark as valid</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_6">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>100</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter payment ID</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageHomepage_logout_3">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>100</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(255, 32, 43);
+border-radius:10px
+</string>
+       </property>
+       <property name="text">
+        <string>Mark as invalid</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_7">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>100</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>payment ID | Tenant name | House number</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>800</x>
+         <y>100</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:transparent;
+border: 2px solid transparent;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-search-100.png</normaloff>:/icons/icons/icons8-search-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>200</y>
+         <width>801</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="rowCount">
+        <number>10</number>
+       </property>
+       <property name="columnCount">
+        <number>8</number>
+       </property>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+      </widget>
+      <widget class="QWidget" name="layoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>160</y>
+         <width>327</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QRadioButton" name="radioButton_3">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>View Unsorted payments only</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_4">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>View all payments</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageadminrepairs">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>800</x>
+         <y>100</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:transparent;
+border: 2px solid transparent;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-search-100.png</normaloff>:/icons/icons/icons8-search-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_8">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>100</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter request ID</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageReportAComplaint_submitComplaint_8">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>100</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(67, 203, 99);
+border-radius:10px
+</string>
+       </property>
+       <property name="text">
+        <string>Mark as sorted</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="tableWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>200</y>
+         <width>741</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="rowCount">
+        <number>10</number>
+       </property>
+       <property name="columnCount">
+        <number>8</number>
+       </property>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+      </widget>
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_16">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>871</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>25</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color:rgb(22, 22, 22)</string>
+       </property>
+       <property name="text">
+        <string>REQUESTED REPAIRS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_9">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>100</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Tenant name | House number</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>160</y>
+         <width>287</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="radioButton">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>View unsorted requests</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_2">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>View all requests</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageAdminChat">
+      <widget class="QTextEdit" name="ted_pageChat_chatbox_manager_2">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>20</y>
+         <width>641</width>
+         <height>401</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(52, 52, 52);
+border-radius: 8px;
+color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_48">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>181</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(52, 52, 52);
+border-radius: 8px</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageChat_send_2">
+       <property name="geometry">
+        <rect>
+         <x>738</x>
+         <y>440</y>
+         <width>71</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-radius: 4px</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/send.png</normaloff>:/icons/icons/send.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageChat_chatWithManager_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>150</y>
+         <width>141</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-top: 2px solid rgb(81, 81, 81);
+border-bottom: 2px solid rgb(81, 81, 81)</string>
+       </property>
+       <property name="text">
+        <string>Chat with Manager</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_pageChat_message_2">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>440</y>
+         <width>501</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 8px</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageChat_chatWithOwner_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>240</y>
+         <width>141</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-top: 2px solid rgb(81, 81, 81);
+border-bottom: 2px solid rgb(81, 81, 81)</string>
+       </property>
+       <property name="text">
+        <string>Chat with Owner</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageadminVacation">
+      <widget class="QLineEdit" name="led_LoginPage_Username_10">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter vacation ID</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>800</x>
+         <y>80</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:transparent;
+border: 2px solid transparent;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-search-100.png</normaloff>:/icons/icons/icons8-search-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageReportAComplaint_submitComplaint_9">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>80</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(67, 203, 99);
+border-radius:10px
+</string>
+       </property>
+       <property name="text">
+        <string>Mark as sorted</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="tableWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>180</y>
+         <width>741</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="rowCount">
+        <number>10</number>
+       </property>
+       <property name="columnCount">
+        <number>8</number>
+       </property>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_11">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>80</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Tenant name | House number</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_17">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>871</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>25</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color:rgb(22, 22, 22)</string>
+       </property>
+       <property name="text">
+        <string>VACATION NOTICES</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>130</y>
+         <width>305</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QRadioButton" name="radioButton_5">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>View unsorted notices only</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_6">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>View all notices</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="pageComplaints">
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>130</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:transparent;
+border: 2px solid transparent;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-search-100.png</normaloff>:/icons/icons/icons8-search-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_7">
+       <property name="geometry">
+        <rect>
+         <x>199</x>
+         <y>5</y>
+         <width>127</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>View all payments</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="tableWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>200</y>
+         <width>801</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="rowCount">
+        <number>10</number>
+       </property>
+       <property name="columnCount">
+        <number>8</number>
+       </property>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_12">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>130</y>
+         <width>231</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>House number | Category</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageReportAComplaint_submitComplaint_10">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>130</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(67, 203, 99);
+border-radius:10px
+</string>
+       </property>
+       <property name="text">
+        <string>Reload</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_18">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>871</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>25</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color:rgb(22, 22, 22)</string>
+       </property>
+       <property name="text">
+        <string>VIEW COMPLAINTS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_3">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>130</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Date</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Category</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>House_number</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_50">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>100</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Sort By</string>
+       </property>
+      </widget>
+      <zorder>pushButton_4</zorder>
+      <zorder>radioButton_7</zorder>
+      <zorder>tableWidget_4</zorder>
+      <zorder>led_LoginPage_Username_12</zorder>
+      <zorder>btn_pageReportAComplaint_submitComplaint_10</zorder>
+      <zorder>lbl_pageHomepage_welcomeUser_18</zorder>
+      <zorder>label_50</zorder>
+      <zorder>comboBox_3</zorder>
+     </widget>
+     <widget class="QWidget" name="page"/>
+    </widget>
+    <zorder>label_68</zorder>
+    <zorder>btn_pageHomepage_chat_2</zorder>
+    <zorder>btn_pageHomepage_checkAvailableProperties_2</zorder>
+    <zorder>btn_pageHomepage_payRent_2</zorder>
+    <zorder>label_32</zorder>
+    <zorder>btn_pageHomepage_reportacomplaint_4</zorder>
+    <zorder>btn_pageHomepage_reportacomplaint_5</zorder>
+    <zorder>btn_pageHomepage_reportacomplaint_6</zorder>
+    <zorder>btn_pageHomepage_logout_2</zorder>
+    <zorder>lbl_pageHomepage_welcomeUser_13</zorder>
+    <zorder>stackedWidget_3</zorder>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -27,13 +27,17 @@ phone_number VARCHAR(20),
 email_address VARCHAR(100),
 user_password VARCHAR(50));
 
-CREATE TABLE rent_payments(
+CREATE TABLE payments(
 payment_id INT PRIMARY KEY AUTO_INCREMENT,
-id_number VARCHAR(10),
+house_number VARCHAR(10),
+tenants_name VARCHAR(200),
+payment_reason VARCHAR(100),
+payment_code VARCHAR(100),
+payment_method VARCHAR(100),
 amount DECIMAL(9, 2),
 payment_date DATETIME,
-transaction_cobe VARCHAR(100),
-authorized_by VARCHAR(100));
+verified VARCHAR(100));
+
 CREATE TABLE messages(
 message_id int PRIMARY KEY AUTO_INCREMENT,
 date_sent datetime, 
@@ -59,7 +63,7 @@ next_of_kin_first_name, next_of_kin_last_name) VALUES
 (24568121, "Ken", "Walibora", 254736951362, "kenwalibora@gmail.com", "M45", "2023-03-11", "Plumber", "Miss", "Wake");
 
 INSERT INTO tenants_logins(id_number,house_number,phone_number, email_address, user_password) VALUES
-(11217220, "B16", 254799368479, "mbalukaderrik@gmail.com", "Deriky1"),
+(11217220, "B16", 254799368479, "mbalukaderrik@gmail.com", "."),
 (32711242, "A11", 254712348479, "angela19200@gmail.com", "Wowman"),
 (07554865, "J9",  254748556412, "ianfala1213@gmail.com", "Tenant4"),
 (24568121, "M45", 254736951362, "kenwalibora@gmail.com", "M45Karia");
@@ -67,8 +71,37 @@ INSERT INTO tenants_logins(id_number,house_number,phone_number, email_address, u
 CREATE TABLE complaints(
 complaint_id INT PRIMARY KEY AUTO_INCREMENT,
 complaint_date_posted DATETIME,
-complaint_from VARCHAR(100),
+house_number VARCHAR(100),
+tenants_name VARCHAR(100),
 date_of_incedence DATE,
 complaint_category VARCHAR(100),
-complaint_description VARCHAR(3000))
+complaint_description VARCHAR(3000));
+
+CREATE TABLE repairs(
+repair_id INT PRIMARY KEY AUTO_INCREMENT,
+house_number VARCHAR(100),
+tenants_name VARCHAR(100),
+category VARCHAR(100),
+scheduled_date DATE,
+description VARCHAR(1000),
+sorted VARCHAR(100));
+
+
+CREATE TABLE vacate_notice(
+vacation_id INT PRIMARY KEY AUTO_INCREMENT,
+house_number VARCHAR(100),
+tenants_name VARCHAR(100),
+vacation_date DATE,
+reason VARCHAR(1000),
+reimbursement_channel VARCHAR(100),
+account_number VARCHAR(100),
+sorted VARCHAR(100));
+
+
+CREATE TABLE properties(
+property_id INT PRIMARY KEY AUTO_INCREMENT,
+house_number VARCHAR(100),
+picture longblob);
+
+
 

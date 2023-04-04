@@ -2188,6 +2188,17 @@ class Ui_Form(object):
 
         # Mambo yangu
 
+        # from PyQt5 import QtCore, QtGui, QtWidgets
+        # from PyQt5.QtGui import QTextCursor
+        # from PyQt5.QtWidgets import QMessageBox
+        # from PyQt5.QtCore import QThread, pyqtSignal
+        # import mysql.connector
+        # import random
+        # import smtplib
+        # from datetime import datetime
+        # import re
+        # import time as sleeptime
+
         self.db = mysql.connector.connect(
                 user="root",
                 host="localhost",
@@ -2291,42 +2302,6 @@ class Ui_Form(object):
         self.toolButton_6.clicked.connect(self.btn_pageHomepage_checkAvailableProperties_clicked)
         self.date_pageReport_a_complaint_date_of_incedence_3.setDate(QtCore.QDate.currentDate())
         self.btn_pageReportAComplaint_submitComplaint_3.clicked.connect(self.btn_pageReportAComplaint_submitComplaint_3_clicked)
-        self.current_property_id = 1
-        self.btn_pageSignup_pagePassword_back_3.clicked.connect(self.btn_pageSignup_pagePassword_back_3_clicked)
-        self.btn_pageSignup_pagePassword_back_2.clicked.connect(self.btn_pageSignup_pagePassword_back_2_clicked)
-
-
-    def btn_pageSignup_pagePassword_back_2_clicked(self):
-            next_id = self.current_property_id - 1
-            if next_id == 0:
-                    self.current_property_id = self.property_count
-            else:
-                    self.current_property_id = next_id
-
-            self.load_property()
-    def btn_pageSignup_pagePassword_back_3_clicked(self):
-        next_id = self.current_property_id +1
-        if next_id > self.property_count:
-                self.current_property_id = 1
-        else:
-                self.current_property_id = next_id
-
-        self.load_property()
-
-    def load_property(self):
-        self.mycursor.execute(f"SELECT house_number, picture FROM apartment_name.properties WHERE property_id = {self.current_property_id};")
-        result = [i for i in self.mycursor][0]
-        house_number = result[0]
-        image_data = result[1]
-
-        with open("myfile.png", "wb") as file:
-                file.write(image_data)
-
-        pixmap = QPixmap('myfile.png')
-        self.lbl_pageHomepage_welcomeUser_12.setPixmap(pixmap)
-        self.lbl_pageHomepage_welcomeUser_11.setText(f'House number: {house_number}')
-
-
 
     def btn_pageReportAComplaint_submitComplaint_3_clicked(self):
         date = self.date_pageReport_a_complaint_date_of_incedence_3.date().toString('yyyy-MM-dd')
@@ -2366,11 +2341,6 @@ class Ui_Form(object):
                 x = warning.exec_()
 
     def btn_pageHomepage_checkAvailableProperties_clicked(self):
-            self.mycursor.execute("SELECT count(*) FROM apartment_name.properties;")
-            self.property_count = [i for i in self.mycursor][0][0]
-            self.current_property_id = 1
-
-            self.load_property()
             self.stackedWidget_2.setCurrentWidget(self.pageViewproperties)
 
     def btn_pageHomepage_reportacomplaint_3_clicked(self):
@@ -3434,7 +3404,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QTextCursor
 from PyQt5.QtWidgets import QMessageBox
 from PyQt5.QtCore import QThread, pyqtSignal
-from PyQt5.QtGui import QPixmap
 import mysql.connector
 import random
 import smtplib
