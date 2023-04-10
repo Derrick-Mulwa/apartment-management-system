@@ -13,11 +13,13 @@ conn = mysql.connector.connect(
 
 # insert the binary data into the database as a longblob
 mycursor = conn.cursor()
-query = "INSERT INTO apartment_name.properties(house_number, picture) VALUES (%s, %s)"
-values = ('Friendscorner Apartments', file_data)
-mycursor.execute(query, values)
-conn.commit()
-# mycursor.execute("SELECT count(*) FROM apartment_name.properties;")
-# count = [i for i in mycursor][0][0]
+# query = "INSERT INTO apartment_name.properties(house_number, picture) VALUES (%s, %s)"
+# values = ('Friendscorner Apartments', file_data)
+# mycursor.execute(query, values)
+# conn.commit()
 
-# print(count)
+house = 'B16'
+mycursor.execute(f"SELECT * FROM apartment_name.accounts;")
+count = [i for i in mycursor]
+
+print(count[0][1])

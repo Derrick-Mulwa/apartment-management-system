@@ -748,7 +748,7 @@ color: rgb(17, 17, 17);</string>
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../Downloads/icons8-user-male-50.png</normaloff>../../../Downloads/icons8-user-male-50.png</iconset>
+            <normaloff>../../../../Downloads/icons8-user-male-50.png</normaloff>../../../../Downloads/icons8-user-male-50.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -768,7 +768,7 @@ color: rgb(17, 17, 17);</string>
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../Downloads/icons8-female-user-64.png</normaloff>../../../Downloads/icons8-female-user-64.png</iconset>
+            <normaloff>../../../../Downloads/icons8-female-user-64.png</normaloff>../../../../Downloads/icons8-female-user-64.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -2057,9 +2057,9 @@ border-radius:5px;</string>
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>20</y>
+         <y>0</y>
          <width>871</width>
-         <height>71</height>
+         <height>81</height>
         </rect>
        </property>
        <property name="font">
@@ -2094,7 +2094,8 @@ color: rgb(255, 255, 255);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius:8px;
-background-color: rgb(41, 166, 18);</string>
+background-color: rgb(41, 166, 18);
+padding-top:10px;</string>
        </property>
        <property name="text">
         <string>Pay rent</string>
@@ -2129,7 +2130,8 @@ background-color: rgb(41, 166, 18);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius:8px;
-background-color: rgb(26, 29, 166);</string>
+background-color: rgb(26, 29, 166);
+padding-top:10px;</string>
        </property>
        <property name="text">
         <string>CHAT</string>
@@ -2164,7 +2166,8 @@ background-color: rgb(26, 29, 166);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius:8px;
-background-color: rgb(197, 200, 11);</string>
+background-color: rgb(197, 200, 11);
+padding-top:10px;</string>
        </property>
        <property name="text">
         <string>Schedule repairs</string>
@@ -2199,7 +2202,8 @@ background-color: rgb(197, 200, 11);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius:8px;
-background-color: rgb(188, 2, 14);</string>
+background-color: rgb(188, 2, 14);
+padding-top:10px;</string>
        </property>
        <property name="text">
         <string>Report complaint</string>
@@ -2234,7 +2238,8 @@ background-color: rgb(188, 2, 14);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius:8px;
-background-color: rgb(126, 126, 126);</string>
+background-color: rgb(126, 126, 126);
+padding-top:10px;</string>
        </property>
        <property name="text">
         <string>Vacate</string>
@@ -2264,12 +2269,14 @@ background-color: rgb(126, 126, 126);</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>18</pointsize>
+         <pointsize>17</pointsize>
         </font>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius:8px;
-background-color: rgb(41, 166, 18);</string>
+background-color: rgb(41, 166, 18);
+padding-top:10px;
+padding:5px</string>
        </property>
        <property name="text">
         <string>Available properties</string>
@@ -2468,9 +2475,14 @@ border-radius: 10px;</string>
          <height>41</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-
+padding-left:15px;
 border: 2px solid white;
 border-radius: 10px;</string>
        </property>
@@ -2548,7 +2560,7 @@ border-radius:10px
       <widget class="QLabel" name="label_51">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>60</x>
          <y>290</y>
          <width>211</width>
          <height>21</height>
@@ -2569,7 +2581,7 @@ border-radius:10px
       <widget class="QLineEdit" name="led_LoginPage_Username_4">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>60</x>
          <y>320</y>
          <width>311</width>
          <height>41</height>
@@ -2796,7 +2808,11 @@ border: 2px solid black</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(170, 170, 127);
 border-radius: 4px;
-border: 2px solid black</string>
+border: 2px solid black;
+padding-left:10px;</string>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy MMMM dd</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_36">
@@ -2828,7 +2844,8 @@ background-color: rgb(170, 170, 127);</string>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(170, 170, 127);
 border-radius: 4px;
-border: 2px solid black</string>
+border: 2px solid black;
+padding-left:10px</string>
        </property>
        <item>
         <property name="text">
@@ -3092,7 +3109,8 @@ border: 2px solid black</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 4px;
-border: 2px solid black</string>
+border: 2px solid black;
+padding-left:10px;</string>
        </property>
        <item>
         <property name="text">
@@ -3157,10 +3175,11 @@ border-radius:10px
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 4px;
+padding-left:10px;
 border: 2px solid black</string>
        </property>
        <property name="displayFormat">
-        <string>]yyyy MMMM dd</string>
+        <string>yyyy MMMM dd</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_46">
@@ -3201,7 +3220,11 @@ repairs to take place</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 4px;
-border: 2px solid black</string>
+border: 2px solid black;
+padding-left:10px;</string>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy MMMM dd</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_47">
@@ -3615,48 +3638,6 @@ background-color: rgb(0, 255, 0)</string>
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="label_30">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>10</y>
-       <width>91</width>
-       <height>91</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(0, 255, 0)</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="resources.qrc">:/icons/icons/user.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lbl_pageHomepage_welcomeUser">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>110</y>
-       <width>151</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(0, 255, 0);
-color: rgb(20, 20, 20);</string>
-     </property>
-     <property name="text">
-      <string>Welcome user</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
     <widget class="QPushButton" name="btn_pageHomepage_payRent">
      <property name="geometry">
       <rect>
@@ -3789,9 +3770,47 @@ border-bottom: 2px solid rgb(81, 81, 81)</string>
       <string>Issue vacation notice</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_52">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>10</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 255, 0)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources.qrc">:/icons/icons/user.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_pageHomepage_payRent_4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-bottom: 2px solid rgb(81, 81, 81)</string>
+     </property>
+     <property name="text">
+      <string>Dashboard </string>
+     </property>
+    </widget>
     <zorder>label_19</zorder>
-    <zorder>label_30</zorder>
-    <zorder>lbl_pageHomepage_welcomeUser</zorder>
     <zorder>btn_pageHomepage_payRent</zorder>
     <zorder>btn_pageHomepage_chat</zorder>
     <zorder>btn_pageHomepage_reportacomplaint</zorder>
@@ -3799,6 +3818,8 @@ border-bottom: 2px solid rgb(81, 81, 81)</string>
     <zorder>btn_pageHomepage_logout</zorder>
     <zorder>btn_pageHomepage_reportacomplaint_2</zorder>
     <zorder>btn_pageHomepage_reportacomplaint_3</zorder>
+    <zorder>label_52</zorder>
+    <zorder>btn_pageHomepage_payRent_4</zorder>
     <zorder>stackedWidget_2</zorder>
    </widget>
    <widget class="QWidget" name="pageadmin">
@@ -3856,16 +3877,16 @@ border-top: 3px solid rgb(81, 81, 81);
 border-bottom: 2px solid rgb(81, 81, 81)</string>
      </property>
      <property name="text">
-      <string>Verify Payments</string>
+      <string>Payments</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_32">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>80</x>
        <y>10</y>
-       <width>91</width>
-       <height>91</height>
+       <width>81</width>
+       <height>81</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -3971,26 +3992,6 @@ border-radius:10px
      </property>
      <property name="text">
       <string>LOGOUT</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_13">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>110</y>
-       <width>151</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(0, 255, 0);
-color: rgb(20, 20, 20);</string>
-     </property>
-     <property name="text">
-      <string>Welcome admin</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QStackedWidget" name="stackedWidget_3">
@@ -4254,7 +4255,7 @@ background-color: rgb(197, 200, 11);</string>
          <x>0</x>
          <y>0</y>
          <width>871</width>
-         <height>71</height>
+         <height>61</height>
         </rect>
        </property>
        <property name="font">
@@ -4267,7 +4268,7 @@ background-color: rgb(197, 200, 11);</string>
 color:rgb(22, 22, 22)</string>
        </property>
        <property name="text">
-        <string>VERIFY PAYMENTS</string>
+        <string>PAYMENTS</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -4276,9 +4277,9 @@ color:rgb(22, 22, 22)</string>
       <widget class="QPushButton" name="btn_pageReportAComplaint_submitComplaint_7">
        <property name="geometry">
         <rect>
-         <x>240</x>
-         <y>100</y>
-         <width>111</width>
+         <x>190</x>
+         <y>130</y>
+         <width>91</width>
          <height>31</height>
         </rect>
        </property>
@@ -4297,9 +4298,9 @@ border-radius:10px
       <widget class="QLineEdit" name="led_LoginPage_Username_6">
        <property name="geometry">
         <rect>
-         <x>20</x>
-         <y>100</y>
-         <width>211</width>
+         <x>50</x>
+         <y>130</y>
+         <width>131</width>
          <height>31</height>
         </rect>
        </property>
@@ -4316,9 +4317,9 @@ border-radius: 10px;</string>
       <widget class="QPushButton" name="btn_pageHomepage_logout_3">
        <property name="geometry">
         <rect>
-         <x>390</x>
-         <y>100</y>
-         <width>101</width>
+         <x>290</x>
+         <y>130</y>
+         <width>91</width>
          <height>31</height>
         </rect>
        </property>
@@ -4334,9 +4335,9 @@ border-radius:10px
       <widget class="QLineEdit" name="led_LoginPage_Username_7">
        <property name="geometry">
         <rect>
-         <x>560</x>
-         <y>100</y>
-         <width>231</width>
+         <x>500</x>
+         <y>190</y>
+         <width>251</width>
          <height>31</height>
         </rect>
        </property>
@@ -4353,8 +4354,8 @@ border-radius: 10px;</string>
       <widget class="QPushButton" name="pushButton">
        <property name="geometry">
         <rect>
-         <x>800</x>
-         <y>100</y>
+         <x>770</x>
+         <y>190</y>
          <width>51</width>
          <height>31</height>
         </rect>
@@ -4381,9 +4382,9 @@ border: 2px solid transparent;</string>
        <property name="geometry">
         <rect>
          <x>40</x>
-         <y>200</y>
-         <width>801</width>
-         <height>281</height>
+         <y>230</y>
+         <width>791</width>
+         <height>251</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -4420,13 +4421,28 @@ border: 2px solid transparent;</string>
       <widget class="QWidget" name="layoutWidget_2">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>160</y>
+         <x>50</x>
+         <y>190</y>
          <width>327</width>
          <height>31</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QRadioButton" name="radioButton_4">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>View all payments</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
         <item>
          <widget class="QRadioButton" name="radioButton_3">
           <property name="font">
@@ -4438,31 +4454,144 @@ border: 2px solid transparent;</string>
            <string>View Unsorted payments only</string>
           </property>
           <property name="checked">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="radioButton_4">
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>View all payments</string>
+           <bool>false</bool>
           </property>
          </widget>
         </item>
        </layout>
+      </widget>
+      <widget class="QPushButton" name="btn_pageReportAComplaint_submitComplaint_11">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>140</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(67, 203, 99);
+border-radius:5px
+</string>
+       </property>
+       <property name="text">
+        <string>Add amount to specified tenant</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageHomepage_logout_4">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>140</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(255, 32, 43);
+border-radius:5px
+</string>
+       </property>
+       <property name="text">
+        <string>Add amount to all tenants</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_13">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>100</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 5px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter House number</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_19">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>60</y>
+         <width>381</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>VERIFY PAYMENT</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_14">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>100</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 5px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Amount</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_20">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>70</y>
+         <width>331</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>ADD PAYMENT</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
       </widget>
      </widget>
      <widget class="QWidget" name="pageadminrepairs">
       <widget class="QPushButton" name="pushButton_2">
        <property name="geometry">
         <rect>
-         <x>800</x>
-         <y>100</y>
+         <x>750</x>
+         <y>130</y>
          <width>51</width>
          <height>31</height>
         </rect>
@@ -4488,9 +4617,9 @@ border: 2px solid transparent;</string>
       <widget class="QLineEdit" name="led_LoginPage_Username_8">
        <property name="geometry">
         <rect>
-         <x>20</x>
+         <x>60</x>
          <y>100</y>
-         <width>211</width>
+         <width>171</width>
          <height>31</height>
         </rect>
        </property>
@@ -4593,9 +4722,9 @@ color:rgb(22, 22, 22)</string>
       <widget class="QLineEdit" name="led_LoginPage_Username_9">
        <property name="geometry">
         <rect>
-         <x>560</x>
-         <y>100</y>
-         <width>231</width>
+         <x>570</x>
+         <y>130</y>
+         <width>171</width>
          <height>31</height>
         </rect>
        </property>
@@ -4612,7 +4741,7 @@ border-radius: 10px;</string>
       <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>60</x>
          <y>160</y>
          <width>287</width>
          <height>31</height>
@@ -4665,23 +4794,6 @@ border-radius: 8px;
 color: rgb(255, 255, 255);</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_48">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>120</y>
-         <width>181</width>
-         <height>211</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(52, 52, 52);
-border-radius: 8px</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
       <widget class="QPushButton" name="btn_pageChat_send_2">
        <property name="geometry">
         <rect>
@@ -4718,25 +4830,6 @@ border-radius: 4px</string>
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QPushButton" name="btn_pageChat_chatWithManager_2">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>150</y>
-         <width>141</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-radius:5px;
-background-color: rgb(0, 255, 0);
-border-top: 2px solid rgb(81, 81, 81);
-border-bottom: 2px solid rgb(81, 81, 81)</string>
-       </property>
-       <property name="text">
-        <string>Chat with Manager</string>
-       </property>
-      </widget>
       <widget class="QLineEdit" name="led_pageChat_message_2">
        <property name="geometry">
         <rect>
@@ -4751,23 +4844,50 @@ border-bottom: 2px solid rgb(81, 81, 81)</string>
 border-radius: 8px</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="btn_pageChat_chatWithOwner_2">
+      <widget class="QPushButton" name="pushButton_5">
        <property name="geometry">
         <rect>
-         <x>30</x>
-         <y>240</y>
-         <width>141</width>
-         <height>61</height>
+         <x>150</x>
+         <y>30</y>
+         <width>51</width>
+         <height>31</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;
-background-color: rgb(0, 255, 0);
-border-top: 2px solid rgb(81, 81, 81);
-border-bottom: 2px solid rgb(81, 81, 81)</string>
+        <string notr="true">background-color:transparent;
+border: 2px solid transparent;</string>
        </property>
        <property name="text">
-        <string>Chat with Owner</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/icons/icons/icons8-search-100.png</normaloff>:/icons/icons/icons8-search-100.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_15">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>House number</string>
        </property>
       </widget>
      </widget>
@@ -4775,9 +4895,9 @@ border-bottom: 2px solid rgb(81, 81, 81)</string>
       <widget class="QLineEdit" name="led_LoginPage_Username_10">
        <property name="geometry">
         <rect>
-         <x>20</x>
-         <y>80</y>
-         <width>211</width>
+         <x>50</x>
+         <y>90</y>
+         <width>171</width>
          <height>31</height>
         </rect>
        </property>
@@ -4794,8 +4914,8 @@ border-radius: 10px;</string>
       <widget class="QPushButton" name="pushButton_3">
        <property name="geometry">
         <rect>
-         <x>800</x>
-         <y>80</y>
+         <x>740</x>
+         <y>90</y>
          <width>51</width>
          <height>31</height>
         </rect>
@@ -4822,7 +4942,7 @@ border: 2px solid transparent;</string>
        <property name="geometry">
         <rect>
          <x>250</x>
-         <y>80</y>
+         <y>90</y>
          <width>111</width>
          <height>31</height>
         </rect>
@@ -4883,8 +5003,8 @@ border-radius:10px
        <property name="geometry">
         <rect>
          <x>560</x>
-         <y>80</y>
-         <width>231</width>
+         <y>90</y>
+         <width>171</width>
          <height>31</height>
         </rect>
        </property>
@@ -4926,8 +5046,8 @@ color:rgb(22, 22, 22)</string>
       <widget class="QWidget" name="layoutWidget_3">
        <property name="geometry">
         <rect>
-         <x>70</x>
-         <y>130</y>
+         <x>50</x>
+         <y>150</y>
          <width>305</width>
          <height>31</height>
         </rect>
@@ -5072,14 +5192,14 @@ border-radius: 10px;</string>
        <property name="geometry">
         <rect>
          <x>230</x>
-         <y>130</y>
+         <y>140</y>
          <width>111</width>
          <height>31</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color:rgb(67, 203, 99);
-border-radius:10px
+border-radius:5px
 </string>
        </property>
        <property name="text">
@@ -5118,7 +5238,7 @@ color:rgb(22, 22, 22)</string>
        <property name="geometry">
         <rect>
          <x>50</x>
-         <y>130</y>
+         <y>140</y>
          <width>141</width>
          <height>31</height>
         </rect>
@@ -5126,7 +5246,7 @@ color:rgb(22, 22, 22)</string>
        <property name="styleSheet">
         <string notr="true">border: 2px solid black;
 padding-left:12px;
-border-radius: 10px;</string>
+border-radius: 5px;</string>
        </property>
        <item>
         <property name="text">
@@ -5147,10 +5267,10 @@ border-radius: 10px;</string>
       <widget class="QLabel" name="label_50">
        <property name="geometry">
         <rect>
-         <x>60</x>
-         <y>100</y>
-         <width>101</width>
-         <height>21</height>
+         <x>50</x>
+         <y>90</y>
+         <width>191</width>
+         <height>41</height>
         </rect>
        </property>
        <property name="font">
@@ -5162,7 +5282,7 @@ border-radius: 10px;</string>
         <string notr="true"/>
        </property>
        <property name="text">
-        <string>Sort By</string>
+        <string>     Sort By</string>
        </property>
       </widget>
       <zorder>pushButton_4</zorder>
@@ -5174,7 +5294,205 @@ border-radius: 10px;</string>
       <zorder>label_50</zorder>
       <zorder>comboBox_3</zorder>
      </widget>
-     <widget class="QWidget" name="page"/>
+     <widget class="QWidget" name="pageAddproperty">
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_21">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>871</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>25</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(113, 113, 113);
+color:rgb(22, 22, 22)</string>
+       </property>
+       <property name="text">
+        <string>PROPERTY MANAGEMENT</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageReportAComplaint_submitComplaint_12">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>200</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(67, 203, 99);
+border-radius:5px
+</string>
+       </property>
+       <property name="text">
+        <string>Add Property as Available</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_16">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>130</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter House number</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_22">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>70</y>
+         <width>871</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(22, 22, 22)</string>
+       </property>
+       <property name="text">
+        <string>Add property</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_pageHomepage_welcomeUser_23">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>260</y>
+         <width>871</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(22, 22, 22)</string>
+       </property>
+       <property name="text">
+        <string>Delete Property From Available </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="led_LoginPage_Username_17">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>350</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+border: 2px solid black;
+padding-left:12px;
+border-radius: 10px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter House number</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_pageHomepage_logout_5">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>420</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(255, 32, 43);
+border-radius:10px
+</string>
+       </property>
+       <property name="text">
+        <string>Remove</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_LoginPage_Login_2">
+       <property name="geometry">
+        <rect>
+         <x>520</x>
+         <y>130</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(6, 46, 175);
+border-radius: 10px
+}
+
+QPushButton:hover{
+backgroundr:white;
+
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Select Image to Upload</string>
+       </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="btn_pageHomepage_payRent_3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:5px;
+background-color: rgb(0, 255, 0);
+border-bottom: 2px solid rgb(81, 81, 81)</string>
+     </property>
+     <property name="text">
+      <string>Dashboard </string>
+     </property>
     </widget>
     <zorder>label_68</zorder>
     <zorder>btn_pageHomepage_chat_2</zorder>
@@ -5185,13 +5503,14 @@ border-radius: 10px;</string>
     <zorder>btn_pageHomepage_reportacomplaint_5</zorder>
     <zorder>btn_pageHomepage_reportacomplaint_6</zorder>
     <zorder>btn_pageHomepage_logout_2</zorder>
-    <zorder>lbl_pageHomepage_welcomeUser_13</zorder>
+    <zorder>btn_pageHomepage_payRent_3</zorder>
     <zorder>stackedWidget_3</zorder>
    </widget>
   </widget>
  </widget>
  <resources>
   <include location="resources.qrc"/>
+  <include location="../../../.designer/backup/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

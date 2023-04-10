@@ -1,48 +1,37 @@
-import mysql.connector
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
-from PyQt5.QtGui import QPixmap, QImage
-from PyQt5 import QtGui
-
-# connect to the database
-conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root"
-)
-
-# execute the SQL query to retrieve the longblob file
-cursor = conn.cursor()
-query = "SELECT picture FROM apartment_name.properties"
-cursor.execute(query)
-result = [i for i in cursor][1]
-image_data = result[0]
-
-with open("myfile.png", "wb") as file:
-    file.write(image_data)
-
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QFileDialog
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
-from PyQt5.QtGui import QPixmap
 
-class MainWindow(QMainWindow):
+class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
 
-        # Create a QLabel widget and set its pixmap to an image file
-        label = QLabel(self)
-        pixmap = QPixmap('myfile.png')
-        label.setPixmap(pixmap)
-        label.setScaledContents(True)
-        label.setGeometry(0, 0, pixmap.width(), pixmap.height())
+        self.initUI()
+
+    def initUI(self):
+        # Create the button and connect it to the file dialog
+        btn = QPushButton('Select JPG', self)
+        btn.clicked.connect(self.showFileDialog)
 
         # Set the window properties
-        self.setGeometry(100, 100, pixmap.width(), pixmap.height())
-        self.setWindowTitle('QLabel with Image')
+        self.setGeometry(100, 100, 300, 300)
+        self.setWindowTitle('JPG File Selector')
+        self.show()
 
+    def showFileDialog(self):
+        # Create a file dialog
+        fileDialog = QFileDialog()
 
+        # Set the file type filter
+        fileDialog.setNameFilter("JPG files (*.jpg)")
+
+        # Get the file path
+        filePath, _ = fileDialog.getOpenFileName(self, "Select JPG", "", "JPG files (*.jpg)")
+
+        # Do something with the file path, such as displaying the image
+        print(filePath)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = MainWindow()
-    window.show()
     sys.exit(app.exec_())
+
