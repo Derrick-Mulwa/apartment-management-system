@@ -25,7 +25,8 @@ id_number VARCHAR(10) PRIMARY KEY,
 house_number VARCHAR(100),
 phone_number VARCHAR(20),
 email_address VARCHAR(100),
-user_password VARCHAR(50));
+user_password VARCHAR(50),
+user VARCHAR(100));
 
 CREATE TABLE payments(
 payment_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -37,7 +38,8 @@ payment_method VARCHAR(100),
 amount DECIMAL(9, 2),
 payment_date DATETIME,
 verified_Not_Verified VARCHAR(100),
-valid_invalid VARCHAR(100));
+valid_invalid VARCHAR(100),
+balance_when_verified DECIMAL(9, 2));
 
 CREATE TABLE accounts(
 house_number VARCHAR(10) PRIMARY KEY,
